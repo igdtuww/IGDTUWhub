@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IGDTUWHub</title>
+    <!-- Use Google Fonts for a modern look -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Chart.js for the CGPA comparison graph -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="logo" id="logo-link">IGDTUWHub</div>
+
+  <!-- Hamburger icon -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <!-- Navigation links -->
+  <ul class="nav-links">
+    <li><a href="#" id="home-link">Home</a></li>
+    <li><a href="#" id="resources-link">Resources</a></li>
+    <li><a href="#" id="games-link">Games</a></li>
+    <li><a href="#" id="notes-link">CGPA Calculator</a></li>
+    <li><a href="#" id="events-link">Events</a></li>
+    <li><a href="#" id="about-us-link">About Us</a></li>
+  </ul>
+</nav>
+
+
+    <main id="dynamic-content" class="container">
+      <!-- The main content will be injected here by JavaScript -->
+    </main>
+
+    <!-- Chatbot Container -->
+    <div
+      id="chatbot-container"
+      style="position: fixed; bottom: 20px; right: 20px; z-index: 100"
+    >
+      <div
+        id="chatbot-toggle"
+        style="
+          background-color: #4b89dc;
+          color: white;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        "
+      >
+        <i class="fas fa-comment-dots" style="font-size: 1.5rem"></i>
+      </div>
+      <div
+        id="chatbot-box"
+        style="
+          display: none;
+          background-color: #1e1e1e;
+          color: white;
+          border-radius: 10px;
+          width: 300px;
+          height: 400px;
+          position: absolute;
+          bottom: 60px;
+          right: 0;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+          flex-direction: column;
+        "
+      >
+        <div
+          id="chatbot-header"
+          style="
+            background-color: #2a2a2a;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <span>IGDTUWBot</span>
+          <i
+            class="fas fa-times"
+            id="chatbot-close"
+            style="cursor: pointer"
+          ></i>
+        </div>
+        <div
+          id="chatbot-messages"
+          style="flex: 1; padding: 10px; overflow-y: auto"
+        ></div>
+        <div
+          id="chatbot-input-container"
+          style="display: flex; padding: 10px; border-top: 1px solid #333"
+        >
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Type a message..."
+            style="
+              flex: 1;
+              padding: 8px;
+              border-radius: 5px;
+              border: none;
+              background-color: #2a2a2a;
+              color: white;
+            "
+          />
+          <button
+            id="chatbot-send"
+            style="
+              background-color: #4b89dc;
+              color: white;
+              border: none;
+              padding: 8px 12px;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-left: 5px;
+            "
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with social media links -->
+    <footer>
+      <p>&copy; 2025 IGDTUWHub. All rights reserved.</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/manviiiisinhhh/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/manvisinhha/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
