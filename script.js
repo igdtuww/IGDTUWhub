@@ -642,6 +642,71 @@ const branches = {
           //   },
           // },
         };
+  const holidays = {
+    2023: {
+      January: ["14-Makar Sankranti", "26-Republic Day"],
+      March: ["8-Holi"],
+      August: ["15-Independence Day"],
+      October: ["2-Gandhi Jayanti", "24-Dussehra"],
+      November: ["12-Diwali"],
+    },
+    2024: {
+      January: ["26-Republic Day"],
+      March: ["25-Holi"],
+      August: ["15-Independence Day"],
+      October: ["2-Gandhi Jayanti", "12-Dussehra"],
+      November: ["1-Diwali"],
+    },
+    2025: {
+      August: [
+        "11 - Orientation Program",
+        "12 to 29 - Induction Program (UG/PG/PhD)",
+        "11 - UG Registration Starts",
+        "04 - Classes Start (pre-2024)",
+        "05 - Classes Start (PG/PhD)",
+        "12 - Classes Start (UG)",
+      ],
+      October: [
+        "09 to 17 - Mid Term Examination (All Programs)",
+        "Alumni Meet – Autumn",
+        "AIST-2025 & ICMEC-2025 International Conferences",
+      ],
+      November: [
+        "05 - Mid-Term Marks Display",
+        "20 - Diwali",
+        "Alumni Meet cum Industry/Institution Networking Meet",
+        "8th Convocation (IGDTUW)",
+      ],
+      December: [
+        "01 to 05 - End Term Internal Practical",
+        "08 to 26 - End Term Theory Exams",
+        "29 - Winter Break Begins",
+      ],
+    },
+    2026: {
+      January: [
+        "12 to 19 - Even Semester Registration (All Programs)",
+        "12 - Classes Begin (All Programs)",
+        "Alumni Meet - Spring",
+      ],
+      February: ["05 to 07 - Techno-Cultural Fest (TARANGANA and INNERVE)"],
+      March: [
+        "06 to 13 - Mid Term Exams (All Programs)",
+        "13 to 14 - IGNITE (Sports Meet)",
+        "Industry Academia Connect (One Week)",
+        "27 - Mid Term Marks Display",
+      ],
+      April: ["20 to 01 May - End Term Practical Exams (During Lab Timings)"],
+      May: ["04 to 22 - End Term Theory Exams", "25 - Summer Break Starts"],
+      June: [
+        "Faculty Summer Vacation Starts (from 01, 08 or 15 June based on approval)",
+      ],
+      July: [
+        "Summer Internships / Workshops Continue",
+        "Results of Even Sem to be Declared by Early July",
+      ],
+    },
+  };
 
   const dsaQuestions = {
     easy: [
