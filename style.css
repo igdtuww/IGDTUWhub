@@ -1189,3 +1189,18 @@ footer {
 .feedback-item p {
   margin: 0;
 }
+
+/* Logo + Menu grouped */
+.logo-menu {
+  display: flex;
+  align-items: center;
+  gap: 12rem; /* space between logo and hamburger */
+}
+
+/* Keep navbar content aligned */
+.navbar {
+  justify-content: space-between; /* keeps links on right */
+}
+.menu-toggle:checked ~ .nav-links {
+  display: flex;
+}

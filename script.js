@@ -11,59 +11,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Programming Fundamentals",
-            "Data Structures",
-            "Web Development",
-            "Discrete Mathematics",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Computer Organization",
-            "Algorithms",
-            "Operating Systems",
-            "Software Engineering",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Artificial Intelligence",
-            "Machine Learning",
-            "Linear Algebra",
-            "Reinforcement Learning",
+            "Data Structures",
+            "Discrete Structures",
+            "Database Management Systems",
+            "Software Engineering",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
-            "Probability and Statistics",
-            "Computer Vision",
-            "Deep Learning",
-            "Natural Language Processing",
+            "Design and Analysis of Algorithms",
+            "Operating Systems",
+            "Computer Organization and Architecture",
+            "Object-Oriented Programming using C++",
+            "Theory of Computation",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "AI Ethics",
-            "AI in Healthcare",
-            "Advanced ML",
-            "Mobile Computing",
+            "Artificial Intelligence",
+            "Computer Networks",
+            "Microprocessors & Microcontrollers",
+            "Compiler Design",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "Capstone Project",
-            "Blockchain",
-            "Cyber Security",
-            "Cloud Computing",
+            "Machine Learning",
+            "Web Engineering",
+            "Cryptography & Network Security",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Data Analytics",
-            "Big Data",
-            "Information Security",
-            "Advanced Algorithms",
+            "Cloud Computing",
+            "Data Science",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Distributed Systems",
-            "Advanced Topics in AI",
-            "IoT",
-            "Robotics",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -73,59 +80,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Discrete Mathematics",
-            "Object-Oriented Programming",
-            "Data Structures",
-            "Algorithms",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Computer Organization",
-            "Operating Systems",
-            "Software Engineering",
-            "Computer Networks",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Database Management",
-            "Web Technologies",
-            "Compiler Design",
-            "Cyber Security",
+            "Data Structures",
+            "Discrete Structures",
+            "Database Management Systems",
+            "Software Engineering",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
-            "Cloud Computing",
-            "Mobile Computing",
-            "Distributed Systems",
-            "Data Analytics",
+            "Design and Analysis of Algorithms",
+            "Operating Systems",
+            "Computer Organization and Architecture",
+            "Object-Oriented Programming using C++",
+            "Theory of Computation",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "Big Data",
-            "Information Security",
-            "Advanced Algorithms",
-            "Machine Learning",
+            "Computer Networks",
+            "Artificial Intelligence",
+            "Microprocessors & Microcontrollers",
+            "Compiler Design",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "Artificial Intelligence",
-            "IoT",
-            "Robotics",
-            "Blockchain",
+            "Machine Learning",
+            "Web Engineering",
+            "Cryptography & Network Security",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "VLSI Design",
-            "Optical Communication",
-            "Satellite Communication",
-            "Wireless Networks",
+            "Cloud Computing",
+            "Data Science",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Capstone Project",
-            "Advanced Topics in CS",
-            "Software Testing",
-            "Quantum Computing",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -135,59 +149,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Circuit Analysis",
-            "Digital Electronics",
-            "Signals and Systems",
-            "Microprocessors",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Communication Systems",
-            "Embedded Systems",
-            "Robotics",
-            "IoT",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
             "Analog Electronics",
-            "Semiconductor Devices",
-            "Electromagnetic Fields",
-            "Control Systems",
+            "Digital Electronics",
+            "Signals & Systems",
+            "Network Theory",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
-            "VLSI Design",
-            "Optical Communication",
-            "Satellite Communication",
-            "Wireless Networks",
+            "Electromagnetic Field Theory",
+            "Analog & Digital Communication",
+            "Control Systems",
+            "Microprocessors & Microcontrollers",
+            "Electronic Measurement & Instrumentation",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "Deep Learning",
-            "Computer Vision",
-            "Natural Language Processing",
-            "AI Ethics",
+            "Digital Signal Processing",
+            "Antenna & Wave Propagation",
+            "VLSI Design",
+            "Wireless Communication",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "AI in Healthcare",
-            "Advanced ML",
-            "Mobile Computing",
-            "Distributed Systems",
+            "Power Electronics",
+            "Embedded Systems",
+            "Microwave Engineering",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Data Analytics",
-            "Big Data",
-            "Information Security",
-            "Advanced Algorithms",
+            "Optical Communication",
+            "Satellite Communication",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Capstone Project",
-            "Advanced Topics in ECE-AI",
-            "Software Testing",
-            "Quantum Computing",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -197,59 +218,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Analog Electronics",
-            "Semiconductor Devices",
-            "Electromagnetic Fields",
-            "Control Systems",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "VLSI Design",
-            "Optical Communication",
-            "Satellite Communication",
-            "Wireless Networks",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Circuit Analysis",
+            "Analog Electronics",
             "Digital Electronics",
-            "Signals and Systems",
-            "Microprocessors",
+            "Signals & Systems",
+            "Network Theory",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
-            "Communication Systems",
-            "Embedded Systems",
-            "Robotics",
-            "IoT",
+            "Electromagnetic Field Theory",
+            "Analog & Digital Communication",
+            "Control Systems",
+            "Microprocessors & Microcontrollers",
+            "Electronic Measurement & Instrumentation",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "Data Analytics",
-            "Big Data",
-            "Information Security",
-            "Advanced Algorithms",
+            "Digital Signal Processing",
+            "Antenna & Wave Propagation",
+            "VLSI Design",
+            "Wireless Communication",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "Machine Learning",
-            "Artificial Intelligence",
-            "Deep Learning",
-            "Computer Vision",
+            "Power Electronics",
+            "Embedded Systems",
+            "Microwave Engineering",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Natural Language Processing",
-            "AI Ethics",
-            "AI in Healthcare",
-            "Advanced ML",
+            "Optical Communication",
+            "Satellite Communication",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Capstone Project",
-            "Advanced Topics in ECE",
-            "Software Testing",
-            "Quantum Computing",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -259,59 +287,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Fundamentals of IT",
-            "Web Development",
-            "Data Structures",
-            "Object-Oriented Programming",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Software Engineering",
-            "Data Mining",
-            "Cloud Computing",
-            "Cyber Security",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Blockchain",
-            "Big Data Analytics",
-            "Mobile Computing",
-            "Distributed Systems",
+            "Data Structures",
+            "Discrete Structures",
+            "Database Management Systems",
+            "Software Engineering",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
+            "Design and Analysis of Algorithms",
             "Operating Systems",
-            "Computer Networks",
-            "Information Security",
-            "Machine Learning",
+            "Computer Organization and Architecture",
+            "Object-Oriented Programming using C++",
+            "Theory of Computation",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "Artificial Intelligence",
-            "Deep Learning",
-            "Computer Vision",
-            "Natural Language Processing",
+            "Web Technology",
+            "Cyber Security",
+            "Microprocessors & Microcontrollers",
+            "Compiler Design",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "AI Ethics",
-            "AI in Healthcare",
-            "Advanced ML",
-            "Capstone Project",
+            "Data Analytics",
+            "E-Commerce & ERP",
+            "Cloud Computing",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Advanced Topics in IT",
-            "Software Testing",
-            "Quantum Computing",
-            "Data Analytics",
-          ],
-          "8th Semester": [
-            "Advanced Algorithms",
-            "Robotics",
+            "Distributed Systems",
             "IoT",
-            "Satellite Communication",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -321,54 +356,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Introduction to AI",
-            "Linear Algebra",
-            "Probability and Statistics",
-            "Reinforcement Learning",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Neural Networks",
-            "AI Ethics",
-            "AI in Healthcare",
-            "Advanced ML",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Deep Learning",
-            "Computer Vision",
-            "Natural Language Processing",
-            "Capstone Project",
+            "Data Structures",
+            "Probability & Statistics",
+            "Linear Algebra",
+            "Introduction to AI",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
-          "4th Semester": ["Robotics", "IoT", "Data Science", "Big Data"],
+          "4th Semester": [
+            "Design and Analysis of Algorithms",
+            "Machine Learning Fundamentals",
+            "Database Management Systems",
+            "Data Mining",
+            "Big Data Technologies",
+            "Generic Open Elective-II",
+          ],
         },
         3: {
           "5th Semester": [
-            "Software Engineering",
-            "Data Mining",
-            "Cloud Computing",
-            "Cyber Security",
+            "Deep Learning",
+            "Natural Language Processing",
+            "Computer Vision",
+            "Reinforcement Learning",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "Blockchain",
-            "Mobile Computing",
-            "Distributed Systems",
-            "Advanced Algorithms",
+            "Cloud Computing",
+            "Data Visualization",
+            "Time Series Analysis",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Operating Systems",
-            "Computer Networks",
-            "Information Security",
-            "Web Development",
+            "Robotics & AI",
+            "Ethical AI",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Advanced Topics in AIML",
-            "Software Testing",
-            "Quantum Computing",
-            "Advanced AI",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -378,59 +425,66 @@ document.addEventListener("DOMContentLoaded", () => {
       years: {
         1: {
           "1st Semester": [
-            "Engineering Mechanics",
-            "Thermodynamics",
-            "Fluid Mechanics",
-            "Strength of Materials",
+            "Applied Mathematics-I",
+            "Applied Physics-I",
+            "Applied Chemistry",
+            "Engineering Mechanics / Basic Electrical Engineering",
+            "Workshop Practice / Engineering Graphics Lab",
+            "Programming in C Language / Humanities & Social Science",
           ],
           "2nd Semester": [
-            "Kinematics of Machinery",
-            "Heat Transfer",
-            "Machine Design",
-            "Manufacturing Processes",
+            "Applied Mathematics-II",
+            "Applied Physics-II",
+            "Environmental Science",
+            "Basic Electrical Engineering / Engineering Mechanics",
+            "Engineering Graphics Lab / Workshop Practice",
+            "Humanities & Social Science / Programming in C Language",
           ],
         },
         2: {
           "3rd Semester": [
-            "Industrial Engineering",
-            "Automobile Engineering",
-            "CAD/CAM",
-            "Robotics",
+            "Engineering Thermodynamics",
+            "Fluid Mechanics",
+            "Mechanics of Solids",
+            "Manufacturing Processes",
+            "Generic Open Elective-I",
+            "Industrial Training / Internship",
+            "Numerical Methods",
           ],
           "4th Semester": [
-            "Power Plant Engineering",
-            "Mechatronics",
-            "Finite Element Analysis",
-            "Operations Research",
+            "Applied Thermodynamics",
+            "Theory of Machines",
+            "Machine Design-I",
+            "Fluid Machinery",
+            "Material Science",
+            "Generic Open Elective-II",
           ],
         },
         3: {
           "5th Semester": [
-            "Fluid Power Engineering",
-            "Refrigeration and Air Conditioning",
-            "Tool Design",
-            "Advanced Manufacturing Processes",
+            "Heat and Mass Transfer",
+            "Machine Design-II",
+            "Refrigeration & Air Conditioning",
+            "Automobile Engineering",
+            "Program Elective-I",
           ],
           "6th Semester": [
-            "Computational Fluid Dynamics",
-            "Composite Materials",
-            "Industrial Automation",
-            "Quality Management",
+            "Dynamics of Machinery",
+            "CNC and Automation",
+            "Finite Element Methods",
+            "Program Elective-II",
+            "Generic Open Elective-III",
           ],
         },
         4: {
           "7th Semester": [
-            "Supply Chain Management",
-            "Aerospace Engineering",
-            "Robotics and Automation",
-            "Energy Management",
+            "CAD/CAM",
+            "Renewable Energy Systems",
+            "Program Elective-III",
+            "Generic Open Elective-IV",
+            "Dissertation/Project-I",
           ],
-          "8th Semester": [
-            "Capstone Project",
-            "Advanced Topics in MAE",
-            "Software Testing",
-            "Quantum Computing",
-          ],
+          "8th Semester": ["Major Project", "Industrial Training / Internship"],
         },
       },
     },
@@ -492,20 +546,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "Supply Chain Management",
             "Software Testing",
             "Quantum Computing",
-          ],
-        },
-        5: {
-          "9th Semester": [
-            "Advanced Topics in DMAM",
-            "Software Testing",
-            "Quantum Computing",
-            "Communication Skills",
-          ],
-          "10th Semester": [
-            "Advanced AI",
-            "Capstone Project",
-            "Data Analytics",
-            "Robotics",
           ],
         },
       },
@@ -1274,9 +1314,12 @@ function solve(input) {
                     <section class="subject-options-section section">
                         <h2>${subject}</h2>
                         <div class="notes-and-pyq-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                            <div class="card notes-option" data-type="notes" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
-                                Notes
-                            </div>
+                            <a href="https://drive.google.com/drive/folders/1LLI98y-jqeJZeXjY6qg4mVXHDiOgMgTP?usp=drive_link&pli=1" target="_blank">
+    <div class="card notes-option" data-type="notes" data-subject="Programming Fundamentals" data-branch="cse-ai" data-year="1" data-semester="1st Semester" style="padding: 2rem; font-size: 1.5rem;">
+        Notes
+    </div>
+</a>
+
                             <div class="card pyq-option" data-type="pyq" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
                                 PYQ
                             </div>
@@ -1286,22 +1329,22 @@ function solve(input) {
                 `;
   };
 
-  const renderUnitSelection = (subject, type, branch, year, semester) => {
-    dynamicContent.innerHTML = `
-                    <section class="unit-selection-section section">
-                        <h2>${subject} - ${type.toUpperCase()}</h2>
-                        <div class="unit-list">
-                            <ul>
-                                <li class="card" data-unit="1" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-1</li>
-                                <li class="card" data-unit="2" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-2</li>
-                                <li class="card" data-unit="3" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-3</li>
-                                <li class="card" data-unit="4" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-4</li>
-                            </ul>
-                        </div>
-                        <button class="game-back-btn" id="back-to-subject-options" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Back to Options</button>
-                    </section>
-                `;
-  };
+  // const renderUnitSelection = (subject, type, branch, year, semester) => {
+  //   dynamicContent.innerHTML = `
+  //                   <section class="unit-selection-section section">
+  //                       <h2>${subject} - ${type.toUpperCase()}</h2>
+  //                       <div class="unit-list">
+  //                           <ul>
+  //                               <li class="card" data-unit="1" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-1</li>
+  //                               <li class="card" data-unit="2" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-2</li>
+  //                               <li class="card" data-unit="3" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-3</li>
+  //                               <li class="card" data-unit="4" data-subject="${subject}" data-type="${type}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Unit-4</li>
+  //                           </ul>
+  //                       </div>
+  //                       <button class="game-back-btn" id="back-to-subject-options" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Back to Options</button>
+  //                   </section>
+  //               `;
+  // };
 
   const renderPyqSelection = (subject, branch, year, semester) => {
     dynamicContent.innerHTML = `
@@ -1353,7 +1396,6 @@ function solve(input) {
                          <button class="game-back-btn" id="back-to-unit-selection" data-subject="${subject}" data-type="${type}">Back to Units</button>
                     </section>
                 `;
-                
   };
 
   // Helper functions for games and notes
@@ -2297,39 +2339,77 @@ function solve(input) {
     }
   });
 
+  // function
+  function loadSection(sectionId) {
+    const navLink = document.getElementById(sectionId);
+    if (navLink) {
+      navLink.click(); // trigger the same action as navbar
+    } else {
+      console.error("Section not found:", sectionId);
+    }
+  }
+
   // Chatbot functionality
+  // --- Chatbot Elements ---
   const chatbotToggle = document.getElementById("chatbot-toggle");
   const chatbotBox = document.getElementById("chatbot-box");
   const chatbotClose = document.getElementById("chatbot-close");
+  const chatbotMessages = document.getElementById("chatbot-messages");
   const chatbotInput = document.getElementById("chatbot-input");
   const chatbotSend = document.getElementById("chatbot-send");
-  const chatbotMessages = document.getElementById("chatbot-messages");
 
-  const botResponses = {
-    hi: "Hello! How can I help you with IGDTUWHub?",
-    hello:
-      "Hi there! I can help you navigate the website. What would you like to know?",
-    okay: "Glad to hear that. Is there anything else I can assist you with?",
-    resources:
-      "You can find notes and PYQs for various branches and semesters in the Resources section. Just select your branch and year.",
-    games:
-      "We have several games for you to relax! You can play Tic-Tac-Toe, Memory, Puzzle, or Pong.",
-    "cgpa calculator":
-      "Our CGPA calculator helps you estimate your GPA. You can add your subjects and credits to get an accurate result.",
-    "about us":
-      "The About Us page has information about the team behind this project. We are all IT students!",
-    events:
-      "The Events section has a calendar showing important dates and holidays. You can even add your own events to the calendar.",
-    "thank you": "You're welcome! Let me know if you need anything else.",
-    bye: "Goodbye! Have a great day!",
+  const botIntents = {
+    greetings: [
+      "Hello! 👋 How can I help you with IGDTUWHub?",
+      "Hi there! 😊 What would you like to know?",
+      "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
+    ],
+    resources: [
+      {
+        text: "📚 Loading Resources section for you...",
+        action: () => loadSection("resources-link"),
+      },
+    ],
+    games: [
+      {
+        text: "🎮 Taking you to Games!",
+        action: () => loadSection("games-link"),
+      },
+    ],
+    cgpa: [
+      {
+        text: "📊 Opening the CGPA Calculator...",
+        action: () => loadSection("notes-link"),
+      },
+    ],
+    about: [
+      {
+        text: "👩‍💻 Let me show you About Us.",
+        action: () => loadSection("about-us-link"),
+      },
+    ],
+    events: [
+      {
+        text: "📅 Loading Events section now!",
+        action: () => loadSection("events-link"),
+      },
+    ],
+    fallback: [
+      "🤔 Sorry, I didn’t get that. Try asking about resources, games, CGPA calculator, or events.",
+    ],
   };
 
+  // --- Utility: Pick a random response from an intent ---
+  const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+  // --- Message UI ---
   const addMessage = (sender, text) => {
     const messageEl = document.createElement("div");
     messageEl.style.marginBottom = "10px";
     messageEl.style.padding = "8px";
     messageEl.style.borderRadius = "10px";
     messageEl.style.maxWidth = "80%";
+
     if (sender === "user") {
       messageEl.style.backgroundColor = "#4b89dc";
       messageEl.style.color = "white";
@@ -2338,47 +2418,35 @@ function solve(input) {
       messageEl.style.backgroundColor = "#2a2a2a";
       messageEl.style.color = "white";
     }
-    messageEl.textContent = text;
+
+    // FIX: support both string and object
+    messageEl.textContent = typeof text === "string" ? text : text.text;
+
     chatbotMessages.appendChild(messageEl);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
   };
 
+  // --- Bot NLP Logic ---
   const getBotResponse = (userMessage) => {
-    const cleanMessage = userMessage.toLowerCase().trim();
-    if (
-      cleanMessage.includes("hello") ||
-      cleanMessage.includes("hi") ||
-      cleanMessage.includes("hey")
-    ) {
-      return "Hello! How can I help you with IGDTUWHub?";
-    }
-    if (cleanMessage.includes("okay") || cleanMessage.includes("ok")) {
-      return "Glad to hear that. Is there anything else I can assist you with?";
-    }
-    if (cleanMessage.includes("thank you") || cleanMessage.includes("thanks")) {
-      return "You're welcome! Let me know if you need anything else.";
-    }
-    if (cleanMessage.includes("bye") || cleanMessage.includes("goodbye")) {
-      return "Goodbye! Have a great day!";
-    }
-    if (cleanMessage.includes("resources")) {
-      return "You can find notes and PYQs for various branches and semesters in the Resources section. Just select your branch and year.";
-    }
-    if (cleanMessage.includes("games")) {
-      return "We have several games for you to relax! You can play Tic-Tac-Toe, Memory, Puzzle, or Pong.";
-    }
-    if (cleanMessage.includes("cgpa calculator")) {
-      return "Our CGPA calculator helps you estimate your GPA. You can add your subjects and credits to get an accurate result.";
-    }
-    if (cleanMessage.includes("about us")) {
-      return "The About Us page has information about the team behind this project. We are all IT students!";
-    }
-    if (cleanMessage.includes("events")) {
-      return "The Events section has a calendar showing important dates and holidays. You can even add your own events to the calendar.";
-    }
-    return 'I am a simple bot. Try asking about "resources", "games", "cgpa calculator", or "about us".';
+    const msg = userMessage.toLowerCase();
+
+    if (msg.match(/\b(hi|hello|hey)\b/)) return getRandom(botIntents.greetings);
+    if (msg.match(/\b(okay|ok|fine)\b/)) return getRandom(botIntents.okay);
+    if (msg.match(/\b(thank|thanks)\b/)) return getRandom(botIntents.thanks);
+    if (msg.match(/\b(bye|goodbye|see ya)\b/)) return getRandom(botIntents.bye);
+    if (msg.includes("resource")) return getRandom(botIntents.resources);
+    if (msg.includes("game")) return getRandom(botIntents.games);
+    if (msg.includes("cgpa") || msg.includes("gpa"))
+      return getRandom(botIntents.cgpa);
+    if (msg.includes("about")) return getRandom(botIntents.about);
+    if (msg.includes("event") || msg.includes("calendar"))
+      return getRandom(botIntents.events);
+
+    // fallback
+    return getRandom(botIntents.fallback);
   };
 
+  // --- Send Message ---
   const sendMessage = () => {
     const userMessage = chatbotInput.value;
     if (userMessage.trim() === "") return;
@@ -2387,15 +2455,24 @@ function solve(input) {
 
     setTimeout(() => {
       const botResponse = getBotResponse(userMessage);
-      addMessage("bot", botResponse);
+
+      if (typeof botResponse === "string") {
+        // Normal text response
+        addMessage("bot", botResponse);
+      } else if (botResponse && typeof botResponse === "object") {
+        // Advanced response with action
+        addMessage("bot", botResponse.text);
+        if (botResponse.action) botResponse.action();
+      }
     }, 500);
   };
 
+  // --- Event Listeners ---
   chatbotToggle.addEventListener("click", () => {
     const isVisible = chatbotBox.style.display === "flex";
     chatbotBox.style.display = isVisible ? "none" : "flex";
     if (!isVisible) {
-      addMessage("bot", "Hello! How can I help you today?");
+      addMessage("bot", "👋 Hi! I'm your assistant. How can I help you today?");
     }
   });
   chatbotClose.addEventListener("click", () => {
