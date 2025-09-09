@@ -1291,6 +1291,9 @@ const subjectLinks = {
   "Elements of Mechanical Engineering": "https://drive.google.com/drive/folders/1se-WAPXb9_AWQZ7o1RvsaIVJXLEYOmMa?usp=drive_link",
   "Engineering Mechanics": "https://drive.google.com/drive/folders/1Tq5JrNZilon7GxkvFh-wN_FEei0J-jJP?usp=drive_link",
   "Programming with C": "https://drive.google.com/drive/folders/1l0bB5kTo6DHj3fPvXGId-LyP9O_SUpvK?usp=drive_link",
+  "Electronics Workshop": "https://drive.google.com/drive/folders/1aBc1owgICAf_DK20P7I-tR9lDXTmjbAO?usp=drive_link",
+  "Programming Fundamentals": "https://drive.google.com/drive/folders/1-LPF6YxsvldZqxkwMzsJhpHJ01iD3l7i?usp=drive_link",
+
   //"subject": "link",
   // add more subjects here...
 };
