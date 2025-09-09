@@ -32,7 +32,7 @@ It serves as a **centralized academic and productivity hub** that includes:
   Monthly academic events including exams, festivals, and breaks (2025–26 included).
 
 - **Games Section:**  
-  Relax with basic games like Tic Tac Toe, Memory Match, Mini-Coding Games and Puzzle.
+  Relax with basic games like Tic Tac Toe, Memory Match, and Puzzle.
 
 - **Integrated Chatbot:**  
   Assists users with navigation and FAQs.
