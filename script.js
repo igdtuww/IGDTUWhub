@@ -1029,7 +1029,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Arni</h3>
-                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring, and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. I am someone with a strong interest in Artificial Intelligence, ML and DL. Outside of technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
+                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. I am someone with a strong interest in AI, ML and DL. Outside of technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
