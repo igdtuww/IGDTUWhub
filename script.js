@@ -955,7 +955,7 @@ function solve(input) {
                         <div class="profiles-container">
                             <div class="profile-card">
                                 <h3>Manvi</h3>
-                                <p>Hi, I'm Manvi! I'm really passionate about learning new things, taking on challenges, and finding creative ways to solve problems. I'm always excited to share what I know and grow together with others.</p>
+                                <p>Hi, I’m Manvi ! I’m passionate about learning new things and exploring creative ways to solve problems, with a constant drive to take on challenges. I enjoy sharing knowledge and growing alongside others, always excited to learn and improve.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -964,7 +964,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Arni</h3>
-                                <p>Arni is an IT student specializing in data structures and algorithms. She enjoys solving complex coding problems and building efficient systems.</p>
+                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring, and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. I am someone with a strong interest in Artificial Intelligence, ML and DL. Outside of technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -973,7 +973,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Divya</h3>
-                                <p>Divya is an IT student with a keen interest in cybersecurity and cloud computing. She is dedicated to building secure and scalable applications.</p>
+                                <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems and believe in growing through both technical skills and personal creativity.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/divya-yadav-3b7592322/" target="_blank"><i class="fab fa-linkedin"></i></a>
