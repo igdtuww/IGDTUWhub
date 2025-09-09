@@ -1359,7 +1359,7 @@ const subjectLinks = {
   "Electronics Workshop": "https://drive.google.com/drive/folders/1aBc1owgICAf_DK20P7I-tR9lDXTmjbAO?usp=drive_link",
   "Programming Fundamentals": "https://drive.google.com/drive/folders/1-LPF6YxsvldZqxkwMzsJhpHJ01iD3l7i?usp=drive_link",
   "Workshop Practice": "https://drive.google.com/drive/folders/1y4u16aD_sG51_FtDU6PBL4Dnr3zQc_nk?usp=drive_link",
-
+  "Discrete Mathematics": "https://drive.google.com/drive/folders/1VxWIJfY791LAWtQrMcTdPtnfuAvVohJp?usp=drive_link:,
   //"subject": "link",
   // add more subjects here...
 };
