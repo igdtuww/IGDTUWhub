@@ -1020,7 +1020,7 @@ function solve(input) {
                         <div class="profiles-container">
                             <div class="profile-card">
                                 <h3>Manvi</h3>
-                                <p>Hi, I’m Manvi ! I’m passionate about learning new things and exploring creative ways to solve problems, with a constant drive to take on challenges. I enjoy sharing knowledge and growing alongside others, always excited to learn and improve.</p>
+                                <p>Hi, I’m Manvi Sinha ,a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML , AI and Designing, and love tackling challenges with creativity. I believe in growing by sharing ideas and exploring new perspectives through storytelling and collaboration.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1029,7 +1029,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Arni</h3>
-                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. I am someone with a strong interest in AI, ML and DL. Outside of technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
+                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL. Beyond technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
