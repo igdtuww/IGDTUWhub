@@ -4,681 +4,644 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
 
   // Data for branches and subjects
-  const branches = {
-    "cse-ai": {
-      name: "CSE-AI",
-      icon: "fas fa-brain",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Data Structures",
-            "Discrete Structures",
-            "Database Management Systems",
-            "Software Engineering",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Design and Analysis of Algorithms",
-            "Operating Systems",
-            "Computer Organization and Architecture",
-            "Object-Oriented Programming using C++",
-            "Theory of Computation",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Artificial Intelligence",
-            "Computer Networks",
-            "Microprocessors & Microcontrollers",
-            "Compiler Design",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Machine Learning",
-            "Web Engineering",
-            "Cryptography & Network Security",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Cloud Computing",
-            "Data Science",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    cse: {
-      name: "CSE",
-      icon: "fas fa-desktop",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Data Structures",
-            "Discrete Structures",
-            "Database Management Systems",
-            "Software Engineering",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Design and Analysis of Algorithms",
-            "Operating Systems",
-            "Computer Organization and Architecture",
-            "Object-Oriented Programming using C++",
-            "Theory of Computation",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Computer Networks",
-            "Artificial Intelligence",
-            "Microprocessors & Microcontrollers",
-            "Compiler Design",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Machine Learning",
-            "Web Engineering",
-            "Cryptography & Network Security",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Cloud Computing",
-            "Data Science",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    "ece-ai": {
-      name: "ECE-AI",
-      icon: "fas fa-microchip",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Analog Electronics",
-            "Digital Electronics",
-            "Signals & Systems",
-            "Network Theory",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Electromagnetic Field Theory",
-            "Analog & Digital Communication",
-            "Control Systems",
-            "Microprocessors & Microcontrollers",
-            "Electronic Measurement & Instrumentation",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Digital Signal Processing",
-            "Antenna & Wave Propagation",
-            "VLSI Design",
-            "Wireless Communication",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Power Electronics",
-            "Embedded Systems",
-            "Microwave Engineering",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Optical Communication",
-            "Satellite Communication",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    ece: {
-      name: "ECE",
-      icon: "fas fa-code-branch",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Analog Electronics",
-            "Digital Electronics",
-            "Signals & Systems",
-            "Network Theory",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Electromagnetic Field Theory",
-            "Analog & Digital Communication",
-            "Control Systems",
-            "Microprocessors & Microcontrollers",
-            "Electronic Measurement & Instrumentation",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Digital Signal Processing",
-            "Antenna & Wave Propagation",
-            "VLSI Design",
-            "Wireless Communication",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Power Electronics",
-            "Embedded Systems",
-            "Microwave Engineering",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Optical Communication",
-            "Satellite Communication",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    it: {
-      name: "IT",
-      icon: "fas fa-globe",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Data Structures",
-            "Discrete Structures",
-            "Database Management Systems",
-            "Software Engineering",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Design and Analysis of Algorithms",
-            "Operating Systems",
-            "Computer Organization and Architecture",
-            "Object-Oriented Programming using C++",
-            "Theory of Computation",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Web Technology",
-            "Cyber Security",
-            "Microprocessors & Microcontrollers",
-            "Compiler Design",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Data Analytics",
-            "E-Commerce & ERP",
-            "Cloud Computing",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Distributed Systems",
-            "IoT",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    aiml: {
-      name: "AIML",
-      icon: "fas fa-robot",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Data Structures",
-            "Probability & Statistics",
-            "Linear Algebra",
-            "Introduction to AI",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Design and Analysis of Algorithms",
-            "Machine Learning Fundamentals",
-            "Database Management Systems",
-            "Data Mining",
-            "Big Data Technologies",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Deep Learning",
-            "Natural Language Processing",
-            "Computer Vision",
-            "Reinforcement Learning",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Cloud Computing",
-            "Data Visualization",
-            "Time Series Analysis",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Robotics & AI",
-            "Ethical AI",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    mae: {
-      name: "MAE",
-      icon: "fas fa-cogs",
-      years: {
-        1: {
-          "1st Semester": [
-            "Applied Mathematics-I",
-            "Applied Physics-I",
-            "Applied Chemistry",
-            "Engineering Mechanics / Basic Electrical Engineering",
-            "Workshop Practice / Engineering Graphics Lab",
-            "Programming in C Language / Humanities & Social Science",
-          ],
-          "2nd Semester": [
-            "Applied Mathematics-II",
-            "Applied Physics-II",
-            "Environmental Science",
-            "Basic Electrical Engineering / Engineering Mechanics",
-            "Engineering Graphics Lab / Workshop Practice",
-            "Humanities & Social Science / Programming in C Language",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Engineering Thermodynamics",
-            "Fluid Mechanics",
-            "Mechanics of Solids",
-            "Manufacturing Processes",
-            "Generic Open Elective-I",
-            "Industrial Training / Internship",
-            "Numerical Methods",
-          ],
-          "4th Semester": [
-            "Applied Thermodynamics",
-            "Theory of Machines",
-            "Machine Design-I",
-            "Fluid Machinery",
-            "Material Science",
-            "Generic Open Elective-II",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Heat and Mass Transfer",
-            "Machine Design-II",
-            "Refrigeration & Air Conditioning",
-            "Automobile Engineering",
-            "Program Elective-I",
-          ],
-          "6th Semester": [
-            "Dynamics of Machinery",
-            "CNC and Automation",
-            "Finite Element Methods",
-            "Program Elective-II",
-            "Generic Open Elective-III",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "CAD/CAM",
-            "Renewable Energy Systems",
-            "Program Elective-III",
-            "Generic Open Elective-IV",
-            "Dissertation/Project-I",
-          ],
-          "8th Semester": ["Major Project", "Industrial Training / Internship"],
-        },
-      },
-    },
-    dmam: {
-      name: "DMAM",
-      icon: "fas fa-chart-line",
-      years: {
-        1: {
-          "1st Semester": [
-            "Marketing Fundamentals",
-            "Consumer Behavior",
-            "Statistics for Marketing",
-            "Principles of Management",
-          ],
-          "2nd Semester": [
-            "Digital Marketing Strategy",
-            "Web Analytics",
-            "Data Visualization",
-            "E-commerce Essentials",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "SEO and SEM",
-            "Social Media Marketing",
-            "Market Research",
-            "Database Management",
-          ],
-          "4th Semester": [
-            "Content Marketing",
-            "Email Marketing",
-            "Google Analytics Certification",
-            "Business Communication",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Predictive Analytics",
-            "Marketing Automation",
-            "CRM Strategies",
-            "Ethical Hacking",
-          ],
-          "6th Semester": [
-            "Capstone Project",
-            "Financial Analysis",
-            "Advanced Data Mining",
-            "Digital Advertising",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Advanced Analytics",
-            "Business Intelligence",
-            "IoT in Marketing",
-            "AI in Marketing",
-          ],
-          "8th Semester": [
-            "Mobile Marketing",
-            "Supply Chain Management",
-            "Software Testing",
-            "Quantum Computing",
-          ],
-        },
-      },
-    },
-    mac: {
-      name: "MAC",
-      icon: "fas fa-industry",
-      years: {
-        1: {
-          "1st Semester": [
-            "Engineering Physics",
-            "Engineering Chemistry",
-            "Engineering Mathematics",
-            "Communication Skills",
-          ],
-          "2nd Semester": [
-            "Engineering Graphics",
-            "Computer Programming",
-            "Workshop Practice",
-            "Material Science",
-          ],
-        },
-        2: {
-          "3rd Semester": [
-            "Thermodynamics",
-            "Fluid Mechanics",
-            "Manufacturing Technology",
-            "Machine Design",
-          ],
-          "4th Semester": [
-            "Automobile Engineering",
-            "Robotics",
-            "CAD/CAM",
-            "Mechatronics",
-          ],
-        },
-        3: {
-          "5th Semester": [
-            "Automation",
-            "Industrial Automation",
-            "CNC Machines",
-            "Quality Control",
-          ],
-          "6th Semester": [
-            "Supply Chain Management",
-            "Production Planning",
-            "Operations Research",
-            "Industrial Management",
-          ],
-        },
-        4: {
-          "7th Semester": [
-            "Advanced Manufacturing",
-            "Renewable Energy Systems",
-            "Artificial Intelligence",
-            "Machine Learning",
-          ],
-          "8th Semester": [
-            "Capstone Project",
-            "Advanced Topics in MAC",
-            "Software Testing",
-            "Quantum Computing",
-          ],
-        },
-      },
-    },
-  };
-
-  const holidays = {
-    2023: {
-      January: ["14-Makar Sankranti", "26-Republic Day"],
-      March: ["8-Holi"],
-      August: ["15-Independence Day"],
-      October: ["2-Gandhi Jayanti", "24-Dussehra"],
-      November: ["12-Diwali"],
-    },
-    2024: {
-      January: ["26-Republic Day"],
-      March: ["25-Holi"],
-      August: ["15-Independence Day"],
-      October: ["2-Gandhi Jayanti", "12-Dussehra"],
-      November: ["1-Diwali"],
-    },
-    2025: {
-      August: [
-        "11 - Orientation Program",
-        "12 to 29 - Induction Program (UG/PG/PhD)",
-        "11 - UG Registration Starts",
-        "04 - Classes Start (pre-2024)",
-        "05 - Classes Start (PG/PhD)",
-        "12 - Classes Start (UG)",
-      ],
-      October: [
-        "09 to 17 - Mid Term Examination (All Programs)",
-        "Alumni Meet – Autumn",
-        "AIST-2025 & ICMEC-2025 International Conferences",
-      ],
-      November: [
-        "05 - Mid-Term Marks Display",
-        "20 - Diwali",
-        "Alumni Meet cum Industry/Institution Networking Meet",
-        "8th Convocation (IGDTUW)",
-      ],
-      December: [
-        "01 to 05 - End Term Internal Practical",
-        "08 to 26 - End Term Theory Exams",
-        "29 - Winter Break Begins",
-      ],
-    },
-    2026: {
-      January: [
-        "12 to 19 - Even Semester Registration (All Programs)",
-        "12 - Classes Begin (All Programs)",
-        "Alumni Meet - Spring",
-      ],
-      February: ["05 to 07 - Techno-Cultural Fest (TARANGANA and INNERVE)"],
-      March: [
-        "06 to 13 - Mid Term Exams (All Programs)",
-        "13 to 14 - IGNITE (Sports Meet)",
-        "Industry Academia Connect (One Week)",
-        "27 - Mid Term Marks Display",
-      ],
-      April: ["20 to 01 May - End Term Practical Exams (During Lab Timings)"],
-      May: ["04 to 22 - End Term Theory Exams", "25 - Summer Break Starts"],
-      June: [
-        "Faculty Summer Vacation Starts (from 01, 08 or 15 June based on approval)",
-      ],
-      July: [
-        "Summer Internships / Workshops Continue",
-        "Results of Even Sem to be Declared by Early July",
-      ],
-    },
-  };
+  
+const branches = {
+          "cse-ai": {
+            name: "CSE-AI",
+            icon: "fas fa-brain",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Probability and Statistics",
+                  "Environmental Sciences",
+                  "Communication Skills",
+                  "Programming with Python",
+                  "Basics of Electrical and Electronics Engineering",
+                  "IT Workshop",
+                  "Web Application Development",
+                ],
+                "2nd Semester": [
+                  "Applied Mathematics",
+                  "Applied Physics",
+                  "Web Application Development",
+                  "Basics of Electrical and Electronics Engineering",
+                  "Introduction to Data Science",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Artificial Intelligence",
+                  "Machine Learning",
+                  "Linear Algebra",
+                  "Reinforcement Learning",
+                ],
+                "4th Semester": [
+                  "Probability and Statistics",
+                  "Computer Vision",
+                  "Deep Learning",
+                  "Natural Language Processing",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "AI Ethics",
+                  "AI in Healthcare",
+                  "Advanced ML",
+                  "Mobile Computing",
+                ],
+                "6th Semester": [
+                  "Capstone Project",
+                  "Blockchain",
+                  "Cyber Security",
+                  "Cloud Computing",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Data Analytics",
+                  "Big Data",
+                  "Information Security",
+                  "Advanced Algorithms",
+                ],
+                "8th Semester": [
+                  "Distributed Systems",
+                  "Advanced Topics in AI",
+                  "IoT",
+                  "Robotics",
+                ],
+              },
+            },
+          },
+          cse: {
+            name: "CSE",
+            icon: "fas fa-desktop",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Applied Mathematics",
+                  "Applied Physics",
+                  "Programming with C",
+                  "IT Workshop",
+                  "Basics of Electrical and Electronics Engineering",
+                  "Web Application Development", 
+                  "Communication Skills", 
+                ],
+                "2nd Semester": [
+                  "Probability and Statistics",
+                  "Environmental Sciences",
+                  "Data Structures",
+                  "IT Workshop",
+                  "Basics of Electrical and Electronics Engineering",
+                  "Mobile Application Development",
+                  "Soft Skills and Personality Development", 
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Discrete Mathematics",
+                  "Software Engineering",
+                  "Design and Analysis of Algorithm",
+                  "Operations Management",
+                  "Ergonomic Design",
+                  "Indian Knowledge System",
+                  "Introduction to Internet of Things",
+                ],
+                "4th Semester": [
+                  "Database Management Systems",
+                  "Computer Organization and Architecture",
+                  "Operating Systems",
+                  "Indian Knowledge System",
+                  "Advanced IoT and Real World Applications",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Big Data",
+                  "Information Security",
+                  "Advanced Algorithms",
+                  "Machine Learning",
+                ],
+                "6th Semester": [
+                  "Artificial Intelligence",
+                  "IoT",
+                  "Robotics",
+                  "Blockchain",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "VLSI Design",
+                  "Optical Communication",
+                  "Satellite Communication",
+                  "Wireless Networks",
+                ],
+                "8th Semester": [
+                  "Capstone Project",
+                  "Advanced Topics in CS",
+                  "Software Testing",
+                  "Quantum Computing",
+                ],
+              },
+            },
+          },
+          "ece-ai": {
+            name: "ECE-AI",
+            icon: "fas fa-microchip",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Applied Mathematics",
+                  "Fundamentals of Electrical Sciences",
+                  "Communication Skills",
+                  "Signals & Systems",
+                  "Electronics Workshop",
+                  "Programming Fundamentals",
+                  "Web Application Development",
+                ],
+                "2nd Semester": [
+                  "Environmental Sciences",
+                  "Applied Physics",
+                  "Network Analysis and Synthesis",
+                  "Programming Fundamentals",
+                  "Web Application Development",
+                  "Introduction to Data Science",
+                  "IT Workshop",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Analog Electronics",
+                  "Semiconductor Devices",
+                  "Electromagnetic Fields",
+                  "Control Systems",
+                ],
+                "4th Semester": [
+                  "VLSI Design",
+                  "Optical Communication",
+                  "Satellite Communication",
+                  "Wireless Networks",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Deep Learning",
+                  "Computer Vision",
+                  "Natural Language Processing",
+                  "AI Ethics",
+                ],
+                "6th Semester": [
+                  "AI in Healthcare",
+                  "Advanced ML",
+                  "Mobile Computing",
+                  "Distributed Systems",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Data Analytics",
+                  "Big Data",
+                  "Information Security",
+                  "Advanced Algorithms",
+                ],
+                "8th Semester": [
+                  "Capstone Project",
+                  "Advanced Topics in ECE-AI",
+                  "Software Testing",
+                  "Quantum Computing",
+                ],
+              },
+            },
+          },
+          ece: {
+            name: "ECE",
+            icon: "fas fa-code-branch",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Applied Mathematics",
+                  "Fundamentals of Electrical Sciences",
+                  "Communication Skills",
+                  "Signals & Systems",
+                  "Electronics Workshop",
+                  "Programming Fundamentals",
+                  "Web Application Development",
+                ],
+                "2nd Semester": [
+                  "Environmental Sciences",
+                  "Applied Physics",
+                  "Network Analysis and Synthesis",
+                  "Programming Fundamentals",
+                  "Web Application Development",
+                  "Introduction to Data Science",
+                  "IT Workshop",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Circuit Analysis",
+                  "Digital Electronics",
+                  "Signals and Systems",
+                  "Microprocessors",
+                ],
+                "4th Semester": [
+                  "Communication Systems",
+                  "Embedded Systems",
+                  "Robotics",
+                  "IoT",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Data Analytics",
+                  "Big Data",
+                  "Information Security",
+                  "Advanced Algorithms",
+                ],
+                "6th Semester": [
+                  "Machine Learning",
+                  "Artificial Intelligence",
+                  "Deep Learning",
+                  "Computer Vision",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Natural Language Processing",
+                  "AI Ethics",
+                  "AI in Healthcare",
+                  "Advanced ML",
+                ],
+                "8th Semester": [
+                  "Capstone Project",
+                  "Advanced Topics in ECE",
+                  "Software Testing",
+                  "Quantum Computing",
+                ],
+              },
+            },
+          },
+          it: {
+            name: "IT",
+            icon: "fas fa-globe",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Applied Mathematics",
+                  "Applied Physics",
+                  "Communication Skills",
+                  "Programming with Python",
+                  "Web Application Development",
+                  "Basics of Electrical and Electronics Engineering",
+                  "IT Workshop",
+                ],
+                "2nd Semester": [
+                  "Probability and Statistics",
+                  "Environmental Sciences",
+                  "Object Oriented Programming",
+                  "Basics of Electrical and Electronics Engineering",
+                  "IT Workshop",
+                  "Introduction to Data Science",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Discrete Mathematics",
+                  "Data Structures and Algorithm",
+                  "Database Management Systems",
+                  "Operations Management",
+                  "Ergonomic Design",
+                  "Indian Knowledge System",
+                  "Open Source Technologies",
+                ],
+                "4th Semester": [
+                  "Design and Analysis of Algorithms",
+                  "Operating Systems",
+                  "Software Engineering",
+                  "Cloud Computing",
+                  "Indian Knowledge System",
+                  "Fundamentals of Devops",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Artificial Intelligence",
+                  "Deep Learning",
+                  "Computer Vision",
+                  "Natural Language Processing",
+                ],
+                "6th Semester": [
+                  "AI Ethics",
+                  "AI in Healthcare",
+                  "Advanced ML",
+                  "Capstone Project",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Advanced Topics in IT",
+                  "Software Testing",
+                  "Quantum Computing",
+                  "Data Analytics",
+                ],
+                "8th Semester": [
+                  "Advanced Algorithms",
+                  "Robotics",
+                  "IoT",
+                  "Satellite Communication",
+                ],
+              },
+            },
+          },
+          aiml: {
+            name: "AIML",
+            icon: "fas fa-robot",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Probability and Statistics",
+                  "Environmental Sciences",
+                  "Communication Skills",
+                  "Programming with Python",
+                  "Web Application Development",
+                  "IT Workshop",
+                  "Basics of Electrical and Electronics Engineering",
+                ],
+                "2nd Semester": [
+                  "Applied Mathematics",
+                  "Applied Physics",
+                  "Object Oriented Programming",
+                  "Basics of Electrical and Electronics Engineering",
+                  "IT Workshop",
+                  "Introduction to Data Science",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Discrete Mathematics",
+                  "Data Structures and Algorithm",
+                  "Database Management Systems",
+                  "Operations Management",
+                  "Ergonomic Design",
+                  "Indian Knowledge System",
+                  "Open Source Technologies",
+                ],
+                "4th Semester": [
+                  "Design and Analysis of Algorithms",
+                  "Operating Systems",
+                  "Software Engineering",
+                  "Cloud Computing",
+                  "Indian Knowledge System",
+                  "Fundamentals of Devops",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Software Engineering",
+                  "Data Mining",
+                  "Cloud Computing",
+                  "Cyber Security",
+                ],
+                "6th Semester": [
+                  "Blockchain",
+                  "Mobile Computing",
+                  "Distributed Systems",
+                  "Advanced Algorithms",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Operating Systems",
+                  "Computer Networks",
+                  "Information Security",
+                  "Web Development",
+                ],
+                "8th Semester": [
+                  "Advanced Topics in AIML",
+                  "Software Testing",
+                  "Quantum Computing",
+                  "Advanced AI",
+                ],
+              },
+            },
+          },
+          mae: {
+            name: "MAE",
+            icon: "fas fa-cogs",
+            years: {
+              1: {
+                "1st Semester": [
+                  "Applied Mathematics",
+                  "Applied Physics",
+                  "Communication Skills",
+                  "Elements of Mechanical Engineering",
+                  "Web Application Development",
+                  "Basics of Electrical and Electronics Engineering",
+                  "Programming Fundamentals",
+                  "Workshop Practice",
+                ],
+                "2nd Semester": [
+                  "Probability and Statistics",
+                  "Environmental Sciences",
+                  "Engineering Mechanics",
+                  "Basics of Electrical and Electronics Engineering",
+                  "Programming Fundamentals",
+                  "Introduction to Data Science",
+                  "Engineering Graphics & CAD Modelling",
+                  "Soft Skills and Personality Development",
+                ],
+              },
+              2: {
+                "3rd Semester": [
+                  "Industrial Engineering",
+                  "Automobile Engineering",
+                  "CAD/CAM",
+                  "Robotics",
+                ],
+                "4th Semester": [
+                  "Power Plant Engineering",
+                  "Mechatronics",
+                  "Finite Element Analysis",
+                  "Operations Research",
+                ],
+              },
+              3: {
+                "5th Semester": [
+                  "Fluid Power Engineering",
+                  "Refrigeration and Air Conditioning",
+                  "Tool Design",
+                  "Advanced Manufacturing Processes",
+                ],
+                "6th Semester": [
+                  "Computational Fluid Dynamics",
+                  "Composite Materials",
+                  "Industrial Automation",
+                  "Quality Management",
+                ],
+              },
+              4: {
+                "7th Semester": [
+                  "Supply Chain Management",
+                  "Aerospace Engineering",
+                  "Robotics and Automation",
+                  "Energy Management",
+                ],
+                "8th Semester": [
+                  "Capstone Project",
+                  "Advanced Topics in MAE",
+                  "Software Testing",
+                  "Quantum Computing",
+                ],
+              },
+            },
+          },
+          // dmam: {
+          //   name: "DMAM",
+          //   icon: "fas fa-chart-line",
+          //   years: {
+          //     1: {
+          //       "1st Semester": [
+          //         "Elements of Mechanical Engineering",
+          //         "Workshop Practice",
+          //         "Applied Mathematics",
+          //         "Applied Physics",
+          //         "Communication Skills",
+          //         "Programming Fundamentals",
+          //       ],
+          //       "2nd Semester": [
+          //         "Digital Marketing Strategy",
+          //         "Web Analytics",
+          //         "Data Visualization",
+          //         "E-commerce Essentials",
+          //       ],
+          //     },
+          //     2: {
+          //       "3rd Semester": [
+          //         "SEO and SEM",
+          //         "Social Media Marketing",
+          //         "Market Research",
+          //         "Database Management",
+          //       ],
+          //       "4th Semester": [
+          //         "Content Marketing",
+          //         "Email Marketing",
+          //         "Google Analytics Certification",
+          //         "Business Communication",
+          //       ],
+          //     },
+          //     3: {
+          //       "5th Semester": [
+          //         "Predictive Analytics",
+          //         "Marketing Automation",
+          //         "CRM Strategies",
+          //         "Ethical Hacking",
+          //       ],
+          //       "6th Semester": [
+          //         "Capstone Project",
+          //         "Financial Analysis",
+          //         "Advanced Data Mining",
+          //         "Digital Advertising",
+          //       ],
+          //     },
+          //     4: {
+          //       "7th Semester": [
+          //         "Advanced Analytics",
+          //         "Business Intelligence",
+          //         "IoT in Marketing",
+          //         "AI in Marketing",
+          //       ],
+          //       "8th Semester": [
+          //         "Mobile Marketing",
+          //         "Supply Chain Management",
+          //         "Software Testing",
+          //         "Quantum Computing",
+          //       ],
+          //     },
+          //     5: {
+          //       "9th Semester": [
+          //         "Advanced Topics in DMAM",
+          //         "Software Testing",
+          //         "Quantum Computing",
+          //         "Communication Skills",
+          //       ],
+          //       "10th Semester": [
+          //         "Advanced AI",
+          //         "Capstone Project",
+          //         "Data Analytics",
+          //         "Robotics",
+          //       ],
+          //     },
+          //   },
+          // },
+          // mac: {
+          //   name: "MAC",
+          //   icon: "fas fa-industry",
+          //   years: {
+          //     1: {
+          //       "1st Semester": [
+          //         "Calculus",
+          //         "Communication Skills",
+          //         "Programming in C",
+          //         "Environmental Science",
+          //         "Web Application Development",
+          //         "Basics Electrical Engineering ",
+          //       ],
+          //       "2nd Semester": [
+          //         "Engineering Graphics",
+          //         "Computer Programming",
+          //         "Workshop Practice",
+          //         "Material Science",
+          //       ],
+          //     },
+          //     2: {
+          //       "3rd Semester": [
+          //         "Thermodynamics",
+          //         "Fluid Mechanics",
+          //         "Manufacturing Technology",
+          //         "Machine Design",
+          //       ],
+          //       "4th Semester": [
+          //         "Automobile Engineering",
+          //         "Robotics",
+          //         "CAD/CAM",
+          //         "Mechatronics",
+          //       ],
+          //     },
+          //     3: {
+          //       "5th Semester": [
+          //         "Automation",
+          //         "Industrial Automation",
+          //         "CNC Machines",
+          //         "Quality Control",
+          //       ],
+          //       "6th Semester": [
+          //         "Supply Chain Management",
+          //         "Production Planning",
+          //         "Operations Research",
+          //         "Industrial Management",
+          //       ],
+          //     },
+          //     4: {
+          //       "7th Semester": [
+          //         "Advanced Manufacturing",
+          //         "Renewable Energy Systems",
+          //         "Artificial Intelligence",
+          //         "Machine Learning",
+          //       ],
+          //       "8th Semester": [
+          //         "Capstone Project",
+          //         "Advanced Topics in MAC",
+          //         "Software Testing",
+          //         "Quantum Computing",
+          //       ],
+          //     },
+          //   },
+          // },
+        };
 
   const dsaQuestions = {
     easy: [
@@ -992,7 +955,7 @@ function solve(input) {
                         <div class="profiles-container">
                             <div class="profile-card">
                                 <h3>Manvi</h3>
-                                <p>Hi, I’m Manvi Sinha! I’m passionate about learning new things and exploring creative ways to solve problems, with a constant drive to take on challenges. I enjoy sharing knowledge and growing alongside others, always excited to learn and improve.</p>
+                                <p>Hi, I'm Manvi! I'm really passionate about learning new things, taking on challenges, and finding creative ways to solve problems. I'm always excited to share what I know and grow together with others.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1001,7 +964,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Arni</h3>
-                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring, and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. Outside of technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
+                                <p>Arni is an IT student specializing in data structures and algorithms. She enjoys solving complex coding problems and building efficient systems.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1010,7 +973,7 @@ function solve(input) {
                             </div>
                             <div class="profile-card">
                                 <h3>Divya</h3>
-                                <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems and believe in growing through both technical skills and personal creativity.</p>
+                                <p>Divya is an IT student with a keen interest in cybersecurity and cloud computing. She is dedicated to building secure and scalable applications.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/divya-yadav-3b7592322/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1309,25 +1272,57 @@ function solve(input) {
                 `;
   };
 
-  const renderSubjectOptions = (subject, branch, year, semester) => {
-    dynamicContent.innerHTML = `
-                    <section class="subject-options-section section">
-                        <h2>${subject}</h2>
-                        <div class="notes-and-pyq-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                            <a href="https://drive.google.com/drive/folders/1LLI98y-jqeJZeXjY6qg4mVXHDiOgMgTP?usp=drive_link&pli=1" target="_blank">
-    <div class="card notes-option" data-type="notes" data-subject="Programming Fundamentals" data-branch="cse-ai" data-year="1" data-semester="1st Semester" style="padding: 2rem; font-size: 1.5rem;">
-        Notes
-    </div>
-</a>
+const subjectLinks = {
+  "Applied Mathematics": "https://drive.google.com/drive/folders/1LLI98y-jqeJZeXjY6qg4mVXHDiOgMgTP?usp=drive_link",
+  "Applied Physics": "https://drive.google.com/drive/folders/1m0addOBmQjwP8rdl0vZL29tt2PPHDe8R?usp=drive_link",
+  "IT Workshop": "https://drive.google.com/drive/folders/1Z7Jh7pcu4XgBrEL0ACR0UGerwutaxqAY?usp=drive_link",
+  "Programming with Python": "https://drive.google.com/drive/folders/13BGj6bG5bYCRfImMJ0b28Qwfj0SoXfFX?usp=drive_link",
+  "Probability and Statistics": "https://drive.google.com/drive/folders/1_zlQA3XSzkz8OrnePJGU7G6sNhCJ92TY?usp=drive_link",
+  "Environmental Sciences": "https://drive.google.com/drive/folders/1_mNHz2xo30754lAcNJdsQmKZvS3NI_uM?usp=drive_link",
+  "Web Application Development": "https://drive.google.com/drive/folders/1KPMQfQG1kkyevGuhe-pbvL6LrpInkQGC?usp=drive_link",
+  "Basics of Electrical and Electronics Engineering": "https://drive.google.com/drive/folders/1X48lSL1_LIRmoOb_cAlh-AppsnyW0tu_?usp=drive_link",
+  "Communication Skills": "https://drive.google.com/drive/folders/16lHKOBdPbWruYPks3xLFuJte5MzRGtQm?usp=drive_link",
+  "Data Structures": "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac?usp=drive_link",
+  "Introduction to Data Science": "https://drive.google.com/drive/folders/1hF6CzhCaKuJb2YvPI7ypvxKRBL1XKwDe?usp=drive_link",
+  "Soft Skills and Personality Development": "https://drive.google.com/drive/folders/1d9_zPLadzn_ExjNfD0DuOfARScB4mLQ9?usp=drive_link",
+  "Fundamentals of Electrical Sciences": "https://drive.google.com/drive/folders/1W0IL6NrYjt5UCwvH2aYzmHLhnMa6_Kvb?usp=drive_link",
+  "Signals and Systems": "https://drive.google.com/drive/folders/1DilmTPvKwKk6q8_-ctnDEJyXJbkTfhNK?usp=drive_link",
+  "Object Oriented Programming": "https://drive.google.com/drive/folders/1mni41RgLBgtahHYwHRByzsarvuoicBgy?usp=drive_link",
+  "Elements of Mechanical Engineering": "https://drive.google.com/drive/folders/1se-WAPXb9_AWQZ7o1RvsaIVJXLEYOmMa?usp=drive_link",
+  "Engineering Mechanics": "https://drive.google.com/drive/folders/1Tq5JrNZilon7GxkvFh-wN_FEei0J-jJP?usp=drive_link",
+  //"subject": "link",
+  // add more subjects here...
+};
 
-                            <div class="card pyq-option" data-type="pyq" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
-                                PYQ
-                            </div>
-                        </div>
-                        <button class="game-back-btn" id="back-to-subjects" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Back to Subjects</button>
-                    </section>
-                `;
-  };
+
+const renderSubjectOptions = (subject, branch, year, semester) => {
+  const notesLink = subjectLinks[subject] || "#"; 
+  const pyqLink = "#"; // 🔗 Placeholder for PYQ, you’ll add real links later
+
+  dynamicContent.innerHTML = `
+    <section class="subject-options-section section">
+      <h2>${subject}</h2>
+      <div class="notes-and-pyq-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <a href="${notesLink}" target="_blank" style= "text-decoration: none">
+          <div class="card notes-option" style="padding: 2rem; font-size: 1.5rem">
+            Notes
+          </div>
+        </a>
+        <a href="${pyqLink}" target="_blank"  style= "text-decoration: none;">
+          <div class="card pyq-option" style="padding: 2rem; font-size: 1.5rem;">
+            PYQ
+          </div>
+        </a>
+      </div>
+      <button class="game-back-btn" id="back-to-subjects" 
+              data-branch="${branch}" data-year="${year}" data-semester="${semester}">
+        Back to Subjects
+      </button>
+    </section>
+  `;
+};
+
+
 
   // const renderUnitSelection = (subject, type, branch, year, semester) => {
   //   dynamicContent.innerHTML = `
@@ -1346,39 +1341,42 @@ function solve(input) {
   //               `;
   // };
 
-  const renderPyqSelection = (subject, branch, year, semester) => {
-    dynamicContent.innerHTML = `
-                    <section class="pyq-selection-section section">
-                        <h2>${subject} - PYQ</h2>
-                        <div class="pyq-options-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                            <div class="card mid-sem-option" data-type="pyq" data-term="mid" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
-                                Mid-Sem
-                            </div>
-                            <div class="card end-sem-option" data-type="pyq" data-term="end" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
-                                End-Sem
-                            </div>
-                        </div>
-                        <button class="game-back-btn" id="back-to-subject-options" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Back to Options</button>
-                    </section>
-                `;
-  };
+  // const renderPyqSelection = (subject, branch, year, semester) => {
+  //   dynamicContent.innerHTML = `
+  //                   <section class="pyq-selection-section section">
+  //                       <h2>${subject} - PYQ</h2>
+  //                       <div class="pyq-options-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+  //                           <div class="card mid-sem-option" data-type="pyq" data-term="mid" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
+  //                               Mid-Sem
+  //                           </div>
+  //                           <div class="card end-sem-option" data-type="pyq" data-term="end" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}" style="padding: 2rem; font-size: 1.5rem;">
+  //                               End-Sem
+  //                           </div>
+  //                       </div>
+  //                       <button class="game-back-btn" id="back-to-subject-options" data-subject="${subject}" data-branch="${branch}" data-year="${year}" data-semester="${semester}">Back to Options</button>
+  //                   </section>
+  //               `;
+  // };
 
-  const renderPyqViewer = (subject, term) => {
-    const notesContent = `
-                    <h2>${subject} - ${term.toUpperCase()} PYQ</h2>
-                    <div class="card">
-                        <h3>Example Questions for ${term.toUpperCase()}</h3>
-                        <p>This is a placeholder for the Previous Year Questions. This is a dummy example to show how the questions would be displayed.</p>
-                        <a href="https://drive.google.com/drive/folders/13BGj6bG5bYCRfImMJ0b28Qwfj0SoXfFX?usp=drive_link" target="_blank">View as PDF</a>
-                    </div>
-                `;
-    dynamicContent.innerHTML = `
-                    <section class="notes-viewer section">
-                        ${notesContent}
-                         <button class="game-back-btn" id="back-to-pyq-options" data-subject="${subject}">Back to PYQ Options</button>
-                    </section>
-                `;
-  };
+  const renderPyqViewer = (subject) => {
+  const notesContent = `
+    <h2>${subject} - PYQs</h2>
+    <div class="card">
+      <h3>Previous Year Questions</h3>
+      <p>This is a placeholder for the PYQs. Replace this with Google Drive links per subject.</p>
+      <a href="https://drive.google.com/drive/folders/your_subject_pyq_link" target="_blank">View PYQs</a>
+    </div>
+  `;
+
+  dynamicContent.innerHTML = `
+    <section class="notes-viewer section">
+      ${notesContent}
+      <button class="game-back-btn" id="back-to-subject-options" 
+              data-subject="${subject}">Back to Options</button>
+    </section>
+  `;
+};
+
 
   const renderUnitViewer = (subject, type, unit) => {
     const notesContent = `
