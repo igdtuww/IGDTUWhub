@@ -17,7 +17,8 @@ body {
 /* Navbar Base */
 .navbar {
   background-color: #1e1e1e;
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +33,7 @@ body {
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
+  padding-left: 2rem;
 }
 
 /* Navigation Links */
@@ -40,6 +42,7 @@ body {
   display: flex;
   gap: 2rem;
   margin: 0;
+  padding-right: 0.95rem;
 }
 
 .nav-links a {
@@ -520,7 +523,8 @@ td input {
   background-color: #d63384;
   color: #fff;
   border: none;
-  padding: 0.5rem;
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -662,6 +666,9 @@ footer {
   }
   .nav-links {
     gap: 1rem;
+  }
+  .remove-subject-btn{
+    padding-right: 2rem;
   }
   .welcome-section {
     flex-direction: column;
@@ -1132,7 +1139,6 @@ footer {
 }
 #gpa-compare-inputs {
   display: flex;
-  gap: 1rem;
   margin-top: 1rem;
 }
 #gpa-compare-inputs input {
@@ -1194,7 +1200,7 @@ footer {
 .logo-menu {
   display: flex;
   align-items: center;
-  gap: 12rem; /* space between logo and hamburger */
+  gap: 2rem; /* space between logo and hamburger */
 }
 
 /* Keep navbar content aligned */
@@ -1203,4 +1209,13 @@ footer {
 }
 .menu-toggle:checked ~ .nav-links {
   display: flex;
+}
+@media (max-width:760px) {
+  .logo{
+    padding-left: 8rem;
+  }
+  .menu-icon{
+    padding-right:8rem;
+  }
+  
 }
