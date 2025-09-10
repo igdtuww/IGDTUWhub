@@ -1364,10 +1364,26 @@ const subjectLinks = {
   // add more subjects here...
 };
 
+const pyqLinks = {
+  "Applied Mathematics": "https://drive.google.com/drive/folders/1vuQlxljaUk-nd1J7cLsGeM9P4BisY54v?usp=drive_link",
+  "Applied Physics": "https://drive.google.com/drive/folders/1lD2QvIAW_7beX65zqu9rKYBgCa1fkqCs?usp=drive_link",
+  "Programming with Python": "https://drive.google.com/drive/folders/1HhJlqmXWmRuoODcax-PbLEjdsdb_y55x?usp=drive_link",
+  "IT Workshop": "https://drive.google.com/drive/folders/1WWSY6PQdv--uGEHlu20Z376LM3GA8IDq?usp=drive_link",
+  "Communication Skills":"https://drive.google.com/drive/folders/1lLbwQNr_i5iiM0tlImezsEMWYOAfaOVB?usp=drive_link",
+  "Environmental Sciences":"https://drive.google.com/drive/folders/1OUEnMuy0eZnE8gSqcjSB5u35WNIY6NVt?usp=drive_link",
+  "Introduction to Data Science":"https://drive.google.com/drive/folders/1ROIfGg9IB_m20iRb6IgrQguL-xgnuYQN?usp=drive_link",
+  "Web Application Development":"https://drive.google.com/drive/folders/19AUfb-6i1LukbpkwdYWpv6HNEVn5Wper?usp=drive_link",
+  "Soft Skills and Personality Development":"https://drive.google.com/drive/folders/1_Teky5w13k88V_zKHgpQTb7v1XyD2_8f?usp=drive_link",
+  "Probability and Statistics":"https://drive.google.com/drive/folders/1HDqQX8EGhHA2HvQXSIM_QZ54ojtKX__q?usp=drive_link",
+  "Object Oriented Programming":"https://drive.google.com/drive/folders/1BVZ5szuIywvNNu_FYc7xY5AdyQirTU0m?usp=drive_link",
+  // keep adding subjects with their PYQ links...
+};
+
+
 
 const renderSubjectOptions = (subject, branch, year, semester) => {
   const notesLink = subjectLinks[subject] || "#"; 
-  const pyqLink = "#"; // 🔗 Placeholder for PYQ, you’ll add real links later
+  const pyqLink = pyqLinks[subject] // 🔗 Placeholder for PYQ, you’ll add real links later
 
   dynamicContent.innerHTML = `
     <section class="subject-options-section section">
