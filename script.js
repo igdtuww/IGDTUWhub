@@ -46,34 +46,34 @@ const branches = {
                   "Advanced IoT and Real World Applications",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "AI Ethics",
-                  // "AI in Healthcare",
-                  // "Advanced ML",
-                  // "Mobile Computing",
-                ],
-                "6th Semester": [
-                  // "Capstone Project",
-                  // "Blockchain",
-                  // "Cyber Security",
-                  // "Cloud Computing",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Data Analytics",
-                  // "Big Data",
-                  // "Information Security",
-                  // "Advanced Algorithms",
-                ],
-                "8th Semester": [
-                  // "Distributed Systems",
-                  // "Advanced Topics in AI",
-                  // "IoT",
-                  // "Robotics",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "AI Ethics",
+              //     // "AI in Healthcare",
+              //     // "Advanced ML",
+              //     // "Mobile Computing",
+              //   ],
+              //   "6th Semester": [
+              //     // "Capstone Project",
+              //     // "Blockchain",
+              //     // "Cyber Security",
+              //     // "Cloud Computing",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Data Analytics",
+              //     // "Big Data",
+              //     // "Information Security",
+              //     // "Advanced Algorithms",
+              //   ],
+              //   "8th Semester": [
+              //     // "Distributed Systems",
+              //     // "Advanced Topics in AI",
+              //     // "IoT",
+              //     // "Robotics",
+              //   ],
+              // },
             },
           },
           cse: {
@@ -117,34 +117,34 @@ const branches = {
                   "Open Source Technologies",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Big Data",
-                  // "Information Security",
-                  // "Advanced Algorithms",
-                  // "Machine Learning",
-                ],
-                "6th Semester": [
-                  // "Artificial Intelligence",
-                  // "IoT",
-                  // "Robotics",
-                  // "Blockchain",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "VLSI Design",
-                  // "Optical Communication",
-                  // "Satellite Communication",
-                  // "Wireless Networks",
-                ],
-                "8th Semester": [
-                  // "Capstone Project",
-                  // "Advanced Topics in CS",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Big Data",
+              //     // "Information Security",
+              //     // "Advanced Algorithms",
+              //     // "Machine Learning",
+              //   ],
+              //   "6th Semester": [
+              //     // "Artificial Intelligence",
+              //     // "IoT",
+              //     // "Robotics",
+              //     // "Blockchain",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "VLSI Design",
+              //     // "Optical Communication",
+              //     // "Satellite Communication",
+              //     // "Wireless Networks",
+              //   ],
+              //   "8th Semester": [
+              //     // "Capstone Project",
+              //     // "Advanced Topics in CS",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
             },
           },
           "ece-ai": {
@@ -187,34 +187,34 @@ const branches = {
                   "Design and Ananlysis of Algorithms",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Deep Learning",
-                  // "Computer Vision",
-                  // "Natural Language Processing",
-                  // "AI Ethics",
-                ],
-                "6th Semester": [
-                  // "AI in Healthcare",
-                  // "Advanced ML",
-                  // "Mobile Computing",
-                  // "Distributed Systems",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Data Analytics",
-                  // "Big Data",
-                  // "Information Security",
-                  // "Advanced Algorithms",
-                ],
-                "8th Semester": [
-                  // "Capstone Project",
-                  // "Advanced Topics in ECE-AI",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Deep Learning",
+              //     // "Computer Vision",
+              //     // "Natural Language Processing",
+              //     // "AI Ethics",
+              //   ],
+              //   "6th Semester": [
+              //     // "AI in Healthcare",
+              //     // "Advanced ML",
+              //     // "Mobile Computing",
+              //     // "Distributed Systems",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Data Analytics",
+              //     // "Big Data",
+              //     // "Information Security",
+              //     // "Advanced Algorithms",
+              //   ],
+              //   "8th Semester": [
+              //     // "Capstone Project",
+              //     // "Advanced Topics in ECE-AI",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
             },
           },
           ece: {
@@ -257,34 +257,34 @@ const branches = {
                   "Control Systems",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Data Analytics",
-                  // "Big Data",
-                  // "Information Security",
-                  // "Advanced Algorithms",
-                ],
-                "6th Semester": [
-                  // "Machine Learning",
-                  // "Artificial Intelligence",
-                  // "Deep Learning",
-                  // "Computer Vision",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Natural Language Processing",
-                  // "AI Ethics",
-                  // "AI in Healthcare",
-                  // "Advanced ML",
-                ],
-                "8th Semester": [
-                  // "Capstone Project",
-                  // "Advanced Topics in ECE",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Data Analytics",
+              //     // "Big Data",
+              //     // "Information Security",
+              //     // "Advanced Algorithms",
+              //   ],
+              //   "6th Semester": [
+              //     // "Machine Learning",
+              //     // "Artificial Intelligence",
+              //     // "Deep Learning",
+              //     // "Computer Vision",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Natural Language Processing",
+              //     // "AI Ethics",
+              //     // "AI in Healthcare",
+              //     // "Advanced ML",
+              //   ],
+              //   "8th Semester": [
+              //     // "Capstone Project",
+              //     // "Advanced Topics in ECE",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
             },
           },
           it: {
@@ -329,34 +329,34 @@ const branches = {
                   "Fundamentals of Devops",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Artificial Intelligence",
-                  // "Deep Learning",
-                  // "Computer Vision",
-                  // "Natural Language Processing",
-                ],
-                "6th Semester": [
-                  // "AI Ethics",
-                  // "AI in Healthcare",
-                  // "Advanced ML",
-                  // "Capstone Project",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Advanced Topics in IT",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                  // "Data Analytics",
-                ],
-                "8th Semester": [
-                  // "Advanced Algorithms",
-                  // "Robotics",
-                  // "IoT",
-                  // "Satellite Communication",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Artificial Intelligence",
+              //     // "Deep Learning",
+              //     // "Computer Vision",
+              //     // "Natural Language Processing",
+              //   ],
+              //   "6th Semester": [
+              //     // "AI Ethics",
+              //     // "AI in Healthcare",
+              //     // "Advanced ML",
+              //     // "Capstone Project",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Advanced Topics in IT",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //     // "Data Analytics",
+              //   ],
+              //   "8th Semester": [
+              //     // "Advanced Algorithms",
+              //     // "Robotics",
+              //     // "IoT",
+              //     // "Satellite Communication",
+              //   ],
+              // },
             },
           },
           aiml: {
@@ -401,34 +401,34 @@ const branches = {
                   "Fundamentals of Devops",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Software Engineering",
-                  // "Data Mining",
-                  // "Cloud Computing",
-                  // "Cyber Security",
-                ],
-                "6th Semester": [
-                  // "Blockchain",
-                  // "Mobile Computing",
-                  // "Distributed Systems",
-                  // "Advanced Algorithms",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Operating Systems",
-                  // "Computer Networks",
-                  // "Information Security",
-                  // "Web Development",
-                ],
-                "8th Semester": [
-                  // "Advanced Topics in AIML",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                  // "Advanced AI",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Software Engineering",
+              //     // "Data Mining",
+              //     // "Cloud Computing",
+              //     // "Cyber Security",
+              //   ],
+              //   "6th Semester": [
+              //     // "Blockchain",
+              //     // "Mobile Computing",
+              //     // "Distributed Systems",
+              //     // "Advanced Algorithms",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Operating Systems",
+              //     // "Computer Networks",
+              //     // "Information Security",
+              //     // "Web Development",
+              //   ],
+              //   "8th Semester": [
+              //     // "Advanced Topics in AIML",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //     // "Advanced AI",
+              //   ],
+              // },
             },
           },
           mae: {
@@ -474,34 +474,34 @@ const branches = {
                   "IoT Lab",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Fluid Power Engineering",
-                  // "Refrigeration and Air Conditioning",
-                  // "Tool Design",
-                  // "Advanced Manufacturing Processes",
-                ],
-                "6th Semester": [
-                  // "Computational Fluid Dynamics",
-                  // "Composite Materials",
-                  // "Industrial Automation",
-                  // "Quality Management",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Supply Chain Management",
-                  // "Aerospace Engineering",
-                  // "Robotics and Automation",
-                  // "Energy Management",
-                ],
-                "8th Semester": [
-                  // "Capstone Project",
-                  // "Advanced Topics in MAE",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Fluid Power Engineering",
+              //     // "Refrigeration and Air Conditioning",
+              //     // "Tool Design",
+              //     // "Advanced Manufacturing Processes",
+              //   ],
+              //   "6th Semester": [
+              //     // "Computational Fluid Dynamics",
+              //     // "Composite Materials",
+              //     // "Industrial Automation",
+              //     // "Quality Management",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Supply Chain Management",
+              //     // "Aerospace Engineering",
+              //     // "Robotics and Automation",
+              //     // "Energy Management",
+              //   ],
+              //   "8th Semester": [
+              //     // "Capstone Project",
+              //     // "Advanced Topics in MAE",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
             },
           },
           dmam: {
@@ -547,48 +547,48 @@ const branches = {
                   "IoT Lab",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Predictive Analytics",
-                  // "Marketing Automation",
-                  // "CRM Strategies",
-                  // "Ethical Hacking",
-                ],
-                "6th Semester": [
-                  // "Capstone Project",
-                  // "Financial Analysis",
-                  // "Advanced Data Mining",
-                  // "Digital Advertising",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Advanced Analytics",
-                  // "Business Intelligence",
-                  // "IoT in Marketing",
-                  // "AI in Marketing",
-                ],
-                "8th Semester": [
-                  // "Mobile Marketing",
-                  // "Supply Chain Management",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
-              5: {
-                "9th Semester": [
-                  // "Advanced Topics in DMAM",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                  // "Communication Skills",
-                ],
-                "10th Semester": [
-                  // "Advanced AI",
-                  // "Capstone Project",
-                  // "Data Analytics",
-                  // "Robotics",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Predictive Analytics",
+              //     // "Marketing Automation",
+              //     // "CRM Strategies",
+              //     // "Ethical Hacking",
+              //   ],
+              //   "6th Semester": [
+              //     // "Capstone Project",
+              //     // "Financial Analysis",
+              //     // "Advanced Data Mining",
+              //     // "Digital Advertising",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Advanced Analytics",
+              //     // "Business Intelligence",
+              //     // "IoT in Marketing",
+              //     // "AI in Marketing",
+              //   ],
+              //   "8th Semester": [
+              //     // "Mobile Marketing",
+              //     // "Supply Chain Management",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
+              // 5: {
+              //   "9th Semester": [
+              //     // "Advanced Topics in DMAM",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //     // "Communication Skills",
+              //   ],
+              //   "10th Semester": [
+              //     // "Advanced AI",
+              //     // "Capstone Project",
+              //     // "Data Analytics",
+              //     // "Robotics",
+              //   ],
+              // },
             },
           },
           mac: {
@@ -629,34 +629,34 @@ const branches = {
                   // "Mechatronics",
                 ],
               },
-              3: {
-                "5th Semester": [
-                  // "Automation",
-                  // "Industrial Automation",
-                  // "CNC Machines",
-                  // "Quality Control",
-                ],
-                "6th Semester": [
-                  // "Supply Chain Management",
-                  // "Production Planning",
-                  // "Operations Research",
-                  // "Industrial Management",
-                ],
-              },
-              4: {
-                "7th Semester": [
-                  // "Advanced Manufacturing",
-                  // "Renewable Energy Systems",
-                  // "Artificial Intelligence",
-                  // "Machine Learning",
-                ],
-                "8th Semester": [
-                  // "Capstone Project",
-                  // "Advanced Topics in MAC",
-                  // "Software Testing",
-                  // "Quantum Computing",
-                ],
-              },
+              // 3: {
+              //   "5th Semester": [
+              //     // "Automation",
+              //     // "Industrial Automation",
+              //     // "CNC Machines",
+              //     // "Quality Control",
+              //   ],
+              //   "6th Semester": [
+              //     // "Supply Chain Management",
+              //     // "Production Planning",
+              //     // "Operations Research",
+              //     // "Industrial Management",
+              //   ],
+              // },
+              // 4: {
+              //   "7th Semester": [
+              //     // "Advanced Manufacturing",
+              //     // "Renewable Energy Systems",
+              //     // "Artificial Intelligence",
+              //     // "Machine Learning",
+              //   ],
+              //   "8th Semester": [
+              //     // "Capstone Project",
+              //     // "Advanced Topics in MAC",
+              //     // "Software Testing",
+              //     // "Quantum Computing",
+              //   ],
+              // },
             },
           },
         };
@@ -1394,6 +1394,13 @@ const pyqLinks = {
   "Soft Skills and Personality Development":"https://drive.google.com/drive/folders/1_Teky5w13k88V_zKHgpQTb7v1XyD2_8f?usp=drive_link",
   "Probability and Statistics":"https://drive.google.com/drive/folders/1HDqQX8EGhHA2HvQXSIM_QZ54ojtKX__q?usp=drive_link",
   "Object Oriented Programming":"https://drive.google.com/drive/folders/1BVZ5szuIywvNNu_FYc7xY5AdyQirTU0m?usp=drive_link",
+  "Discrete Mathematics":"https://drive.google.com/drive/folders/1-y7yYuKIgqs35f4tguQwHv8O9RbaIYx2",
+  "Software Engineering":"https://drive.google.com/drive/folders/1j-mLBHgBjG0cNBSeSDRN6XfrI5D1uPYv",
+  "Design and Analysis of Algorithm":"https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
+  "Operations Management":"https://drive.google.com/drive/folders/1PJfbTUJ-xL4x12DLb3Fp_IgZA8Y6Pcw1",
+  "Artificial Intelligence":"https://drive.google.com/drive/folders/1j8MkHSglhUEEjtacSjaA_GCtbvp9BCDo",
+  "Computer Networks":"https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
+  "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln"
   // keep adding subjects with their PYQ links...
 };
 
