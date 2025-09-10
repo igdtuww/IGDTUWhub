@@ -2458,6 +2458,193 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     }
   }
 
+  // POMODORO
+
+const renderPomodoro = () => {
+  dynamicContent.innerHTML = `
+    <section class="pomodoro-section">
+      <h1>Pomodoro Timer</h1>
+      <p>Boost your focus with the Pomodoro Technique ⏳</p>
+
+      <div class="pomodoro-card">
+        <!-- Session Buttons -->
+        <div class="session-selector">
+          <button id="pomodoro-button" class="session-selector-button active">Pomodoro</button>
+          <button id="short-break-button" class="session-selector-button">Short Break</button>
+          <button id="long-break-button" class="session-selector-button">Long Break</button>
+        </div>
+
+        <!-- Timer Display -->
+        <div id="timer-display" class="timer-display">25:00</div>
+
+        <!-- Controls -->
+        <div class="control-buttons">
+          <button id="start-button" class="control-button">Start</button>
+          <button id="pause-button" class="control-button hidden">Pause</button>
+          <button id="reset-button" class="control-button">Reset</button>
+        </div>
+
+        <!-- Music Controls -->
+        <div class="music-section">
+          <h3>🎶 Focus Music</h3>
+          
+          <!-- Music Mode Selector -->
+          <div class="music-modes">
+            <button id="lofi-mode" class="music-mode-button active">Lofi</button>
+            <button id="chill-mode" class="music-mode-button">Chill</button>
+            <button id="rainy-mode" class="music-mode-button">Rainy Day</button>
+          </div>
+          <audio id="audio-player"></audio>
+          <button id="play-pause-btn">▶️ Play</button>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ================= Timer Logic =================
+  const timerDisplay = document.getElementById("timer-display");
+  const startButton = document.getElementById("start-button");
+  const pauseButton = document.getElementById("pause-button");
+  const resetButton = document.getElementById("reset-button");
+  const pomodoroButton = document.getElementById("pomodoro-button");
+  const shortBreakButton = document.getElementById("short-break-button");
+  const longBreakButton = document.getElementById("long-break-button");
+
+  const WORK_DURATION = 25 * 60;
+  const SHORT_BREAK_DURATION = 5 * 60;
+  const LONG_BREAK_DURATION = 15 * 60;
+
+  let currentTime = WORK_DURATION;
+  let timer = null;
+  let isPaused = false;
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
+  }
+
+  function updateTimerDisplay() {
+    timerDisplay.textContent = formatTime(currentTime);
+  }
+
+  function startTimer() {
+    startButton.classList.add("hidden");
+    pauseButton.classList.remove("hidden");
+    timer = setInterval(() => {
+      if (!isPaused) {
+        currentTime--;
+        updateTimerDisplay();
+        if (currentTime <= 0) {
+          clearInterval(timer);
+          alert("⏰ Time’s Up!");
+          resetTimer();
+        }
+      }
+    }, 1000);
+  }
+
+  function pauseTimer() {
+    isPaused = true;
+    startButton.textContent = "Resume";
+    startButton.classList.remove("hidden");
+    pauseButton.classList.add("hidden");
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    isPaused = false;
+    if (pomodoroButton.classList.contains("active")) currentTime = WORK_DURATION;
+    else if (shortBreakButton.classList.contains("active")) currentTime = SHORT_BREAK_DURATION;
+    else currentTime = LONG_BREAK_DURATION;
+
+    startButton.textContent = "Start";
+    startButton.classList.remove("hidden");
+    pauseButton.classList.add("hidden");
+    updateTimerDisplay();
+  }
+
+  // Attach Events
+  startButton.addEventListener("click", () => {
+    isPaused = false;
+    startTimer();
+  });
+  pauseButton.addEventListener("click", pauseTimer);
+  resetButton.addEventListener("click", resetTimer);
+
+  [pomodoroButton, shortBreakButton, longBreakButton].forEach((button) => {
+    button.addEventListener("click", () => {
+      [pomodoroButton, shortBreakButton, longBreakButton].forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      resetTimer();
+    });
+  });
+
+  updateTimerDisplay();
+
+  // ================= Music Player =================
+  const audioPlayer = document.getElementById("audio-player");
+  const lofiBtn = document.getElementById("lofi-mode");
+  const chillBtn = document.getElementById("chill-mode");
+  const rainyBtn = document.getElementById("rainy-mode");
+
+  // One track per mode (replace these with your real URLs)
+  const tracks = {
+    lofi: "music/lofi.mp3",
+    chill: "music/cozy.mp3",
+    rainy: "music/rain.mp3"
+  };
+
+  let currentMode = "lofi";
+
+  function switchMode(mode) {
+  currentMode = mode;
+
+  // Remove all active + theme classes
+  [lofiBtn, chillBtn, rainyBtn].forEach((btn) =>
+    btn.classList.remove("active", "lofi-active", "chill-active", "rainy-active")
+  );
+
+  // Add active + theme class to selected mode
+  if (mode === "lofi") lofiBtn.classList.add("active", "lofi-active");
+  if (mode === "chill") chillBtn.classList.add("active", "chill-active");
+  if (mode === "rainy") rainyBtn.classList.add("active", "rainy-active");
+
+  // Load track
+  audioPlayer.src = tracks[mode];
+  // DO NOT auto-play here
+}
+
+const playPauseBtn = document.getElementById("play-pause-btn");
+
+playPauseBtn.addEventListener("click", () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    playPauseBtn.textContent = "⏸️ Pause";
+  } else {
+    audioPlayer.pause();
+    playPauseBtn.textContent = "▶️ Play";
+  }
+});
+
+
+  lofiBtn.addEventListener("click", () => switchMode("lofi"));
+  chillBtn.addEventListener("click", () => switchMode("chill"));
+  rainyBtn.addEventListener("click", () => switchMode("rainy"));
+
+  // Load default (Lofi)
+  //switchMode("lofi");
+};
+
+document.getElementById("pomodoro-link").addEventListener("click", (e) => {
+  e.preventDefault();
+  renderPomodoro();
+});
+
+
+
+
+
   // Chatbot functionality
   // --- Chatbot Elements ---
   const chatbotToggle = document.getElementById("chatbot-toggle");

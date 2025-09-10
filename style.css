@@ -1221,3 +1221,179 @@ footer {
   }
   
 }
+
+/* ================= Pomodoro Timer Styles ================= */
+
+.pomodoro-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.pomodoro-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.pomodoro-section p {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+/* Timer card */
+.pomodoro-card {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Session selector buttons */
+.session-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.session-selector-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.session-selector-button:hover {
+  background-color: #333;
+}
+
+.session-selector-button.active {
+  background-color: #4b89dc;
+  color: #fff;
+}
+
+/* Timer display */
+.timer-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Control buttons */
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.control-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4b89dc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+  background-color: #386ba1;
+}
+
+.control-button.hidden {
+  display: none;
+}
+
+
+/* Pomodoro modal + music styles */
+.modal.hidden { display: none; }
+.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1200; }
+.modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.modal-content { position: relative; background: #1e1e1e; padding: 1rem; border-radius: 10px; width: 94%; max-width: 420px; border: 1px solid #333; z-index: 10; color: #e0e0e0; }
+.music-track-button { width: 100%; padding: 0.7rem; border-radius: 6px; margin-bottom: 6px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #333; text-align: left; cursor: pointer; font-weight: 600; }
+.music-track-button:hover { background:#333; }
+
+
+/* ================= Music Section Styling ================= */
+.music-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.music-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff; /* match overall text color */
+}
+
+/* Music Mode Buttons */
+.music-mode-button {
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: #4b89dc; /* main button color */
+  color: #fff; /* text color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.music-mode-button:hover,
+.music-mode-button.active {
+  background-color: #386ba1; /* hover/active color */
+  color: #fff;
+}
+
+/* Play / Pause Button */
+#play-pause-btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff; /* text color */
+  background-color: #4b89dc; /* main button color */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#play-pause-btn:hover {
+  background-color: #386ba1;
+  transform: translateY(-2px);
+}
+
+/* Music Track Buttons */
+.music-track-button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background-color: #4b89dc; /* match other buttons */
+  color: #fff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.music-track-button:hover {
+  background-color: #386ba1;
+}
