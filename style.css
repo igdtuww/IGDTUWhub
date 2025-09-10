@@ -1343,23 +1343,58 @@ footer {
 
 /* Music Mode Buttons */
 .music-mode-button {
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  margin: 0 0.5rem;
+  border-radius: 12px;
+  padding: 0.6rem 1.4rem;
+  margin: 0.4rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  background-color: #4b89dc; /* main button color */
-  color: #fff; /* text color */
-  border: none;
+  font-size: 0.9rem;
+  background-color: #2a2f3a;        /* dark bluish-grey (not black) */
+  color: #b0c9f0;                   /* soft light blue text */
+  border: 1px solid #3c4452;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-.music-mode-button:hover,
-.music-mode-button.active {
-  background-color: #386ba1; /* hover/active color */
-  color: #fff;
+.music-mode-button:hover {
+  background-color: #3b4555;        /* slightly lighter on hover */
+  color: #4b89dc;                   /* highlight blue text */
+  border-color: #4b89dc;
+  transform: translateY(-2px);
 }
+
+.music-mode-button.active {
+  background-color: #4b89dc;        /* solid theme blue */
+  color: #fff;
+  border-color: #4b89dc;
+  box-shadow: 0 4px 10px rgba(75,137,220,0.4); /* blue glow */
+}
+
+/* Play / Pause Button */
+.play-pause-button {
+  border-radius: 14px;
+  padding: 0.8rem 2.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #4b89dc;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+.play-pause-button:hover {
+  background-color: #386ba1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.6);
+}
+
+.play-pause-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
 
 /* Play / Pause Button */
 #play-pause-btn {
