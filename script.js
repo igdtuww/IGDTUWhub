@@ -1406,7 +1406,8 @@ const pyqLinks = {
   "Artificial Intelligence":"https://drive.google.com/drive/folders/1j8MkHSglhUEEjtacSjaA_GCtbvp9BCDo",
   "Computer Networks":"https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
   "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
-  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I"
+  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
+  "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp"
   // keep adding subjects with their PYQ links...
 };
 
