@@ -1407,7 +1407,8 @@ const pyqLinks = {
   "Computer Networks":"https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
   "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
   "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
-  "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp"
+  "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
+  "Programming with C" : "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY"
   // keep adding subjects with their PYQ links...
 };
 
