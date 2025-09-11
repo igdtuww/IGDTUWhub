@@ -1377,6 +1377,11 @@ const subjectLinks = {
   "Electronics Workshop": "https://drive.google.com/drive/folders/1aBc1owgICAf_DK20P7I-tR9lDXTmjbAO?usp=drive_link",
   "Programming Fundamentals": "https://drive.google.com/drive/folders/1-LPF6YxsvldZqxkwMzsJhpHJ01iD3l7i?usp=drive_link",
   "Workshop Practice": "https://drive.google.com/drive/folders/1y4u16aD_sG51_FtDU6PBL4Dnr3zQc_nk?usp=drive_link",
+  "Discrete Mathematics": "https://drive.google.com/drive/folders/1VxWIJfY791LAWtQrMcTdPtnfuAvVohJp",
+  "Data Structures and Algorithm": "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
+  "Database Management Systems": "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj",
+  "Operations Management" : "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
+  "Open Source Technologies" :"https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA"
 
   //"subject": "link",
   // add more subjects here...
@@ -1400,7 +1405,8 @@ const pyqLinks = {
   "Operations Management":"https://drive.google.com/drive/folders/1PJfbTUJ-xL4x12DLb3Fp_IgZA8Y6Pcw1",
   "Artificial Intelligence":"https://drive.google.com/drive/folders/1j8MkHSglhUEEjtacSjaA_GCtbvp9BCDo",
   "Computer Networks":"https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
-  "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln"
+  "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
+  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I"
   // keep adding subjects with their PYQ links...
 };
 
