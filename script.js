@@ -1408,7 +1408,8 @@ const pyqLinks = {
   "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
   "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
   "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
-  "Programming with C" : "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY"
+  "Programming with C" : "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY",
+  "Data Structures and Algorithms" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I"
   // keep adding subjects with their PYQ links...
 };
 
