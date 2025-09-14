@@ -32,18 +32,20 @@ const branches = {
               2: {
                 "3rd Semester": [
                   "Discrete Mathematics",
-                  "Software Engineering",
-                  "Design and Analysis of Algorithm",
+                  "Database Management Systems",
+                  "Artificial Intelligence",
                   "Operations Management",
                   "Ergonomic Design",
-                  "Introduction to Internet of Things",
+                  "Object Oriented Programming",
+                  "Indian Knowledge System"
                 ],
                 "4th Semester": [
-                  "Database Management Systems",
-                  "Computer Organization and Architecture",
+                  "Design and Analysis of Algorithms",
+                  "Computer Networks",
                   "Operating Systems",
-                  "Data Communication and Computer Networks",
-                  "Advanced IoT and Real World Applications",
+                  "Software Engineering",
+                  "Open Source Technologies",
+                  "Indian Knowledge System"
                 ],
               },
               // 3: {
@@ -103,18 +105,19 @@ const branches = {
               2: {
                 "3rd Semester": [
                   "Discrete Mathematics",
-                  "Database Management Systems",
-                  "Artificial Intelligence",
+                  "Software Engineering",
+                  "Design and Analysis of Algorithm",
                   "Operations Management",
                   "Ergonomic Design",
-                  "Object Oriented Programming",
+                  "Introduction to Internet of Things",
+                  "Indian Knowledge System"
                 ],
                 "4th Semester": [
-                  "Design and Analysis of Algorithms",
-                  "Computer Networks",
+                  "Database Management Systems",
+                  "Computer Organization and Architecture",
                   "Operating Systems",
-                  "Software Engineering",
-                  "Open Source Technologies",
+                  "Indian Knowledge System",
+                  "Advanced IoT and Real World Applications ",
                 ],
               },
               // 3: {
@@ -247,6 +250,8 @@ const branches = {
                   "Numerical Techniques for Engineers",
                   "Digital System Design",
                   "Analog Communication Systems",
+                  "Data Structures and Algorithm",
+                  "Object Oriented Programming",
                   "Electronics Circuit Simulation Workshop",
                   "Advanced Electronic Workshop",
                 ],
@@ -255,6 +260,7 @@ const branches = {
                   "Electromagnetic Field Theory & Antenna",
                   "Digital Communication Systems",
                   "Control Systems",
+                  "Indian Knowledge System",
                 ],
               },
               // 3: {
