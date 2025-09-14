@@ -1381,7 +1381,9 @@ const subjectLinks = {
   "Data Structures and Algorithm": "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
   "Database Management Systems": "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj",
   "Operations Management" : "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
-  "Open Source Technologies" :"https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA"
+  "Open Source Technologies" :"https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
+  "Artificial Intelligence" : "https://drive.google.com/drive/folders/1IE-_mXKynVWpojvvOGCCMhJHPhPExt0A",
+  "Software Engineering" : "https://drive.google.com/drive/folders/1SJMMxPDMypkQbbP02oFPfIKTwOMI6uPY"
 
   //"subject": "link",
   // add more subjects here...
