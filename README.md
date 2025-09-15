@@ -9,6 +9,7 @@ It serves as a **centralized academic and productivity hub** that includes:
 - 🎮 Built-in fun games  
 - 📅 Academic calendar with events  
 - 📚 Saved Courses option  
+- ⏳ Pomodoro Timer for focused study sessions  
 - 🤖 Chatbot assistant  
 - 📌 Resources organized by department: CSE, CSE-AI, ECE, ECE-AI, IT, AIML, MAE  
 
@@ -33,6 +34,10 @@ It serves as a **centralized academic and productivity hub** that includes:
 
 - **Games Section:**  
   Relax with basic games like Tic Tac Toe, Memory Match, and Puzzle.
+
+- **Pomodoro Timer:**  
+  Stay productive with the **25-minute focus + 5-minute break technique** built right into the platform.  
+  Perfect for study sessions, revision, or project work.
 
 - **Integrated Chatbot:**  
   Assists users with navigation and FAQs.

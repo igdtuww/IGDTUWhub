@@ -44,8 +44,9 @@ const branches = {
                   "Computer Networks",
                   "Operating Systems",
                   "Software Engineering",
-                  "Open Source Technologies",
-                  "Indian Knowledge System"
+                  "Cloud Computing",
+                  "Optimization Techniques and Decision Making",
+                  "Open Source Technologies"
                 ],
               },
               // 3: {
@@ -116,8 +117,7 @@ const branches = {
                   "Database Management Systems",
                   "Computer Organization and Architecture",
                   "Operating Systems",
-                  "Indian Knowledge System",
-                  "Advanced IoT and Real World Applications ",
+                  "Advanced IoT and Real World Applications",
                 ],
               },
               // 3: {
@@ -179,15 +179,18 @@ const branches = {
                 "3rd Semester": [
                   "Numerical Techniques for Engineers",
                   "Analog and Digital Electronics",
-                  "Data Structures and Algorithms",
+                  "Data Structures and Algorithm",
                   "Electronics Circuit Simulation Workshop",
                   "Advanced Electronic Workshop",
+                  "Object Oriented Programming",
                 ],
                 "4th Semester": [
                   "Computer Organization and Architecture",
                   "Artificial Intelligence",
                   "Analog Communication Systems",
                   "Design and Ananlysis of Algorithms",
+                  "Electromagnetic Field Theory and Antenna",
+                  "Database Management Systems",
                 ],
               },
               // 3: {
@@ -257,10 +260,9 @@ const branches = {
                 ],
                 "4th Semester": [
                   "Analog Electronics",
-                  "Electromagnetic Field Theory & Antenna",
+                  "Electromagnetic Field Theory and Antenna",
                   "Digital Communication Systems",
                   "Control Systems",
-                  "Indian Knowledge System",
                 ],
               },
               // 3: {
@@ -471,10 +473,15 @@ const branches = {
                   "Thermal Engineering-I",
                   "Machine Drawing Lab",
                   "Robotics Lab",
+                  'Object Oriented Programming',
+                  "Data Structures and Algorithm",
+                  "Database Management Systems",
+
                 ],
                 "4th Semester": [
                   "Thermal Engineering - II",
                   "Production Technology - II",
+                  "Theory of Machines",
                   "Fluid Mechanics and Hydraulic Machines",
                   "Strength of Materials",
                   "IoT Lab",
@@ -544,10 +551,15 @@ const branches = {
                   "Thermal Engineering-I",
                   "Machine Drawing Lab",
                   "Robotics Lab",
+                  'Object Oriented Programming',
+                  "Data Structures and Algorithm",
+                  "Database Management Systems",
+
                 ],
                 "4th Semester": [
                   "Thermal Engineering - II",
                   "Production Technology - II",
+                  "Theory of Machines",
                   "Fluid Mechanics and Hydraulic Machines",
                   "Strength of Materials",
                   "IoT Lab",
@@ -621,20 +633,20 @@ const branches = {
                   "IT Workshop",
                 ],
               },
-              2: {
-                "3rd Semester": [
-                  // "Thermodynamics",
-                  // "Fluid Mechanics",
-                  // "Manufacturing Technology",
-                  // "Machine Design",
-                ],
-                "4th Semester": [
-                  // "Automobile Engineering",
-                  // "Robotics",
-                  // "CAD/CAM",
-                  // "Mechatronics",
-                ],
-              },
+              // 2: {
+              //   "3rd Semester": [
+              //     // "Thermodynamics",
+              //     // "Fluid Mechanics",
+              //     // "Manufacturing Technology",
+              //     // "Machine Design",
+              //   ],
+              //   "4th Semester": [
+              //     // "Automobile Engineering",
+              //     // "Robotics",
+              //     // "CAD/CAM",
+              //     // "Mechatronics",
+              //   ],
+              // },
               // 3: {
               //   "5th Semester": [
               //     // "Automation",
@@ -1390,7 +1402,37 @@ const subjectLinks = {
   "Open Source Technologies" :"https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
   "Artificial Intelligence" : "https://drive.google.com/drive/folders/1IE-_mXKynVWpojvvOGCCMhJHPhPExt0A",
   "Software Engineering" : "https://drive.google.com/drive/folders/1SJMMxPDMypkQbbP02oFPfIKTwOMI6uPY",
-  "Design and Analysis of Algorithm" : "https://drive.google.com/drive/folders/1Z-5TbKvFhYWdEGlEmzrJS3eTUk4zRvnf"
+  "Design and Analysis of Algorithm" : "https://drive.google.com/drive/folders/1Z-5TbKvFhYWdEGlEmzrJS3eTUk4zRvnf",
+  "Advanced Electronic Workshop" : "https://drive.google.com/drive/folders/1GleJVqHY_f3P5IljgxDkcMWwJQ8LpjYC?usp=drive_link",
+  "Analog and Digital Electronics" : "https://drive.google.com/drive/folders/1tmq4sP4XexFo35n1XeAmoQCGpLzJOEhg?usp=drive_link",
+  "Analog Communication Systems" : "https://drive.google.com/drive/folders/1-A52kLu6YMSCus3PHRY2s-m5E9vg8bDl?usp=drive_link",
+  "Analog Electronics" : "https://drive.google.com/drive/folders/1aM54lOajoK0Sv3RGIbtypwDudtZ6uKHX?usp=drive_link",
+  "Cloud Computing" : "https://drive.google.com/drive/folders/1FJn3W-bgHF9bllkkDAtd6xhjspqEeX6E?usp=drive_link",
+  "Computer Organization and Architecture" : "https://drive.google.com/drive/folders/1pr5vlwc1AFVmZQgsQkDz8VDE_qzf6eAE?usp=drive_link",
+  "Computer Networks" : "https://drive.google.com/drive/folders/1COjUvylpWabPNpaV7KcPU_MJ_rDzHUnj?usp=drive_link",
+  "Control Systems" : "https://drive.google.com/drive/folders/18XQwSUrOdVrLXwfxfZH53aRauT1gcd-z?usp=drive_link",
+  "Digital Communication Systems" : "https://drive.google.com/drive/folders/16Tixly8QPx2Jktypc7gHPKT_toGoVIfR?usp=drive_link",
+  "Digital System Design" : "https://drive.google.com/drive/folders/1AavLJgstZO09g8R81g14ZmzgCYkaBl5E?usp=drive_link",
+  "Electromagnetic Field Theory and Antenna" : "https://drive.google.com/drive/folders/1Lw8ET8ldSqx4JFv8LUm3DYiIdZeNCUzp?usp=drive_link",
+  "Electronics Circuit Simulation Workshop" : "https://drive.google.com/drive/folders/1dW97ZLqGXxrRMv7HSDbBXx44-1A6crXf?usp=drive_link",
+  "Engineering Materials" : "https://drive.google.com/drive/folders/1al2sbqwYSAp8qWxEOYINhid2cKXulwLv?usp=drive_link",
+  "Erogonomic Design" : "https://drive.google.com/drive/folders/1fTRaymllTsT-KA5phPU6_cvYD8LNloAB?usp=drive_link",
+  "Fluid Mechanics and Hydraulic Machines" : "https://drive.google.com/drive/folders/1RUXOPf9OxMf9K1l9-5ssJl9NLHhr0XZA?usp=drive_link",
+  "Fundamentals of Devops" : "https://drive.google.com/drive/folders/1TLRSwOtOMpuW1yyxr5lrpgmadwgVsEbC?usp=drive_link",
+  "Indian Knowledge System" : "https://drive.google.com/drive/folders/1JKisG10iMNF4qKzmJS9c45dAmUOphS59?usp=drive_link",
+  "Introduction to Internet of Things" : "https://drive.google.com/drive/folders/1IW1uDptkOLZMZk6pq5RfEr-sXm_Ogwmo?usp=drive_link",
+  "IoT Lab" : "https://drive.google.com/drive/folders/15qXoIellUeSYWs2B2pVpvXmS8Y8xmGlD?usp=drive_link",
+  "Advanced IoT and Real World Applications" : "https://drive.google.com/drive/folders/1FciF5VeeKg4-iXVcrTE3KzNTh3aHn89d?usp=drive_link",
+  "Machine Drawing Lab" :  "https://drive.google.com/drive/folders/1rhskxhoK-__-__nn6CpohnZ2nqa2duGT?usp=drive_link",
+  "Numerical Techniques for Engineers" : "https://drive.google.com/drive/folders/1ToGlSyemOU0_jHHaBysQJfeEUecN4vG-?usp=drive_link",
+  "Operating Systems" : "https://drive.google.com/drive/folders/1wi1wpyJ-NkaZjitHBOlugutWrfHmVZzB?usp=drive_link",
+  "Production Technology - I" : "https://drive.google.com/drive/folders/1NKYe3zUPSj5dmvwOq19Y5TatYfcttOYL?usp=drive_link",
+  "Production Technology - II" : "https://drive.google.com/drive/folders/1tGhsRereUlVSGEONPYyo0r_FdV6ZV2wv?usp=drive_link",
+  "Robotics Lab" : "https://drive.google.com/drive/folders/11Zeoy_Jga4Nyeihpkzw6qimyCRtYW0-y?usp=drive_link",
+  "Strength of Materials" : "https://drive.google.com/drive/folders/1XOX7lJEhWfXcNAr3LMuhWjo0I47iYrJR?usp=drive_link",
+  "Theory of Machines" : "https://drive.google.com/drive/folders/14Y9wCr63vqalNWBhng_Qqq10UAozVhSX?usp=drive_link",  
+  "Thermal Engineering - I" : "https://drive.google.com/drive/folders/11OpFX6E4hJbVZyRamyaNtjA6m65zQYl5?usp=drive_link",
+  "Thermal Engineering - II" :  "https://drive.google.com/drive/folders/1WOD4b4aSSXennn_u7zTpN7LWG3hBnunb?usp=drive_link"
 
   //"subject": "link",
   // add more subjects here...
@@ -1418,7 +1460,10 @@ const pyqLinks = {
   "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
   "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
   "Programming with C" : "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY",
-  "Data Structures and Algorithms" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I"
+  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
+  "Database Management Systems" : "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
+  "Optimization Techniques and Decision Making" : "https://drive.google.com/drive/folders/1Zzqae6FrNTIzXsZXnYX_qlgx_RCx1jJK?usp=drive_link",
+  "Mobile Application Development" : "https://drive.google.com/drive/folders/1n5ODhFZac24Zd4mktc1YZPoUvQPN4xEu?usp=drive_link"
   // keep adding subjects with their PYQ links...
 };
 
@@ -2665,139 +2710,146 @@ document.getElementById("pomodoro-link").addEventListener("click", (e) => {
 
   // Chatbot functionality
   // --- Chatbot Elements ---
-  const chatbotToggle = document.getElementById("chatbot-toggle");
-  const chatbotBox = document.getElementById("chatbot-box");
-  const chatbotClose = document.getElementById("chatbot-close");
-  const chatbotMessages = document.getElementById("chatbot-messages");
-  const chatbotInput = document.getElementById("chatbot-input");
-  const chatbotSend = document.getElementById("chatbot-send");
+  // Chatbot functionality
+// --- Chatbot Elements ---
+const chatbotToggle = document.getElementById("chatbot-toggle");
+const chatbotBox = document.getElementById("chatbot-box");
+const chatbotClose = document.getElementById("chatbot-close");
+const chatbotMessages = document.getElementById("chatbot-messages");
+const chatbotInput = document.getElementById("chatbot-input");
+const chatbotSend = document.getElementById("chatbot-send");
 
-  const botIntents = {
-    greetings: [
-      "Hello! 👋 How can I help you with IGDTUWHub?",
-      "Hi there! 😊 What would you like to know?",
-      "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
-    ],
-    resources: [
-      {
-        text: "📚 Loading Resources section for you...",
-        action: () => loadSection("resources-link"),
-      },
-    ],
-    games: [
-      {
-        text: "🎮 Taking you to Games!",
-        action: () => loadSection("games-link"),
-      },
-    ],
-    cgpa: [
-      {
-        text: "📊 Opening the CGPA Calculator...",
-        action: () => loadSection("notes-link"),
-      },
-    ],
-    about: [
-      {
-        text: "👩‍💻 Let me show you About Us.",
-        action: () => loadSection("about-us-link"),
-      },
-    ],
-    events: [
-      {
-        text: "📅 Loading Events section now!",
-        action: () => loadSection("events-link"),
-      },
-    ],
-    fallback: [
-      "🤔 Sorry, I didn’t get that. Try asking about resources, games, CGPA calculator, or events.",
-    ],
-  };
+const botIntents = {
+  greetings: [
+    "Hello! 👋 How can I help you with IGDTUWHub?",
+    "Hi there! 😊 What would you like to know?",
+    "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
+  ],
+  resources: [
+    {
+      text: "📚 Loading Resources section for you...",
+      action: () => loadSection("resources-link"),
+    },
+  ],
+  games: [
+    {
+      text: "🎮 Taking you to Games!",
+      action: () => loadSection("games-link"),
+    },
+  ],
+  cgpa: [
+    {
+      text: "📊 Opening the CGPA Calculator...",
+      action: () => loadSection("notes-link"),
+    },
+  ],
+  about: [
+    {
+      text: "👩‍💻 Let me show you About Us.",
+      action: () => loadSection("about-us-link"),
+    },
+  ],
+  events: [
+    {
+      text: "📅 Loading Events section now!",
+      action: () => loadSection("events-link"),
+    },
+  ],
+  pomodoro: [
+    {
+      text: "⏳ Taking you to Pomodoro Timer...",
+      action: () => loadSection("pomodoro-link"), // Link this to your Pomodoro section/page
+    },
+  ],
+  fallback: [
+    "🤔 Sorry, I didn’t get that. Try asking about resources, games, CGPA calculator, pomodoro, or events.",
+  ],
+};
 
-  // --- Utility: Pick a random response from an intent ---
-  const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+// --- Utility: Pick a random response from an intent ---
+const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-  // --- Message UI ---
-  const addMessage = (sender, text) => {
-    const messageEl = document.createElement("div");
-    messageEl.style.marginBottom = "10px";
-    messageEl.style.padding = "8px";
-    messageEl.style.borderRadius = "10px";
-    messageEl.style.maxWidth = "80%";
+// --- Message UI ---
+const addMessage = (sender, text) => {
+  const messageEl = document.createElement("div");
+  messageEl.style.marginBottom = "10px";
+  messageEl.style.padding = "8px";
+  messageEl.style.borderRadius = "10px";
+  messageEl.style.maxWidth = "80%";
 
-    if (sender === "user") {
-      messageEl.style.backgroundColor = "#4b89dc";
-      messageEl.style.color = "white";
-      messageEl.style.marginLeft = "auto";
-    } else {
-      messageEl.style.backgroundColor = "#2a2a2a";
-      messageEl.style.color = "white";
+  if (sender === "user") {
+    messageEl.style.backgroundColor = "#4b89dc";
+    messageEl.style.color = "white";
+    messageEl.style.marginLeft = "auto";
+  } else {
+    messageEl.style.backgroundColor = "#2a2a2a";
+    messageEl.style.color = "white";
+  }
+
+  // FIX: support both string and object
+  messageEl.textContent = typeof text === "string" ? text : text.text;
+
+  chatbotMessages.appendChild(messageEl);
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+};
+
+// --- Bot NLP Logic ---
+const getBotResponse = (userMessage) => {
+  const msg = userMessage.toLowerCase();
+
+  if (msg.match(/\b(hi|hello|hey)\b/)) return getRandom(botIntents.greetings);
+  if (msg.includes("resource")) return getRandom(botIntents.resources);
+  if (msg.includes("game")) return getRandom(botIntents.games);
+  if (msg.includes("cgpa") || msg.includes("gpa"))
+    return getRandom(botIntents.cgpa);
+  if (msg.includes("about")) return getRandom(botIntents.about);
+  if (msg.includes("event") || msg.includes("calendar"))
+    return getRandom(botIntents.events);
+  if (msg.includes("pomodoro") || msg.includes("timer"))
+    return getRandom(botIntents.pomodoro);
+
+  // fallback
+  return getRandom(botIntents.fallback);
+};
+
+// --- Send Message ---
+const sendMessage = () => {
+  const userMessage = chatbotInput.value;
+  if (userMessage.trim() === "") return;
+  addMessage("user", userMessage);
+  chatbotInput.value = "";
+
+  setTimeout(() => {
+    const botResponse = getBotResponse(userMessage);
+
+    if (typeof botResponse === "string") {
+      // Normal text response
+      addMessage("bot", botResponse);
+    } else if (botResponse && typeof botResponse === "object") {
+      // Advanced response with action
+      addMessage("bot", botResponse.text);
+      if (botResponse.action) botResponse.action();
     }
+  }, 500);
+};
 
-    // FIX: support both string and object
-    messageEl.textContent = typeof text === "string" ? text : text.text;
-
-    chatbotMessages.appendChild(messageEl);
-    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-  };
-
-  // --- Bot NLP Logic ---
-  const getBotResponse = (userMessage) => {
-    const msg = userMessage.toLowerCase();
-
-    if (msg.match(/\b(hi|hello|hey)\b/)) return getRandom(botIntents.greetings);
-    if (msg.match(/\b(okay|ok|fine)\b/)) return getRandom(botIntents.okay);
-    if (msg.match(/\b(thank|thanks)\b/)) return getRandom(botIntents.thanks);
-    if (msg.match(/\b(bye|goodbye|see ya)\b/)) return getRandom(botIntents.bye);
-    if (msg.includes("resource")) return getRandom(botIntents.resources);
-    if (msg.includes("game")) return getRandom(botIntents.games);
-    if (msg.includes("cgpa") || msg.includes("gpa"))
-      return getRandom(botIntents.cgpa);
-    if (msg.includes("about")) return getRandom(botIntents.about);
-    if (msg.includes("event") || msg.includes("calendar"))
-      return getRandom(botIntents.events);
-
-    // fallback
-    return getRandom(botIntents.fallback);
-  };
-
-  // --- Send Message ---
-  const sendMessage = () => {
-    const userMessage = chatbotInput.value;
-    if (userMessage.trim() === "") return;
-    addMessage("user", userMessage);
-    chatbotInput.value = "";
-
-    setTimeout(() => {
-      const botResponse = getBotResponse(userMessage);
-
-      if (typeof botResponse === "string") {
-        // Normal text response
-        addMessage("bot", botResponse);
-      } else if (botResponse && typeof botResponse === "object") {
-        // Advanced response with action
-        addMessage("bot", botResponse.text);
-        if (botResponse.action) botResponse.action();
-      }
-    }, 500);
-  };
-
-  // --- Event Listeners ---
-  chatbotToggle.addEventListener("click", () => {
-    const isVisible = chatbotBox.style.display === "flex";
-    chatbotBox.style.display = isVisible ? "none" : "flex";
-    if (!isVisible) {
-      addMessage("bot", "👋 Hi! I'm your assistant. How can I help you today?");
-    }
-  });
-  chatbotClose.addEventListener("click", () => {
-    chatbotBox.style.display = "none";
-  });
-  chatbotSend.addEventListener("click", sendMessage);
-  chatbotInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      sendMessage();
-    }
-  });
+// --- Event Listeners ---
+chatbotToggle.addEventListener("click", () => {
+  const isVisible = chatbotBox.style.display === "flex";
+  chatbotBox.style.display = isVisible ? "none" : "flex";
+  if (!isVisible) {
+    addMessage("bot", "👋 Hi! I'm your assistant. How can I help you today?");
+  }
+});
+chatbotClose.addEventListener("click", () => {
+  chatbotBox.style.display = "none";
+});
+chatbotSend.addEventListener("click", sendMessage);
+chatbotInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    sendMessage();
+  }
+});
 
   // Initial page load
   renderHome();
