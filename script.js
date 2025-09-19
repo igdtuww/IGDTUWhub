@@ -1463,7 +1463,18 @@ const pyqLinks = {
   "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
   "Database Management Systems" : "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
   "Optimization Techniques and Decision Making" : "https://drive.google.com/drive/folders/1Zzqae6FrNTIzXsZXnYX_qlgx_RCx1jJK?usp=drive_link",
-  "Mobile Application Development" : "https://drive.google.com/drive/folders/1n5ODhFZac24Zd4mktc1YZPoUvQPN4xEu?usp=drive_link"
+  "Mobile Application Development" : "https://drive.google.com/drive/folders/1n5ODhFZac24Zd4mktc1YZPoUvQPN4xEu?usp=drive_link",
+  "Signals & Systems" : "https://drive.google.com/drive/folders/1-xBztDfOZEFvEjkhp_5lIk7yY-nl7uhe?usp=drive_link",
+  "Fluid Mechanics and Hydraulic Machines" : "https://drive.google.com/drive/folders/1N1-tA3ugSvuVx_Qm9lkb80grCipvq4fz?usp=drive_link",
+  "Engineering Mechanics" : "https://drive.google.com/drive/folders/17a6e3NxfgwIGjU-acD93MmdZRjztZHfu?usp=drive_link",
+  "Introduction to Internet of Things" : "https://drive.google.com/drive/folders/10wc-MPYlVwJbeAQp6Od_66Jn6ZDi2ney?usp=drive_link",
+  "Analog and Digital Electronics" : "https://drive.google.com/drive/folders/12vFzjorE56hm3-11cDCl1Fgd6IHqiO74?usp=drive_link",
+  "Control Systems" : "https://drive.google.com/drive/folders/1U40EUcWVsvWGD1eCoG6VoZzQb0ZHOw2K?usp=drive_link",
+  "Strength of Materials" : "https://drive.google.com/drive/folders/1-X__gb4stO7p8SBnpdkZHsYWNZwF1SHn?usp=drive_link",
+  "Computer Networks" : "https://drive.google.com/drive/folders/1LXf-MhOQdBOf0kYxE67EFE24IA0WTkYF?usp=drive_link",
+  "Digital Communication Systems" : "https://drive.google.com/drive/folders/1zK9KLnonsiYpks1RsKuVQWbiMgQ6mrHp?usp=drive_link",
+  "Production Technology - I" : "https://drive.google.com/drive/folders/1OL_3-4p_7yxYcQrtQpcHfgKOkbUU7tiF?usp=drive_link",
+  
   // keep adding subjects with their PYQ links...
 };
 
