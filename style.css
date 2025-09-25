@@ -1432,3 +1432,9 @@ footer {
 .music-track-button:hover {
   background-color: #386ba1;
 }
+/* Reduce the margin on the team member's name (h3) */
+.profile-card h3 {
+  /* Inherits color: #4b89dc and font-size: 1.5rem from existing styles */
+  margin-top: 0.2rem;    /* Significantly reduced top margin */
+  margin-bottom: 0.5rem; /* Ensure some space below the name, but you can adjust this too */
+}
