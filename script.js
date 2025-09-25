@@ -1042,9 +1042,9 @@ function solve(input) {
       messageEl.textContent = message;
     });
   };
-
-  // Function to render the About Us page
-  const renderAboutUs = () => {
+  
+//About Us
+const renderAboutUs = () => {
     dynamicContent.innerHTML = `
                     <section class="about-us-section section">
                         <h2>About This Website</h2>
@@ -1055,8 +1055,9 @@ function solve(input) {
                         <h2>Meet Our Team Members</h2>
                         <div class="profiles-container">
                             <div class="profile-card">
+                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_35_13_dc8c4c19-photoaidcom-cropped_v6qffi.png" alt="Manvi Sinha" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
                                 <h3>Manvi</h3>
-                                <p>Hi, I’m Manvi Sinha ,a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML , AI and Designing, and love tackling challenges with creativity. I believe in growing by sharing ideas and exploring new perspectives through storytelling and collaboration.</p>
+                                <p>Hi, I’m Manvi Sinha , a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML , AI and Designing, and love tackling challenges with creativity. I believe in growing by sharing ideas and exploring new perspectives through storytelling and collaboration.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
                                 <div class="social-links">
                                     <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1064,6 +1065,7 @@ function solve(input) {
                                 </div>
                             </div>
                             <div class="profile-card">
+                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_49_34_6b47c50a-photoaidcom-cropped_txdve2.png" alt="Arni Goyal" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
                                 <h3>Arni</h3>
                                 <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL. Beyond technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
@@ -1073,6 +1075,7 @@ function solve(input) {
                                 </div>
                             </div>
                             <div class="profile-card">
+                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_58_37_49cc5e42-photoaidcom-cropped_hmnibt.png" alt="Divya Yadav" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;">  
                                 <h3>Divya</h3>
                                 <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems and believe in growing through both technical skills and personal creativity.</p>
                                 <p><strong>Branch:</strong> IT (2028)</p>
