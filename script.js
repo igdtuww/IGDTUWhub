@@ -1478,7 +1478,7 @@ const pyqLinks = {
   "Digital Communication Systems" : "https://drive.google.com/drive/folders/1zK9KLnonsiYpks1RsKuVQWbiMgQ6mrHp?usp=drive_link",
   "Production Technology - I" : "https://drive.google.com/drive/folders/1OL_3-4p_7yxYcQrtQpcHfgKOkbUU7tiF?usp=drive_link",
   "Analog Communication Systems" : "https://drive.google.com/drive/folders/1980xAMY2wV62WzHILmeQ8IOVlQZSk7Ed?usp=drive_link",
-  
+
   // keep adding subjects with their PYQ links...
 };
 
