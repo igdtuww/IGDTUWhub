@@ -1033,13 +1033,13 @@ function solve(input) {
     });
   };
 
-  const renderAboutUs = (addToHistory = true) => {
+ const renderAboutUs = (addToHistory = true) => {
     // 1. History Logic
     if (addToHistory) {
       history.pushState({ page: "about" }, "", "#about");
     }
 
-    // 2. The Content with Images
+    // 2. The Content
     dynamicContent.innerHTML = `
         <section class="about-us-section section">
             <h2>About This Website</h2>
@@ -1047,32 +1047,35 @@ function solve(input) {
                 <p>IGDTUWHub is a community-driven platform designed by students for students of Indira Gandhi Delhi Technical University for Women. Our mission is to provide a centralized hub for all academic resources, making college life easier and more collaborative. Here, you can find a vast collection of notes, previous year's question papers (PYQs), and other study materials submitted and shared by your peers. We believe in the power of shared knowledge to help every student succeed. ✨</p>
                 <p>This platform also features a CGPA calculator to help you track your academic performance, fun games to take a break from studying, and a personal notes section to save your quick thoughts and ideas. We are constantly working to improve and add new features to support the IGDTUW community.</p>
             </div>
+            
             <h2>Meet Our Team Members</h2>
             <div class="profiles-container">
                 <div class="profile-card">
                     <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_35_13_dc8c4c19-photoaidcom-cropped_v6qffi.png" alt="Manvi Sinha" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
                     <h3>Manvi</h3>
-                    <p>Hi, I’m Manvi Sinha , a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML, AI and Designing, and love tackling challenges with creativity.</p>
+                    <p>Hi, I’m Manvi Sinha , a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML, AI and Designing, and love tackling challenges with creativity. I believe in growing by sharing ideas and exploring new perspectives through storytelling and collaboration.</p>
                     <p><strong>Branch:</strong> IT (2028)</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/manvisinhha/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
                 <div class="profile-card">
                     <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_49_34_6b47c50a-photoaidcom-cropped_txdve2.png" alt="Arni Goyal" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
                     <h3>Arni</h3>
-                    <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL.</p>
+                    <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL. Beyond technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
                     <p><strong>Branch:</strong> IT (2028)</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/arni_1408/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
                 <div class="profile-card">
                     <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_58_37_49cc5e42-photoaidcom-cropped_hmnibt.png" alt="Divya Yadav" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;">  
                     <h3>Divya</h3>
-                    <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems.</p>
+                    <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems and believe in growing through both technical skills and personal creativity.</p>
                     <p><strong>Branch:</strong> IT (2028)</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/divya-yadav-3b7592322/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -1080,13 +1083,77 @@ function solve(input) {
                     </div>
                 </div>
             </div>
-            <div class="feedback-section card" style="margin-top: 2rem;">
-                <h3>Feedback</h3>
-                <p>We'd love to hear from you!</p>
-                <a href="https://forms.gle/idwSg4rbAU1tX6AW6" target="_blank" class="add-subject-btn" style="text-align: center; display: block;">Click here to give feedback</a>
+
+            <div class="feedback-section">
+                <h3 class="feedback-title">Feedback Form</h3>
+                <p style="text-align: center; color: #a0a0a0; margin-bottom: 2rem; font-size: 1rem;">We would love to hear from you!</p>
+                
+                <form id="feedback-form-ajax" action="https://formspree.io/f/mangjylp" method="POST" class="custom-feedback-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span style="font-size:0.8rem; color:#666;">(Optional)</span></label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com"> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-feedback-btn">
+                        <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> Send Message
+                    </button>
+                    <p id="form-status" style="text-align: center; margin-top: 15px; font-weight: 500; color: #e0e0e0;"></p>
+                </form>
             </div>
         </section>
     `;
+
+    // 3. AJAX Submission Logic
+    const form = document.getElementById("feedback-form-ajax");
+    const status = document.getElementById("form-status");
+
+    if (form) {
+        form.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            const btn = form.querySelector("button");
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "Sending...";
+            btn.disabled = true;
+
+            const data = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Message sent successfully!"); 
+                    form.reset();
+                    status.innerHTML = "Thanks for helping us improve IGDTUWHub!";
+                    status.style.color = "#a855f7"; // Purple accent
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert("Oops! There was a problem submitting your form");
+                        }
+                    })
+                }
+            }).catch(error => {
+                alert("Oops! There was a network problem.");
+            }).finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        });
+    }
   };
 
   const renderEventCalendar = (addToHistory = true) => {
