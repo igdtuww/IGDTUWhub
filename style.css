@@ -1449,3 +1449,104 @@ footer {
   padding: 1rem 3rem;     /* Adds nice spacing inside the button */
   min-width: 200px;       /* Ensures it's not too small */
 }
+/* --- Vertical, Modern, Dark UI Form --- */
+
+/* 1. The Container Box (Compact & Spaced from Sides) */
+.feedback-section {
+    background-color: #0f1115; /* Deep dark background */
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;       /* Modern rounded corners */
+    padding: 2.5rem;           /* Spacious padding inside */
+    
+    /* WIDTH CONTROLS */
+    max-width: 500px;          /* Maximum width on desktop */
+    width: 90%;                /* On smaller screens, take 90% width (leaves space on sides) */
+    margin: 3rem auto;         /* Centers the box vertically and horizontally */
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 2. Heading Style */
+.feedback-title {
+    text-align: center;
+    margin-bottom: 0.5rem; /* Reduced bottom margin slightly */
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* 3. Form Layout (Vertical Stack) */
+.custom-feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Space between Name, Email, Message */
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between Label and Input */
+    text-align: left;
+}
+
+/* 4. Labels */
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-left: 4px;
+}
+
+/* 5. Inputs & Textarea (The Modern Dark Look) */
+.custom-feedback-form input,
+.custom-feedback-form textarea {
+    width: 100%;
+    background-color: #1a1d24; /* Dark blue-grey input background */
+    border: 1px solid #333;
+    color: #b0b0b0;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect (Purple Glow) */
+.custom-feedback-form input:focus,
+.custom-feedback-form textarea:focus {
+    border-color: #8a2be2;
+    background-color: #20242c;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+/* Textarea Resize Control */
+.custom-feedback-form textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+/* 6. Gradient Button */
+.submit-feedback-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #9f55ff 0%, #4b89dc 100%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-feedback-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(159, 85, 255, 0.4);
+}
