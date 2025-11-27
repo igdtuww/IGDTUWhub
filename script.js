@@ -4,680 +4,662 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
 
   // Data for branches and subjects
-  
-const branches = {
-          "cse-ai": {
-            name: "CSE-AI",
-            icon: "fas fa-brain",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Communication Skills",
-                  "Programming with Python",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                  "Web Application Development",
-                ],
-                "2nd Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Web Application Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Introduction to Data Science",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Discrete Mathematics",
-                  "Database Management Systems",
-                  "Artificial Intelligence",
-                  "Operations Management",
-                  "Ergonomic Design",
-                  "Object Oriented Programming",
-                  "Indian Knowledge System"
-                ],
-                "4th Semester": [
-                  "Design and Analysis of Algorithms",
-                  "Computer Networks",
-                  "Operating Systems",
-                  "Software Engineering",
-                  "Cloud Computing",
-                  "Optimization Techniques and Decision Making",
-                  "Open Source Technologies"
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "AI Ethics",
-              //     // "AI in Healthcare",
-              //     // "Advanced ML",
-              //     // "Mobile Computing",
-              //   ],
-              //   "6th Semester": [
-              //     // "Capstone Project",
-              //     // "Blockchain",
-              //     // "Cyber Security",
-              //     // "Cloud Computing",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Data Analytics",
-              //     // "Big Data",
-              //     // "Information Security",
-              //     // "Advanced Algorithms",
-              //   ],
-              //   "8th Semester": [
-              //     // "Distributed Systems",
-              //     // "Advanced Topics in AI",
-              //     // "IoT",
-              //     // "Robotics",
-              //   ],
-              // },
-            },
-          },
-          cse: {
-            name: "CSE",
-            icon: "fas fa-desktop",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Programming with C",
-                  "IT Workshop",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Web Application Development", 
-                  "Communication Skills", 
-                ],
-                "2nd Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Data Structures",
-                  "IT Workshop",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Mobile Application Development",
-                  "Soft Skills and Personality Development", 
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Discrete Mathematics",
-                  "Software Engineering",
-                  "Design and Analysis of Algorithm",
-                  "Operations Management",
-                  "Ergonomic Design",
-                  "Introduction to Internet of Things",
-                  "Indian Knowledge System"
-                ],
-                "4th Semester": [
-                  "Database Management Systems",
-                  "Computer Organization and Architecture",
-                  "Operating Systems",
-                  "Advanced IoT and Real World Applications",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Big Data",
-              //     // "Information Security",
-              //     // "Advanced Algorithms",
-              //     // "Machine Learning",
-              //   ],
-              //   "6th Semester": [
-              //     // "Artificial Intelligence",
-              //     // "IoT",
-              //     // "Robotics",
-              //     // "Blockchain",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "VLSI Design",
-              //     // "Optical Communication",
-              //     // "Satellite Communication",
-              //     // "Wireless Networks",
-              //   ],
-              //   "8th Semester": [
-              //     // "Capstone Project",
-              //     // "Advanced Topics in CS",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-            },
-          },
-          "ece-ai": {
-            name: "ECE-AI",
-            icon: "fas fa-microchip",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Fundamentals of Electrical Sciences",
-                  "Communication Skills",
-                  "Signals & Systems",
-                  "Electronics Workshop",
-                  "Programming Fundamentals",
-                  "Web Application Development",
-                ],
-                "2nd Semester": [
-                  "Environmental Sciences",
-                  "Applied Physics",
-                  "Network Analysis and Synthesis",
-                  "Programming Fundamentals",
-                  "Web Application Development",
-                  "Introduction to Data Science",
-                  "IT Workshop",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Numerical Techniques for Engineers",
-                  "Analog and Digital Electronics",
-                  "Data Structures and Algorithm",
-                  "Electronics Circuit Simulation Workshop",
-                  "Advanced Electronic Workshop",
-                  "Object Oriented Programming",
-                ],
-                "4th Semester": [
-                  "Computer Organization and Architecture",
-                  "Artificial Intelligence",
-                  "Analog Communication Systems",
-                  "Design and Ananlysis of Algorithms",
-                  "Electromagnetic Field Theory and Antenna",
-                  "Database Management Systems",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Deep Learning",
-              //     // "Computer Vision",
-              //     // "Natural Language Processing",
-              //     // "AI Ethics",
-              //   ],
-              //   "6th Semester": [
-              //     // "AI in Healthcare",
-              //     // "Advanced ML",
-              //     // "Mobile Computing",
-              //     // "Distributed Systems",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Data Analytics",
-              //     // "Big Data",
-              //     // "Information Security",
-              //     // "Advanced Algorithms",
-              //   ],
-              //   "8th Semester": [
-              //     // "Capstone Project",
-              //     // "Advanced Topics in ECE-AI",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-            },
-          },
-          ece: {
-            name: "ECE",
-            icon: "fas fa-code-branch",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Fundamentals of Electrical Sciences",
-                  "Communication Skills",
-                  "Signals & Systems",
-                  "Electronics Workshop",
-                  "Programming Fundamentals",
-                  "Web Application Development",
-                ],
-                "2nd Semester": [
-                  "Environmental Sciences",
-                  "Applied Physics",
-                  "Network Analysis and Synthesis",
-                  "Programming Fundamentals",
-                  "Web Application Development",
-                  "Introduction to Data Science",
-                  "IT Workshop",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Numerical Techniques for Engineers",
-                  "Digital System Design",
-                  "Analog Communication Systems",
-                  "Data Structures and Algorithm",
-                  "Object Oriented Programming",
-                  "Electronics Circuit Simulation Workshop",
-                  "Advanced Electronic Workshop",
-                ],
-                "4th Semester": [
-                  "Analog Electronics",
-                  "Electromagnetic Field Theory and Antenna",
-                  "Digital Communication Systems",
-                  "Control Systems",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Data Analytics",
-              //     // "Big Data",
-              //     // "Information Security",
-              //     // "Advanced Algorithms",
-              //   ],
-              //   "6th Semester": [
-              //     // "Machine Learning",
-              //     // "Artificial Intelligence",
-              //     // "Deep Learning",
-              //     // "Computer Vision",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Natural Language Processing",
-              //     // "AI Ethics",
-              //     // "AI in Healthcare",
-              //     // "Advanced ML",
-              //   ],
-              //   "8th Semester": [
-              //     // "Capstone Project",
-              //     // "Advanced Topics in ECE",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-            },
-          },
-          it: {
-            name: "IT",
-            icon: "fas fa-globe",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Communication Skills",
-                  "Programming with Python",
-                  "Web Application Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                ],
-                "2nd Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Object Oriented Programming",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                  "Introduction to Data Science",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Discrete Mathematics",
-                  "Data Structures and Algorithm",
-                  "Database Management Systems",
-                  "Operations Management",
-                  "Ergonomic Design",
-                  "Indian Knowledge System",
-                  "Open Source Technologies",
-                ],
-                "4th Semester": [
-                  "Design and Analysis of Algorithms",
-                  "Operating Systems",
-                  "Software Engineering",
-                  "Cloud Computing",
-                  "Fundamentals of Devops",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Artificial Intelligence",
-              //     // "Deep Learning",
-              //     // "Computer Vision",
-              //     // "Natural Language Processing",
-              //   ],
-              //   "6th Semester": [
-              //     // "AI Ethics",
-              //     // "AI in Healthcare",
-              //     // "Advanced ML",
-              //     // "Capstone Project",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Advanced Topics in IT",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //     // "Data Analytics",
-              //   ],
-              //   "8th Semester": [
-              //     // "Advanced Algorithms",
-              //     // "Robotics",
-              //     // "IoT",
-              //     // "Satellite Communication",
-              //   ],
-              // },
-            },
-          },
-          aiml: {
-            name: "AIML",
-            icon: "fas fa-robot",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Communication Skills",
-                  "Programming with Python",
-                  "Web Application Development",
-                  "IT Workshop",
-                  "Basics of Electrical and Electronics Engineering",
-                ],
-                "2nd Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Object Oriented Programming",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                  "Introduction to Data Science",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Discrete Mathematics",
-                  "Data Structures and Algorithm",
-                  "Database Management Systems",
-                  "Operations Management",
-                  "Ergonomic Design",
-                  "Indian Knowledge System",
-                  "Open Source Technologies",
-                ],
-                "4th Semester": [
-                  "Design and Analysis of Algorithms",
-                  "Operating Systems",
-                  "Artificial Intelligence",
-                  "Cloud Computing",
-                  "Fundamentals of Devops",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Software Engineering",
-              //     // "Data Mining",
-              //     // "Cloud Computing",
-              //     // "Cyber Security",
-              //   ],
-              //   "6th Semester": [
-              //     // "Blockchain",
-              //     // "Mobile Computing",
-              //     // "Distributed Systems",
-              //     // "Advanced Algorithms",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Operating Systems",
-              //     // "Computer Networks",
-              //     // "Information Security",
-              //     // "Web Development",
-              //   ],
-              //   "8th Semester": [
-              //     // "Advanced Topics in AIML",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //     // "Advanced AI",
-              //   ],
-              // },
-            },
-          },
-          mae: {
-            name: "MAE",
-            icon: "fas fa-cogs",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Communication Skills",
-                  "Elements of Mechanical Engineering",
-                  "Web Application Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Programming Fundamentals",
-                  "Workshop Practice",
-                ],
-                "2nd Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Engineering Mechanics",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Programming Fundamentals",
-                  "Introduction to Data Science",
-                  "Engineering Graphics & CAD Modelling",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Numerical Techniques for Engineers",
-                  "Production Technology-I",
-                  "Engineering Materials",
-                  "Thermal Engineering-I",
-                  "Machine Drawing Lab",
-                  "Robotics Lab",
-                  'Object Oriented Programming',
-                  "Data Structures and Algorithm",
-                  "Database Management Systems",
 
-                ],
-                "4th Semester": [
-                  "Thermal Engineering - II",
-                  "Production Technology - II",
-                  "Theory of Machines",
-                  "Fluid Mechanics and Hydraulic Machines",
-                  "Strength of Materials",
-                  "IoT Lab",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Fluid Power Engineering",
-              //     // "Refrigeration and Air Conditioning",
-              //     // "Tool Design",
-              //     // "Advanced Manufacturing Processes",
-              //   ],
-              //   "6th Semester": [
-              //     // "Computational Fluid Dynamics",
-              //     // "Composite Materials",
-              //     // "Industrial Automation",
-              //     // "Quality Management",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Supply Chain Management",
-              //     // "Aerospace Engineering",
-              //     // "Robotics and Automation",
-              //     // "Energy Management",
-              //   ],
-              //   "8th Semester": [
-              //     // "Capstone Project",
-              //     // "Advanced Topics in MAE",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-            },
-          },
-          dmam: {
-            name: "DMAM",
-            icon: "fas fa-chart-line",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Applied Mathematics",
-                  "Applied Physics",
-                  "Communication Skills",
-                  "Elements of Mechanical Engineering",
-                  "Web Application Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Programming Fundamentals",
-                  "Workshop Practice",
-                ],
-                "2nd Semester": [
-                  "Probability and Statistics",
-                  "Environmental Sciences",
-                  "Engineering Mechanics",
-                  "Basics of Electrical and Electronics Engineering",
-                  "Programming Fundamentals",
-                  "Introduction to Data Science",
-                  "Engineering Graphics & CAD Modelling",
-                  "Soft Skills and Personality Development",
-                ],
-              },
-              2: {
-                "3rd Semester": [
-                  "Numerical Techniques for Engineers",
-                  "Production Technology-I",
-                  "Engineering Materials",
-                  "Thermal Engineering-I",
-                  "Machine Drawing Lab",
-                  "Robotics Lab",
-                  'Object Oriented Programming',
-                  "Data Structures and Algorithm",
-                  "Database Management Systems",
-
-                ],
-                "4th Semester": [
-                  "Thermal Engineering - II",
-                  "Production Technology - II",
-                  "Theory of Machines",
-                  "Fluid Mechanics and Hydraulic Machines",
-                  "Strength of Materials",
-                  "IoT Lab",
-                ],
-              },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Predictive Analytics",
-              //     // "Marketing Automation",
-              //     // "CRM Strategies",
-              //     // "Ethical Hacking",
-              //   ],
-              //   "6th Semester": [
-              //     // "Capstone Project",
-              //     // "Financial Analysis",
-              //     // "Advanced Data Mining",
-              //     // "Digital Advertising",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Advanced Analytics",
-              //     // "Business Intelligence",
-              //     // "IoT in Marketing",
-              //     // "AI in Marketing",
-              //   ],
-              //   "8th Semester": [
-              //     // "Mobile Marketing",
-              //     // "Supply Chain Management",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-              // 5: {
-              //   "9th Semester": [
-              //     // "Advanced Topics in DMAM",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //     // "Communication Skills",
-              //   ],
-              //   "10th Semester": [
-              //     // "Advanced AI",
-              //     // "Capstone Project",
-              //     // "Data Analytics",
-              //     // "Robotics",
-              //   ],
-              // },
-            },
-          },
-          mac: {
-            name: "MAC",
-            icon: "fas fa-industry",
-            years: {
-              1: {
-                "1st Semester": [
-                  "Calculus I",
-                  "Communication Skills",
-                  "Programming with C",
-                  "Environmental Sciences",
-                  "Web Application Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                ],
-                "2nd Semester": [
-                  "Calculus II",
-                  "Applied Physics",
-                  "Linear Algebra",
-                  "Programming Tools for Mathematics",
-                  "Soft Skills and Personality Development",
-                  "Basics of Electrical and Electronics Engineering",
-                  "IT Workshop",
-                ],
-              },
-              // 2: {
-              //   "3rd Semester": [
-              //     // "Thermodynamics",
-              //     // "Fluid Mechanics",
-              //     // "Manufacturing Technology",
-              //     // "Machine Design",
-              //   ],
-              //   "4th Semester": [
-              //     // "Automobile Engineering",
-              //     // "Robotics",
-              //     // "CAD/CAM",
-              //     // "Mechatronics",
-              //   ],
-              // },
-              // 3: {
-              //   "5th Semester": [
-              //     // "Automation",
-              //     // "Industrial Automation",
-              //     // "CNC Machines",
-              //     // "Quality Control",
-              //   ],
-              //   "6th Semester": [
-              //     // "Supply Chain Management",
-              //     // "Production Planning",
-              //     // "Operations Research",
-              //     // "Industrial Management",
-              //   ],
-              // },
-              // 4: {
-              //   "7th Semester": [
-              //     // "Advanced Manufacturing",
-              //     // "Renewable Energy Systems",
-              //     // "Artificial Intelligence",
-              //     // "Machine Learning",
-              //   ],
-              //   "8th Semester": [
-              //     // "Capstone Project",
-              //     // "Advanced Topics in MAC",
-              //     // "Software Testing",
-              //     // "Quantum Computing",
-              //   ],
-              // },
-            },
-          },
-        };
+  const branches = {
+    "cse-ai": {
+      name: "CSE-AI",
+      icon: "fas fa-brain",
+      years: {
+        1: {
+          "1st Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Communication Skills",
+            "Programming with Python",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+            "Web Application Development",
+          ],
+          "2nd Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Web Application Development",
+            "Basics of Electrical and Electronics Engineering",
+            "Introduction to Data Science",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Discrete Mathematics",
+            "Software Engineering",
+            "Design and Analysis of Algorithm",
+            "Operations Management",
+            "Ergonomic Design",
+            "Introduction to Internet of Things",
+          ],
+          "4th Semester": [
+            "Database Management Systems",
+            "Computer Organization and Architecture",
+            "Operating Systems",
+            "Data Communication and Computer Networks",
+            "Advanced IoT and Real World Applications",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "AI Ethics",
+        //     // "AI in Healthcare",
+        //     // "Advanced ML",
+        //     // "Mobile Computing",
+        //   ],
+        //   "6th Semester": [
+        //     // "Capstone Project",
+        //     // "Blockchain",
+        //     // "Cyber Security",
+        //     // "Cloud Computing",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Data Analytics",
+        //     // "Big Data",
+        //     // "Information Security",
+        //     // "Advanced Algorithms",
+        //   ],
+        //   "8th Semester": [
+        //     // "Distributed Systems",
+        //     // "Advanced Topics in AI",
+        //     // "IoT",
+        //     // "Robotics",
+        //   ],
+        // },
+      },
+    },
+    cse: {
+      name: "CSE",
+      icon: "fas fa-desktop",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Programming with C",
+            "IT Workshop",
+            "Basics of Electrical and Electronics Engineering",
+            "Web Application Development",
+            "Communication Skills",
+          ],
+          "2nd Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Data Structures",
+            "IT Workshop",
+            "Basics of Electrical and Electronics Engineering",
+            "Mobile Application Development",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Discrete Mathematics",
+            "Database Management Systems",
+            "Artificial Intelligence",
+            "Operations Management",
+            "Ergonomic Design",
+            "Object Oriented Programming",
+          ],
+          "4th Semester": [
+            "Design and Analysis of Algorithms",
+            "Computer Networks",
+            "Operating Systems",
+            "Software Engineering",
+            "Open Source Technologies",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Big Data",
+        //     // "Information Security",
+        //     // "Advanced Algorithms",
+        //     // "Machine Learning",
+        //   ],
+        //   "6th Semester": [
+        //     // "Artificial Intelligence",
+        //     // "IoT",
+        //     // "Robotics",
+        //     // "Blockchain",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "VLSI Design",
+        //     // "Optical Communication",
+        //     // "Satellite Communication",
+        //     // "Wireless Networks",
+        //   ],
+        //   "8th Semester": [
+        //     // "Capstone Project",
+        //     // "Advanced Topics in CS",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+      },
+    },
+    "ece-ai": {
+      name: "ECE-AI",
+      icon: "fas fa-microchip",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Fundamentals of Electrical Sciences",
+            "Communication Skills",
+            "Signals & Systems",
+            "Electronics Workshop",
+            "Programming Fundamentals",
+            "Web Application Development",
+          ],
+          "2nd Semester": [
+            "Environmental Sciences",
+            "Applied Physics",
+            "Network Analysis and Synthesis",
+            "Programming Fundamentals",
+            "Web Application Development",
+            "Introduction to Data Science",
+            "IT Workshop",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Numerical Techniques for Engineers",
+            "Analog and Digital Electronics",
+            "Data Structures and Algorithms",
+            "Electronics Circuit Simulation Workshop",
+            "Advanced Electronic Workshop",
+          ],
+          "4th Semester": [
+            "Computer Organization and Architecture",
+            "Artificial Intelligence",
+            "Analog Communication Systems",
+            "Design and Ananlysis of Algorithms",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Deep Learning",
+        //     // "Computer Vision",
+        //     // "Natural Language Processing",
+        //     // "AI Ethics",
+        //   ],
+        //   "6th Semester": [
+        //     // "AI in Healthcare",
+        //     // "Advanced ML",
+        //     // "Mobile Computing",
+        //     // "Distributed Systems",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Data Analytics",
+        //     // "Big Data",
+        //     // "Information Security",
+        //     // "Advanced Algorithms",
+        //   ],
+        //   "8th Semester": [
+        //     // "Capstone Project",
+        //     // "Advanced Topics in ECE-AI",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+      },
+    },
+    ece: {
+      name: "ECE",
+      icon: "fas fa-code-branch",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Fundamentals of Electrical Sciences",
+            "Communication Skills",
+            "Signals & Systems",
+            "Electronics Workshop",
+            "Programming Fundamentals",
+            "Web Application Development",
+          ],
+          "2nd Semester": [
+            "Environmental Sciences",
+            "Applied Physics",
+            "Network Analysis and Synthesis",
+            "Programming Fundamentals",
+            "Web Application Development",
+            "Introduction to Data Science",
+            "IT Workshop",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Numerical Techniques for Engineers",
+            "Digital System Design",
+            "Analog Communication Systems",
+            "Electronics Circuit Simulation Workshop",
+            "Advanced Electronic Workshop",
+          ],
+          "4th Semester": [
+            "Analog Electronics",
+            "Electromagnetic Field Theory & Antenna",
+            "Digital Communication Systems",
+            "Control Systems",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Data Analytics",
+        //     // "Big Data",
+        //     // "Information Security",
+        //     // "Advanced Algorithms",
+        //   ],
+        //   "6th Semester": [
+        //     // "Machine Learning",
+        //     // "Artificial Intelligence",
+        //     // "Deep Learning",
+        //     // "Computer Vision",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Natural Language Processing",
+        //     // "AI Ethics",
+        //     // "AI in Healthcare",
+        //     // "Advanced ML",
+        //   ],
+        //   "8th Semester": [
+        //     // "Capstone Project",
+        //     // "Advanced Topics in ECE",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+      },
+    },
+    it: {
+      name: "IT",
+      icon: "fas fa-globe",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Communication Skills",
+            "Programming with Python",
+            "Web Application Development",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+          ],
+          "2nd Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Object Oriented Programming",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+            "Introduction to Data Science",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Discrete Mathematics",
+            "Data Structures and Algorithm",
+            "Database Management Systems",
+            "Operations Management",
+            "Ergonomic Design",
+            "Indian Knowledge System",
+            "Open Source Technologies",
+          ],
+          "4th Semester": [
+            "Design and Analysis of Algorithms",
+            "Operating Systems",
+            "Software Engineering",
+            "Cloud Computing",
+            "Fundamentals of Devops",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Artificial Intelligence",
+        //     // "Deep Learning",
+        //     // "Computer Vision",
+        //     // "Natural Language Processing",
+        //   ],
+        //   "6th Semester": [
+        //     // "AI Ethics",
+        //     // "AI in Healthcare",
+        //     // "Advanced ML",
+        //     // "Capstone Project",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Advanced Topics in IT",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //     // "Data Analytics",
+        //   ],
+        //   "8th Semester": [
+        //     // "Advanced Algorithms",
+        //     // "Robotics",
+        //     // "IoT",
+        //     // "Satellite Communication",
+        //   ],
+        // },
+      },
+    },
+    aiml: {
+      name: "AIML",
+      icon: "fas fa-robot",
+      years: {
+        1: {
+          "1st Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Communication Skills",
+            "Programming with Python",
+            "Web Application Development",
+            "IT Workshop",
+            "Basics of Electrical and Electronics Engineering",
+          ],
+          "2nd Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Object Oriented Programming",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+            "Introduction to Data Science",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Discrete Mathematics",
+            "Data Structures and Algorithm",
+            "Database Management Systems",
+            "Operations Management",
+            "Ergonomic Design",
+            "Indian Knowledge System",
+            "Open Source Technologies",
+          ],
+          "4th Semester": [
+            "Design and Analysis of Algorithms",
+            "Operating Systems",
+            "Artificial Intelligence",
+            "Cloud Computing",
+            "Fundamentals of Devops",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Software Engineering",
+        //     // "Data Mining",
+        //     // "Cloud Computing",
+        //     // "Cyber Security",
+        //   ],
+        //   "6th Semester": [
+        //     // "Blockchain",
+        //     // "Mobile Computing",
+        //     // "Distributed Systems",
+        //     // "Advanced Algorithms",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Operating Systems",
+        //     // "Computer Networks",
+        //     // "Information Security",
+        //     // "Web Development",
+        //   ],
+        //   "8th Semester": [
+        //     // "Advanced Topics in AIML",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //     // "Advanced AI",
+        //   ],
+        // },
+      },
+    },
+    mae: {
+      name: "MAE",
+      icon: "fas fa-cogs",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Communication Skills",
+            "Elements of Mechanical Engineering",
+            "Web Application Development",
+            "Basics of Electrical and Electronics Engineering",
+            "Programming Fundamentals",
+            "Workshop Practice",
+          ],
+          "2nd Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Engineering Mechanics",
+            "Basics of Electrical and Electronics Engineering",
+            "Programming Fundamentals",
+            "Introduction to Data Science",
+            "Engineering Graphics & CAD Modelling",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Numerical Techniques for Engineers",
+            "Production Technology-I",
+            "Engineering Materials",
+            "Thermal Engineering-I",
+            "Machine Drawing Lab",
+            "Robotics Lab",
+          ],
+          "4th Semester": [
+            "Thermal Engineering - II",
+            "Production Technology - II",
+            "Fluid Mechanics and Hydraulic Machines",
+            "Strength of Materials",
+            "IoT Lab",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Fluid Power Engineering",
+        //     // "Refrigeration and Air Conditioning",
+        //     // "Tool Design",
+        //     // "Advanced Manufacturing Processes",
+        //   ],
+        //   "6th Semester": [
+        //     // "Computational Fluid Dynamics",
+        //     // "Composite Materials",
+        //     // "Industrial Automation",
+        //     // "Quality Management",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Supply Chain Management",
+        //     // "Aerospace Engineering",
+        //     // "Robotics and Automation",
+        //     // "Energy Management",
+        //   ],
+        //   "8th Semester": [
+        //     // "Capstone Project",
+        //     // "Advanced Topics in MAE",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+      },
+    },
+    dmam: {
+      name: "DMAM",
+      icon: "fas fa-chart-line",
+      years: {
+        1: {
+          "1st Semester": [
+            "Applied Mathematics",
+            "Applied Physics",
+            "Communication Skills",
+            "Elements of Mechanical Engineering",
+            "Web Application Development",
+            "Basics of Electrical and Electronics Engineering",
+            "Programming Fundamentals",
+            "Workshop Practice",
+          ],
+          "2nd Semester": [
+            "Probability and Statistics",
+            "Environmental Sciences",
+            "Engineering Mechanics",
+            "Basics of Electrical and Electronics Engineering",
+            "Programming Fundamentals",
+            "Introduction to Data Science",
+            "Engineering Graphics & CAD Modelling",
+            "Soft Skills and Personality Development",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            "Numerical Techniques for Engineers",
+            "Production Technology-I",
+            "Engineering Materials",
+            "Thermal Engineering-I",
+            "Machine Drawing Lab",
+            "Robotics Lab",
+          ],
+          "4th Semester": [
+            "Thermal Engineering - II",
+            "Production Technology - II",
+            "Fluid Mechanics and Hydraulic Machines",
+            "Strength of Materials",
+            "IoT Lab",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Predictive Analytics",
+        //     // "Marketing Automation",
+        //     // "CRM Strategies",
+        //     // "Ethical Hacking",
+        //   ],
+        //   "6th Semester": [
+        //     // "Capstone Project",
+        //     // "Financial Analysis",
+        //     // "Advanced Data Mining",
+        //     // "Digital Advertising",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Advanced Analytics",
+        //     // "Business Intelligence",
+        //     // "IoT in Marketing",
+        //     // "AI in Marketing",
+        //   ],
+        //   "8th Semester": [
+        //     // "Mobile Marketing",
+        //     // "Supply Chain Management",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+        // 5: {
+        //   "9th Semester": [
+        //     // "Advanced Topics in DMAM",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //     // "Communication Skills",
+        //   ],
+        //   "10th Semester": [
+        //     // "Advanced AI",
+        //     // "Capstone Project",
+        //     // "Data Analytics",
+        //     // "Robotics",
+        //   ],
+        // },
+      },
+    },
+    mac: {
+      name: "MAC",
+      icon: "fas fa-industry",
+      years: {
+        1: {
+          "1st Semester": [
+            "Calculus I",
+            "Communication Skills",
+            "Programming with C",
+            "Environmental Sciences",
+            "Web Application Development",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+          ],
+          "2nd Semester": [
+            "Calculus II",
+            "Applied Physics",
+            "Linear Algebra",
+            "Programming Tools for Mathematics",
+            "Soft Skills and Personality Development",
+            "Basics of Electrical and Electronics Engineering",
+            "IT Workshop",
+          ],
+        },
+        2: {
+          "3rd Semester": [
+            // "Thermodynamics",
+            // "Fluid Mechanics",
+            // "Manufacturing Technology",
+            // "Machine Design",
+          ],
+          "4th Semester": [
+            // "Automobile Engineering",
+            // "Robotics",
+            // "CAD/CAM",
+            // "Mechatronics",
+          ],
+        },
+        // 3: {
+        //   "5th Semester": [
+        //     // "Automation",
+        //     // "Industrial Automation",
+        //     // "CNC Machines",
+        //     // "Quality Control",
+        //   ],
+        //   "6th Semester": [
+        //     // "Supply Chain Management",
+        //     // "Production Planning",
+        //     // "Operations Research",
+        //     // "Industrial Management",
+        //   ],
+        // },
+        // 4: {
+        //   "7th Semester": [
+        //     // "Advanced Manufacturing",
+        //     // "Renewable Energy Systems",
+        //     // "Artificial Intelligence",
+        //     // "Machine Learning",
+        //   ],
+        //   "8th Semester": [
+        //     // "Capstone Project",
+        //     // "Advanced Topics in MAC",
+        //     // "Software Testing",
+        //     // "Quantum Computing",
+        //   ],
+        // },
+      },
+    },
+  };
   const holidays = {
     2023: {
       January: ["14-Makar Sankranti", "26-Republic Day"],
@@ -850,7 +832,11 @@ function solve(input) {
 `;
 
   // Function to render the home page content
-  const renderHome = () => {
+  const renderHome = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "home" }, "", "#home");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="welcome-section">
                         <div class="welcome-content">
@@ -924,7 +910,11 @@ function solve(input) {
   };
 
   // Function to render the CGPA calculator
-  const renderPerformance = () => {
+  const renderPerformance = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "cgpa" }, "", "#cgpa");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="performance-section section">
                         <h2>CGPA Calculator</h2>
@@ -1042,60 +1032,68 @@ function solve(input) {
       messageEl.textContent = message;
     });
   };
-  
-//About Us
-const renderAboutUs = () => {
+
+  const renderAboutUs = (addToHistory = true) => {
+    // 1. History Logic
+    if (addToHistory) {
+      history.pushState({ page: "about" }, "", "#about");
+    }
+
+    // 2. The Content with Images
     dynamicContent.innerHTML = `
-                    <section class="about-us-section section">
-                        <h2>About This Website</h2>
-                        <div class="card" style="margin-bottom: 2rem;">
-                            <p>IGDTUWHub is a community-driven platform designed by students for students of Indira Gandhi Delhi Technical University for Women. Our mission is to provide a centralized hub for all academic resources, making college life easier and more collaborative.Here, you can find a vast collection of notes, previous year's question papers (PYQs), and other study materials submitted and shared by your peers. We believe in the power of shared knowledge to help every student succeed. ✨</p>
-                            <p>This platform also features a CGPA calculator to help you track your academic performance, fun games to take a break from studying, and a personal notes section to save your quick thoughts and ideas. We are constantly working to improve and add new features to support the IGDTUW community. </p>
-                        </div>
-                        <h2>Meet Our Team Members</h2>
-                        <div class="profiles-container">
-                            <div class="profile-card">
-                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_35_13_dc8c4c19-photoaidcom-cropped_v6qffi.png" alt="Manvi Sinha" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
-                                <h3>Manvi</h3>
-                                <p>Hi, I’m Manvi Sinha , a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML , AI and Designing, and love tackling challenges with creativity. I believe in growing by sharing ideas and exploring new perspectives through storytelling and collaboration.</p>
-                                <p><strong>Branch:</strong> IT (2028)</p>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://www.instagram.com/manvisinhha/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="profile-card">
-                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_49_34_6b47c50a-photoaidcom-cropped_txdve2.png" alt="Arni Goyal" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
-                                <h3>Arni</h3>
-                                <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL. Beyond technology, I’m passionate about Kathak, which inspires my creativity and adds a unique rhythm to my journey.</p>
-                                <p><strong>Branch:</strong> IT (2028)</p>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://www.instagram.com/arni_1408/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="profile-card">
-                                <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_58_37_49cc5e42-photoaidcom-cropped_hmnibt.png" alt="Divya Yadav" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;">  
-                                <h3>Divya</h3>
-                                <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems and believe in growing through both technical skills and personal creativity.</p>
-                                <p><strong>Branch:</strong> IT (2028)</p>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/divya-yadav-3b7592322/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    <a href="https://www.instagram.com/divy.ayadav482/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="feedback-section card" style="margin-top: 2rem;">
-                            <h3 >Feedback</h3>
-                            <p>We'd love to hear from you!</p>
-                            <a href="https://forms.gle/idwSg4rbAU1tX6AW6" target="_blank" class="add-subject-btn" style="text-align: center; display: block;">Click here to give feedback</a>
-                        </div>
-                    </section>
-                `;
+        <section class="about-us-section section">
+            <h2>About This Website</h2>
+            <div class="card" style="margin-bottom: 2rem;">
+                <p>IGDTUWHub is a community-driven platform designed by students for students of Indira Gandhi Delhi Technical University for Women. Our mission is to provide a centralized hub for all academic resources, making college life easier and more collaborative. Here, you can find a vast collection of notes, previous year's question papers (PYQs), and other study materials submitted and shared by your peers. We believe in the power of shared knowledge to help every student succeed. ✨</p>
+                <p>This platform also features a CGPA calculator to help you track your academic performance, fun games to take a break from studying, and a personal notes section to save your quick thoughts and ideas. We are constantly working to improve and add new features to support the IGDTUW community.</p>
+            </div>
+            <h2>Meet Our Team Members</h2>
+            <div class="profiles-container">
+                <div class="profile-card">
+                    <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_35_13_dc8c4c19-photoaidcom-cropped_v6qffi.png" alt="Manvi Sinha" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
+                    <h3>Manvi</h3>
+                    <p>Hi, I’m Manvi Sinha , a curious mind who enjoys learning, building, and designing innovative solutions. I’m passionate about Web Development, ML, AI and Designing, and love tackling challenges with creativity.</p>
+                    <p><strong>Branch:</strong> IT (2028)</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/manviiiisinhhh/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/manvisinhha/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_49_34_6b47c50a-photoaidcom-cropped_txdve2.png" alt="Arni Goyal" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;"> 
+                    <h3>Arni</h3>
+                    <p>Hi, I’m Arni Goyal, driven by a love for learning, exploring and tackling challenges in creative ways. I enjoy sharing ideas and growing alongside others. My interest lies in AI, ML and DL.</p>
+                    <p><strong>Branch:</strong> IT (2028)</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/arni-goyal-b2639b321/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/arni_1408/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <img src="https://res.cloudinary.com/dafpfjkjb/image/upload/WhatsApp_Image_2025-09-25_at_19_58_37_49cc5e42-photoaidcom-cropped_hmnibt.png" alt="Divya Yadav" style="width: 100px; height: 100px; margin-bottom: 0.1rem; object-fit: cover;">  
+                    <h3>Divya</h3>
+                    <p>Hi, I’m Divya Yadav! I’m passionate about Artificial Intelligence and Web Development, with a constant drive to learn and take on new challenges. I enjoy finding creative ways to solve problems.</p>
+                    <p><strong>Branch:</strong> IT (2028)</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/divya-yadav-3b7592322/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/divy.ayadav482/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-section card" style="margin-top: 2rem;">
+                <h3>Feedback</h3>
+                <p>We'd love to hear from you!</p>
+                <a href="https://forms.gle/idwSg4rbAU1tX6AW6" target="_blank" class="add-subject-btn" style="text-align: center; display: block;">Click here to give feedback</a>
+            </div>
+        </section>
+    `;
   };
 
-  const renderEventCalendar = () => {
+  const renderEventCalendar = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "events" }, "", "#events");
+    }
+    // ... leave the rest of the function exactly as it is ...
     const today = new Date();
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
@@ -1208,7 +1206,11 @@ const renderAboutUs = () => {
   };
 
   // Function to render the resources page
-  const renderResources = () => {
+  const renderResources = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "resources" }, "", "#resources");
+    }
+    // ... leave the rest of the function exactly as it is ...
     const savedCourses = JSON.parse(
       localStorage.getItem("igdtuw_saved_courses") || "null"
     );
@@ -1275,7 +1277,15 @@ const renderAboutUs = () => {
   };
 
   // Function to render a specific branch's year content
-  const renderBranchYears = (branchId) => {
+  const renderBranchYears = (branchId, addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState(
+        { page: "years", branchId: branchId },
+        "",
+        `#${branchId}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
     const branch = branches[branchId];
     dynamicContent.innerHTML = `
                     <section class="years-section section">
@@ -1299,7 +1309,15 @@ const renderAboutUs = () => {
       .addEventListener("click", renderResources);
   };
 
-  const renderYearSemesters = (branchId, year) => {
+  const renderYearSemesters = (branchId, year, addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState(
+        { page: "semesters", branchId: branchId, year: year },
+        "",
+        `#${branchId}/${year}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
     const semesters = branches[branchId].years[year];
     dynamicContent.innerHTML = `
                     <section class="semesters-section section">
@@ -1346,7 +1364,26 @@ const renderAboutUs = () => {
       });
   };
 
-  const renderSemesterSubjects = (branchId, year, semester) => {
+  const renderSemesterSubjects = (
+    branchId,
+    year,
+    semester,
+    addToHistory = true
+  ) => {
+    if (addToHistory) {
+      // We replace spaces with dashes for a cleaner URL
+      history.pushState(
+        {
+          page: "subjects",
+          branchId: branchId,
+          year: year,
+          semester: semester,
+        },
+        "",
+        `#${branchId}/${year}/${semester.replace(" ", "-")}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
     const subjects = branches[branchId]?.years[year]?.[semester];
     if (!subjects) {
       alert(
@@ -1376,119 +1413,131 @@ const renderAboutUs = () => {
                 `;
   };
 
-const subjectLinks = {
-  "Applied Mathematics": "https://drive.google.com/drive/folders/1LLI98y-jqeJZeXjY6qg4mVXHDiOgMgTP?usp=drive_link",
-  "Applied Physics": "https://drive.google.com/drive/folders/1m0addOBmQjwP8rdl0vZL29tt2PPHDe8R?usp=drive_link",
-  "IT Workshop": "https://drive.google.com/drive/folders/1Z7Jh7pcu4XgBrEL0ACR0UGerwutaxqAY?usp=drive_link",
-  "Programming with Python": "https://drive.google.com/drive/folders/13BGj6bG5bYCRfImMJ0b28Qwfj0SoXfFX?usp=drive_link",
-  "Probability and Statistics": "https://drive.google.com/drive/folders/1_zlQA3XSzkz8OrnePJGU7G6sNhCJ92TY?usp=drive_link",
-  "Environmental Sciences": "https://drive.google.com/drive/folders/1_mNHz2xo30754lAcNJdsQmKZvS3NI_uM?usp=drive_link",
-  "Web Application Development": "https://drive.google.com/drive/folders/1KPMQfQG1kkyevGuhe-pbvL6LrpInkQGC?usp=drive_link",
-  "Basics of Electrical and Electronics Engineering": "https://drive.google.com/drive/folders/1X48lSL1_LIRmoOb_cAlh-AppsnyW0tu_?usp=drive_link",
-  "Communication Skills": "https://drive.google.com/drive/folders/16lHKOBdPbWruYPks3xLFuJte5MzRGtQm?usp=drive_link",
-  "Data Structures": "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac?usp=drive_link",
-  "Introduction to Data Science": "https://drive.google.com/drive/folders/1hF6CzhCaKuJb2YvPI7ypvxKRBL1XKwDe?usp=drive_link",
-  "Soft Skills and Personality Development": "https://drive.google.com/drive/folders/1d9_zPLadzn_ExjNfD0DuOfARScB4mLQ9?usp=drive_link",
-  "Fundamentals of Electrical Sciences": "https://drive.google.com/drive/folders/1W0IL6NrYjt5UCwvH2aYzmHLhnMa6_Kvb?usp=drive_link",
-  "Signals & Systems": "https://drive.google.com/drive/folders/1DilmTPvKwKk6q8_-ctnDEJyXJbkTfhNK?usp=drive_link",
-  "Object Oriented Programming": "https://drive.google.com/drive/folders/1mni41RgLBgtahHYwHRByzsarvuoicBgy?usp=drive_link",
-  "Elements of Mechanical Engineering": "https://drive.google.com/drive/folders/1se-WAPXb9_AWQZ7o1RvsaIVJXLEYOmMa?usp=drive_link",
-  "Engineering Mechanics": "https://drive.google.com/drive/folders/1Tq5JrNZilon7GxkvFh-wN_FEei0J-jJP?usp=drive_link",
-  "Programming with C": "https://drive.google.com/drive/folders/1l0bB5kTo6DHj3fPvXGId-LyP9O_SUpvK?usp=drive_link",
-  "Electronics Workshop": "https://drive.google.com/drive/folders/1aBc1owgICAf_DK20P7I-tR9lDXTmjbAO?usp=drive_link",
-  "Programming Fundamentals": "https://drive.google.com/drive/folders/1-LPF6YxsvldZqxkwMzsJhpHJ01iD3l7i?usp=drive_link",
-  "Workshop Practice": "https://drive.google.com/drive/folders/1y4u16aD_sG51_FtDU6PBL4Dnr3zQc_nk?usp=drive_link",
-  "Discrete Mathematics": "https://drive.google.com/drive/folders/1VxWIJfY791LAWtQrMcTdPtnfuAvVohJp",
-  "Data Structures and Algorithm": "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
-  "Database Management Systems": "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj",
-  "Operations Management" : "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
-  "Open Source Technologies" :"https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
-  "Artificial Intelligence" : "https://drive.google.com/drive/folders/1IE-_mXKynVWpojvvOGCCMhJHPhPExt0A",
-  "Software Engineering" : "https://drive.google.com/drive/folders/1SJMMxPDMypkQbbP02oFPfIKTwOMI6uPY",
-  "Design and Analysis of Algorithm" : "https://drive.google.com/drive/folders/1Z-5TbKvFhYWdEGlEmzrJS3eTUk4zRvnf",
-  "Advanced Electronic Workshop" : "https://drive.google.com/drive/folders/1GleJVqHY_f3P5IljgxDkcMWwJQ8LpjYC?usp=drive_link",
-  "Analog and Digital Electronics" : "https://drive.google.com/drive/folders/1tmq4sP4XexFo35n1XeAmoQCGpLzJOEhg?usp=drive_link",
-  "Analog Communication Systems" : "https://drive.google.com/drive/folders/1-A52kLu6YMSCus3PHRY2s-m5E9vg8bDl?usp=drive_link",
-  "Analog Electronics" : "https://drive.google.com/drive/folders/1aM54lOajoK0Sv3RGIbtypwDudtZ6uKHX?usp=drive_link",
-  "Cloud Computing" : "https://drive.google.com/drive/folders/1FJn3W-bgHF9bllkkDAtd6xhjspqEeX6E?usp=drive_link",
-  "Computer Organization and Architecture" : "https://drive.google.com/drive/folders/1pr5vlwc1AFVmZQgsQkDz8VDE_qzf6eAE?usp=drive_link",
-  "Computer Networks" : "https://drive.google.com/drive/folders/1COjUvylpWabPNpaV7KcPU_MJ_rDzHUnj?usp=drive_link",
-  "Control Systems" : "https://drive.google.com/drive/folders/18XQwSUrOdVrLXwfxfZH53aRauT1gcd-z?usp=drive_link",
-  "Digital Communication Systems" : "https://drive.google.com/drive/folders/16Tixly8QPx2Jktypc7gHPKT_toGoVIfR?usp=drive_link",
-  "Digital System Design" : "https://drive.google.com/drive/folders/1AavLJgstZO09g8R81g14ZmzgCYkaBl5E?usp=drive_link",
-  "Electromagnetic Field Theory and Antenna" : "https://drive.google.com/drive/folders/1Lw8ET8ldSqx4JFv8LUm3DYiIdZeNCUzp?usp=drive_link",
-  "Electronics Circuit Simulation Workshop" : "https://drive.google.com/drive/folders/1dW97ZLqGXxrRMv7HSDbBXx44-1A6crXf?usp=drive_link",
-  "Engineering Materials" : "https://drive.google.com/drive/folders/1al2sbqwYSAp8qWxEOYINhid2cKXulwLv?usp=drive_link",
-  "Erogonomic Design" : "https://drive.google.com/drive/folders/1fTRaymllTsT-KA5phPU6_cvYD8LNloAB?usp=drive_link",
-  "Fluid Mechanics and Hydraulic Machines" : "https://drive.google.com/drive/folders/1RUXOPf9OxMf9K1l9-5ssJl9NLHhr0XZA?usp=drive_link",
-  "Fundamentals of Devops" : "https://drive.google.com/drive/folders/1TLRSwOtOMpuW1yyxr5lrpgmadwgVsEbC?usp=drive_link",
-  "Indian Knowledge System" : "https://drive.google.com/drive/folders/1JKisG10iMNF4qKzmJS9c45dAmUOphS59?usp=drive_link",
-  "Introduction to Internet of Things" : "https://drive.google.com/drive/folders/1IW1uDptkOLZMZk6pq5RfEr-sXm_Ogwmo?usp=drive_link",
-  "IoT Lab" : "https://drive.google.com/drive/folders/15qXoIellUeSYWs2B2pVpvXmS8Y8xmGlD?usp=drive_link",
-  "Advanced IoT and Real World Applications" : "https://drive.google.com/drive/folders/1FciF5VeeKg4-iXVcrTE3KzNTh3aHn89d?usp=drive_link",
-  "Machine Drawing Lab" :  "https://drive.google.com/drive/folders/1rhskxhoK-__-__nn6CpohnZ2nqa2duGT?usp=drive_link",
-  "Numerical Techniques for Engineers" : "https://drive.google.com/drive/folders/1ToGlSyemOU0_jHHaBysQJfeEUecN4vG-?usp=drive_link",
-  "Operating Systems" : "https://drive.google.com/drive/folders/1wi1wpyJ-NkaZjitHBOlugutWrfHmVZzB?usp=drive_link",
-  "Production Technology - I" : "https://drive.google.com/drive/folders/1NKYe3zUPSj5dmvwOq19Y5TatYfcttOYL?usp=drive_link",
-  "Production Technology - II" : "https://drive.google.com/drive/folders/1tGhsRereUlVSGEONPYyo0r_FdV6ZV2wv?usp=drive_link",
-  "Robotics Lab" : "https://drive.google.com/drive/folders/11Zeoy_Jga4Nyeihpkzw6qimyCRtYW0-y?usp=drive_link",
-  "Strength of Materials" : "https://drive.google.com/drive/folders/1XOX7lJEhWfXcNAr3LMuhWjo0I47iYrJR?usp=drive_link",
-  "Theory of Machines" : "https://drive.google.com/drive/folders/14Y9wCr63vqalNWBhng_Qqq10UAozVhSX?usp=drive_link",  
-  "Thermal Engineering - I" : "https://drive.google.com/drive/folders/11OpFX6E4hJbVZyRamyaNtjA6m65zQYl5?usp=drive_link",
-  "Thermal Engineering - II" :  "https://drive.google.com/drive/folders/1WOD4b4aSSXennn_u7zTpN7LWG3hBnunb?usp=drive_link"
+  const subjectLinks = {
+    "Applied Mathematics":
+      "https://drive.google.com/drive/folders/1LLI98y-jqeJZeXjY6qg4mVXHDiOgMgTP?usp=drive_link",
+    "Applied Physics":
+      "https://drive.google.com/drive/folders/1m0addOBmQjwP8rdl0vZL29tt2PPHDe8R?usp=drive_link",
+    "IT Workshop":
+      "https://drive.google.com/drive/folders/1Z7Jh7pcu4XgBrEL0ACR0UGerwutaxqAY?usp=drive_link",
+    "Programming with Python":
+      "https://drive.google.com/drive/folders/13BGj6bG5bYCRfImMJ0b28Qwfj0SoXfFX?usp=drive_link",
+    "Probability and Statistics":
+      "https://drive.google.com/drive/folders/1_zlQA3XSzkz8OrnePJGU7G6sNhCJ92TY?usp=drive_link",
+    "Environmental Sciences":
+      "https://drive.google.com/drive/folders/1_mNHz2xo30754lAcNJdsQmKZvS3NI_uM?usp=drive_link",
+    "Web Application Development":
+      "https://drive.google.com/drive/folders/1KPMQfQG1kkyevGuhe-pbvL6LrpInkQGC?usp=drive_link",
+    "Basics of Electrical and Electronics Engineering":
+      "https://drive.google.com/drive/folders/1X48lSL1_LIRmoOb_cAlh-AppsnyW0tu_?usp=drive_link",
+    "Communication Skills":
+      "https://drive.google.com/drive/folders/16lHKOBdPbWruYPks3xLFuJte5MzRGtQm?usp=drive_link",
+    "Data Structures":
+      "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac?usp=drive_link",
+    "Introduction to Data Science":
+      "https://drive.google.com/drive/folders/1hF6CzhCaKuJb2YvPI7ypvxKRBL1XKwDe?usp=drive_link",
+    "Soft Skills and Personality Development":
+      "https://drive.google.com/drive/folders/1d9_zPLadzn_ExjNfD0DuOfARScB4mLQ9?usp=drive_link",
+    "Fundamentals of Electrical Sciences":
+      "https://drive.google.com/drive/folders/1W0IL6NrYjt5UCwvH2aYzmHLhnMa6_Kvb?usp=drive_link",
+    "Signals & Systems":
+      "https://drive.google.com/drive/folders/1DilmTPvKwKk6q8_-ctnDEJyXJbkTfhNK?usp=drive_link",
+    "Object Oriented Programming":
+      "https://drive.google.com/drive/folders/1mni41RgLBgtahHYwHRByzsarvuoicBgy?usp=drive_link",
+    "Elements of Mechanical Engineering":
+      "https://drive.google.com/drive/folders/1se-WAPXb9_AWQZ7o1RvsaIVJXLEYOmMa?usp=drive_link",
+    "Engineering Mechanics":
+      "https://drive.google.com/drive/folders/1Tq5JrNZilon7GxkvFh-wN_FEei0J-jJP?usp=drive_link",
+    "Programming with C":
+      "https://drive.google.com/drive/folders/1l0bB5kTo6DHj3fPvXGId-LyP9O_SUpvK?usp=drive_link",
+    "Electronics Workshop":
+      "https://drive.google.com/drive/folders/1aBc1owgICAf_DK20P7I-tR9lDXTmjbAO?usp=drive_link",
+    "Programming Fundamentals":
+      "https://drive.google.com/drive/folders/1-LPF6YxsvldZqxkwMzsJhpHJ01iD3l7i?usp=drive_link",
+    "Workshop Practice":
+      "https://drive.google.com/drive/folders/1y4u16aD_sG51_FtDU6PBL4Dnr3zQc_nk?usp=drive_link",
+    "Discrete Mathematics":
+      "https://drive.google.com/drive/folders/1VxWIJfY791LAWtQrMcTdPtnfuAvVohJp",
+    "Data Structures and Algorithm":
+      "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
+    "Database Management Systems":
+      "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj",
+    "Operations Management":
+      "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
+    "Open Source Technologies":
+      "https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
 
-  //"subject": "link",
-  // add more subjects here...
-};
+    //"subject": "link",
+    // add more subjects here...
+  };
 
-const pyqLinks = {
-  "Applied Mathematics": "https://drive.google.com/drive/folders/1vuQlxljaUk-nd1J7cLsGeM9P4BisY54v?usp=drive_link",
-  "Applied Physics": "https://drive.google.com/drive/folders/1lD2QvIAW_7beX65zqu9rKYBgCa1fkqCs?usp=drive_link",
-  "Programming with Python": "https://drive.google.com/drive/folders/1HhJlqmXWmRuoODcax-PbLEjdsdb_y55x?usp=drive_link",
-  "IT Workshop": "https://drive.google.com/drive/folders/1WWSY6PQdv--uGEHlu20Z376LM3GA8IDq?usp=drive_link",
-  "Communication Skills":"https://drive.google.com/drive/folders/1lLbwQNr_i5iiM0tlImezsEMWYOAfaOVB?usp=drive_link",
-  "Environmental Sciences":"https://drive.google.com/drive/folders/1OUEnMuy0eZnE8gSqcjSB5u35WNIY6NVt?usp=drive_link",
-  "Introduction to Data Science":"https://drive.google.com/drive/folders/1ROIfGg9IB_m20iRb6IgrQguL-xgnuYQN?usp=drive_link",
-  "Web Application Development":"https://drive.google.com/drive/folders/19AUfb-6i1LukbpkwdYWpv6HNEVn5Wper?usp=drive_link",
-  "Soft Skills and Personality Development":"https://drive.google.com/drive/folders/1_Teky5w13k88V_zKHgpQTb7v1XyD2_8f?usp=drive_link",
-  "Probability and Statistics":"https://drive.google.com/drive/folders/1HDqQX8EGhHA2HvQXSIM_QZ54ojtKX__q?usp=drive_link",
-  "Object Oriented Programming":"https://drive.google.com/drive/folders/1BVZ5szuIywvNNu_FYc7xY5AdyQirTU0m?usp=drive_link",
-  "Discrete Mathematics":"https://drive.google.com/drive/folders/1-y7yYuKIgqs35f4tguQwHv8O9RbaIYx2",
-  "Software Engineering":"https://drive.google.com/drive/folders/1j-mLBHgBjG0cNBSeSDRN6XfrI5D1uPYv",
-  "Design and Analysis of Algorithm":"https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
-  "Operations Management":"https://drive.google.com/drive/folders/1PJfbTUJ-xL4x12DLb3Fp_IgZA8Y6Pcw1",
-  "Artificial Intelligence":"https://drive.google.com/drive/folders/1j8MkHSglhUEEjtacSjaA_GCtbvp9BCDo",
-  "Computer Networks":"https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
-  "Operating Systems":"https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
-  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
-  "Basics of Electrical and Electronics Engineering" : "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
-  "Programming with C" : "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY",
-  "Data Structures and Algorithm" : "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
-  "Database Management Systems" : "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
-  "Optimization Techniques and Decision Making" : "https://drive.google.com/drive/folders/1Zzqae6FrNTIzXsZXnYX_qlgx_RCx1jJK?usp=drive_link",
-  "Mobile Application Development" : "https://drive.google.com/drive/folders/1n5ODhFZac24Zd4mktc1YZPoUvQPN4xEu?usp=drive_link",
-  "Signals & Systems" : "https://drive.google.com/drive/folders/1-xBztDfOZEFvEjkhp_5lIk7yY-nl7uhe?usp=drive_link",
-  "Fluid Mechanics and Hydraulic Machines" : "https://drive.google.com/drive/folders/1N1-tA3ugSvuVx_Qm9lkb80grCipvq4fz?usp=drive_link",
-  "Engineering Mechanics" : "https://drive.google.com/drive/folders/17a6e3NxfgwIGjU-acD93MmdZRjztZHfu?usp=drive_link",
-  "Introduction to Internet of Things" : "https://drive.google.com/drive/folders/10wc-MPYlVwJbeAQp6Od_66Jn6ZDi2ney?usp=drive_link",
-  "Analog and Digital Electronics" : "https://drive.google.com/drive/folders/12vFzjorE56hm3-11cDCl1Fgd6IHqiO74?usp=drive_link",
-  "Control Systems" : "https://drive.google.com/drive/folders/1U40EUcWVsvWGD1eCoG6VoZzQb0ZHOw2K?usp=drive_link",
-  "Strength of Materials" : "https://drive.google.com/drive/folders/1-X__gb4stO7p8SBnpdkZHsYWNZwF1SHn?usp=drive_link",
-  "Computer Networks" : "https://drive.google.com/drive/folders/1LXf-MhOQdBOf0kYxE67EFE24IA0WTkYF?usp=drive_link",
-  "Digital Communication Systems" : "https://drive.google.com/drive/folders/1zK9KLnonsiYpks1RsKuVQWbiMgQ6mrHp?usp=drive_link",
-  "Production Technology - I" : "https://drive.google.com/drive/folders/1OL_3-4p_7yxYcQrtQpcHfgKOkbUU7tiF?usp=drive_link",
-  "Analog Communication Systems" : "https://drive.google.com/drive/folders/1980xAMY2wV62WzHILmeQ8IOVlQZSk7Ed?usp=drive_link",
+  const pyqLinks = {
+    "Applied Mathematics":
+      "https://drive.google.com/drive/folders/1vuQlxljaUk-nd1J7cLsGeM9P4BisY54v?usp=drive_link",
+    "Applied Physics":
+      "https://drive.google.com/drive/folders/1lD2QvIAW_7beX65zqu9rKYBgCa1fkqCs?usp=drive_link",
+    "Programming with Python":
+      "https://drive.google.com/drive/folders/1HhJlqmXWmRuoODcax-PbLEjdsdb_y55x?usp=drive_link",
+    "IT Workshop":
+      "https://drive.google.com/drive/folders/1WWSY6PQdv--uGEHlu20Z376LM3GA8IDq?usp=drive_link",
+    "Communication Skills":
+      "https://drive.google.com/drive/folders/1lLbwQNr_i5iiM0tlImezsEMWYOAfaOVB?usp=drive_link",
+    "Environmental Sciences":
+      "https://drive.google.com/drive/folders/1OUEnMuy0eZnE8gSqcjSB5u35WNIY6NVt?usp=drive_link",
+    "Introduction to Data Science":
+      "https://drive.google.com/drive/folders/1ROIfGg9IB_m20iRb6IgrQguL-xgnuYQN?usp=drive_link",
+    "Web Application Development":
+      "https://drive.google.com/drive/folders/19AUfb-6i1LukbpkwdYWpv6HNEVn5Wper?usp=drive_link",
+    "Soft Skills and Personality Development":
+      "https://drive.google.com/drive/folders/1_Teky5w13k88V_zKHgpQTb7v1XyD2_8f?usp=drive_link",
+    "Probability and Statistics":
+      "https://drive.google.com/drive/folders/1HDqQX8EGhHA2HvQXSIM_QZ54ojtKX__q?usp=drive_link",
+    "Object Oriented Programming":
+      "https://drive.google.com/drive/folders/1BVZ5szuIywvNNu_FYc7xY5AdyQirTU0m?usp=drive_link",
+    "Discrete Mathematics":
+      "https://drive.google.com/drive/folders/1-y7yYuKIgqs35f4tguQwHv8O9RbaIYx2",
+    "Software Engineering":
+      "https://drive.google.com/drive/folders/1j-mLBHgBjG0cNBSeSDRN6XfrI5D1uPYv",
+    "Design and Analysis of Algorithm":
+      "https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
+    "Operations Management":
+      "https://drive.google.com/drive/folders/1PJfbTUJ-xL4x12DLb3Fp_IgZA8Y6Pcw1",
+    "Artificial Intelligence":
+      "https://drive.google.com/drive/folders/1j8MkHSglhUEEjtacSjaA_GCtbvp9BCDo",
+    "Computer Networks":
+      "https://drive.google.com/drive/folders/1gaOxKWX5jPiw-qGICgU6KkBW8bRP-yiM",
+    "Operating Systems":
+      "https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
+    "Data Structures and Algorithm":
+      "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
+    // keep adding subjects with their PYQ links...
+  };
 
-  // keep adding subjects with their PYQ links...
-};
+  const renderSubjectOptions = (
+    subject,
+    branch,
+    year,
+    semester,
+    addToHistory = true
+  ) => {
+    if (addToHistory) {
+      history.pushState(
+        {
+          page: "options",
+          subject: subject,
+          branch: branch,
+          year: year,
+          semester: semester,
+        },
+        "",
+        `#${subject.replace(/ /g, "-")}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
+    const notesLink = subjectLinks[subject] || "#";
+    const pyqLink = pyqLinks[subject]; // 🔗 Placeholder for PYQ, you’ll add real links later
 
-
-
-const renderSubjectOptions = (subject, branch, year, semester) => {
-  const notesLink = subjectLinks[subject] || "#"; 
-  const pyqLink = pyqLinks[subject] // 🔗 Placeholder for PYQ, you’ll add real links later
-
-  dynamicContent.innerHTML = `
+    dynamicContent.innerHTML = `
     <section class="subject-options-section section">
       <h2>${subject}</h2>
       <div class="notes-and-pyq-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
@@ -1509,9 +1558,7 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
       </button>
     </section>
   `;
-};
-
-
+  };
 
   // const renderUnitSelection = (subject, type, branch, year, semester) => {
   //   dynamicContent.innerHTML = `
@@ -1547,8 +1594,16 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
   //               `;
   // };
 
-  const renderPyqViewer = (subject) => {
-  const notesContent = `
+  const renderPyqViewer = (subject, term, addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState(
+        { page: "pyq-view", subject: subject, term: term },
+        "",
+        `#pyq/${subject.replace(/ /g, "-")}/${term}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
+    const notesContent = `
     <h2>${subject} - PYQs</h2>
     <div class="card">
       <h3>Previous Year Questions</h3>
@@ -1557,15 +1612,14 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     </div>
   `;
 
-  dynamicContent.innerHTML = `
+    dynamicContent.innerHTML = `
     <section class="notes-viewer section">
       ${notesContent}
       <button class="game-back-btn" id="back-to-subject-options" 
               data-subject="${subject}">Back to Options</button>
     </section>
   `;
-};
-
+  };
 
   const renderUnitViewer = (subject, type, unit) => {
     const notesContent = `
@@ -1792,7 +1846,9 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
   };
 
   // Game Logic
-  const renderGames = () => {
+  const renderGames = (addToHistory = true) => {
+    if (addToHistory) history.pushState({ page: "games" }, "", "#games");
+    // ... rest of code ...
     dynamicContent.innerHTML = `
                     <section class="games-section section">
                         <h2>Games</h2>
@@ -1822,7 +1878,11 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
                 `;
   };
 
-  const renderTicTacToe = () => {
+  const renderTicTacToe = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "tictactoe" }, "", "#game/tictactoe");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="game-section section">
                         <h2>Tic-Tac-Toe</h2>
@@ -1907,7 +1967,11 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     cells.forEach((cell) => cell.addEventListener("click", handleCellClick));
   };
 
-  const renderMemoryGame = () => {
+  const renderMemoryGame = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "memory" }, "", "#game/memory");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="game-section section">
                         <h2>Memory Game</h2>
@@ -1996,7 +2060,11 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
       .addEventListener("click", renderMemoryGame);
   };
 
-  const renderPuzzleGame = () => {
+  const renderPuzzleGame = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "puzzle" }, "", "#game/puzzle");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="game-section section">
                         <h2>Puzzle Game</h2>
@@ -2081,7 +2149,11 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     shuffleBoard();
   };
 
-  const renderPongGame = () => {
+  const renderPongGame = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "pong" }, "", "#game/pong");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="game-section section">
                         <h2>Pong</h2>
@@ -2284,7 +2356,11 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     gameLoop();
   };
 
-  const renderCodingGame = (level = null) => {
+  const renderCodingGame = (level = null, addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "coding" }, "", "#game/coding");
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="coding-game-section section">
                         <h2>Mini Coding Games</h2>
@@ -2323,7 +2399,15 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
     });
   };
 
-  const renderCodingQuestions = (level) => {
+  const renderCodingQuestions = (level, addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState(
+        { page: "coding-questions", level: level },
+        "",
+        `#game/coding/${level}`
+      );
+    }
+    // ... leave the rest of the function exactly as it is ...
     dynamicContent.innerHTML = `
                     <section class="coding-game-section section">
                         <h2>${
@@ -2538,8 +2622,12 @@ const renderSubjectOptions = (subject, branch, year, semester) => {
 
   // POMODORO
 
-const renderPomodoro = () => {
-  dynamicContent.innerHTML = `
+  const renderPomodoro = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "pomodoro" }, "", "#pomodoro");
+    }
+    // ... leave the rest of the function exactly as it is ...
+    dynamicContent.innerHTML = `
     <section class="pomodoro-section">
       <h1>Pomodoro Timer</h1>
       <p>Boost your focus with the Pomodoro Technique ⏳</p>
@@ -2579,293 +2667,345 @@ const renderPomodoro = () => {
     </section>
   `;
 
-  // ================= Timer Logic =================
-  const timerDisplay = document.getElementById("timer-display");
-  const startButton = document.getElementById("start-button");
-  const pauseButton = document.getElementById("pause-button");
-  const resetButton = document.getElementById("reset-button");
-  const pomodoroButton = document.getElementById("pomodoro-button");
-  const shortBreakButton = document.getElementById("short-break-button");
-  const longBreakButton = document.getElementById("long-break-button");
+    // ================= Timer Logic =================
+    const timerDisplay = document.getElementById("timer-display");
+    const startButton = document.getElementById("start-button");
+    const pauseButton = document.getElementById("pause-button");
+    const resetButton = document.getElementById("reset-button");
+    const pomodoroButton = document.getElementById("pomodoro-button");
+    const shortBreakButton = document.getElementById("short-break-button");
+    const longBreakButton = document.getElementById("long-break-button");
 
-  const WORK_DURATION = 25 * 60;
-  const SHORT_BREAK_DURATION = 5 * 60;
-  const LONG_BREAK_DURATION = 15 * 60;
+    const WORK_DURATION = 25 * 60;
+    const SHORT_BREAK_DURATION = 5 * 60;
+    const LONG_BREAK_DURATION = 15 * 60;
 
-  let currentTime = WORK_DURATION;
-  let timer = null;
-  let isPaused = false;
+    let currentTime = WORK_DURATION;
+    let timer = null;
+    let isPaused = false;
 
-  function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
-  }
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remainingSeconds = seconds % 60;
+      return `${String(minutes).padStart(2, "0")}:${String(
+        remainingSeconds
+      ).padStart(2, "0")}`;
+    }
 
-  function updateTimerDisplay() {
-    timerDisplay.textContent = formatTime(currentTime);
-  }
+    function updateTimerDisplay() {
+      timerDisplay.textContent = formatTime(currentTime);
+    }
 
-  function startTimer() {
-    startButton.classList.add("hidden");
-    pauseButton.classList.remove("hidden");
-    timer = setInterval(() => {
-      if (!isPaused) {
-        currentTime--;
-        updateTimerDisplay();
-        if (currentTime <= 0) {
-          clearInterval(timer);
-          alert("⏰ Time’s Up!");
-          resetTimer();
+    function startTimer() {
+      startButton.classList.add("hidden");
+      pauseButton.classList.remove("hidden");
+      timer = setInterval(() => {
+        if (!isPaused) {
+          currentTime--;
+          updateTimerDisplay();
+          if (currentTime <= 0) {
+            clearInterval(timer);
+            alert("⏰ Time’s Up!");
+            resetTimer();
+          }
         }
-      }
-    }, 1000);
-  }
+      }, 1000);
+    }
 
-  function pauseTimer() {
-    isPaused = true;
-    startButton.textContent = "Resume";
-    startButton.classList.remove("hidden");
-    pauseButton.classList.add("hidden");
-  }
+    function pauseTimer() {
+      isPaused = true;
+      startButton.textContent = "Resume";
+      startButton.classList.remove("hidden");
+      pauseButton.classList.add("hidden");
+    }
 
-  function resetTimer() {
-    clearInterval(timer);
-    isPaused = false;
-    if (pomodoroButton.classList.contains("active")) currentTime = WORK_DURATION;
-    else if (shortBreakButton.classList.contains("active")) currentTime = SHORT_BREAK_DURATION;
-    else currentTime = LONG_BREAK_DURATION;
+    function resetTimer() {
+      clearInterval(timer);
+      isPaused = false;
+      if (pomodoroButton.classList.contains("active"))
+        currentTime = WORK_DURATION;
+      else if (shortBreakButton.classList.contains("active"))
+        currentTime = SHORT_BREAK_DURATION;
+      else currentTime = LONG_BREAK_DURATION;
 
-    startButton.textContent = "Start";
-    startButton.classList.remove("hidden");
-    pauseButton.classList.add("hidden");
-    updateTimerDisplay();
-  }
+      startButton.textContent = "Start";
+      startButton.classList.remove("hidden");
+      pauseButton.classList.add("hidden");
+      updateTimerDisplay();
+    }
 
-  // Attach Events
-  startButton.addEventListener("click", () => {
-    isPaused = false;
-    startTimer();
-  });
-  pauseButton.addEventListener("click", pauseTimer);
-  resetButton.addEventListener("click", resetTimer);
-
-  [pomodoroButton, shortBreakButton, longBreakButton].forEach((button) => {
-    button.addEventListener("click", () => {
-      [pomodoroButton, shortBreakButton, longBreakButton].forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-      resetTimer();
+    // Attach Events
+    startButton.addEventListener("click", () => {
+      isPaused = false;
+      startTimer();
     });
-  });
+    pauseButton.addEventListener("click", pauseTimer);
+    resetButton.addEventListener("click", resetTimer);
 
-  updateTimerDisplay();
+    [pomodoroButton, shortBreakButton, longBreakButton].forEach((button) => {
+      button.addEventListener("click", () => {
+        [pomodoroButton, shortBreakButton, longBreakButton].forEach((btn) =>
+          btn.classList.remove("active")
+        );
+        button.classList.add("active");
+        resetTimer();
+      });
+    });
 
-  // ================= Music Player =================
-  const audioPlayer = document.getElementById("audio-player");
-  const lofiBtn = document.getElementById("lofi-mode");
-  const chillBtn = document.getElementById("chill-mode");
-  const rainyBtn = document.getElementById("rainy-mode");
+    updateTimerDisplay();
 
-  // One track per mode (replace these with your real URLs)
-  const tracks = {
-    lofi: "music/lofi.mp3",
-    chill: "music/cozy.mp3",
-    rainy: "music/rain.mp3"
+    // ================= Music Player =================
+    const audioPlayer = document.getElementById("audio-player");
+    const lofiBtn = document.getElementById("lofi-mode");
+    const chillBtn = document.getElementById("chill-mode");
+    const rainyBtn = document.getElementById("rainy-mode");
+
+    // One track per mode (replace these with your real URLs)
+    const tracks = {
+      lofi: "music/lofi.mp3",
+      chill: "music/cozy.mp3",
+      rainy: "music/rain.mp3",
+    };
+
+    let currentMode = "lofi";
+
+    function switchMode(mode) {
+      currentMode = mode;
+
+      // Remove all active + theme classes
+      [lofiBtn, chillBtn, rainyBtn].forEach((btn) =>
+        btn.classList.remove(
+          "active",
+          "lofi-active",
+          "chill-active",
+          "rainy-active"
+        )
+      );
+
+      // Add active + theme class to selected mode
+      if (mode === "lofi") lofiBtn.classList.add("active", "lofi-active");
+      if (mode === "chill") chillBtn.classList.add("active", "chill-active");
+      if (mode === "rainy") rainyBtn.classList.add("active", "rainy-active");
+
+      // Load track
+      audioPlayer.src = tracks[mode];
+      // DO NOT auto-play here
+    }
+
+    const playPauseBtn = document.getElementById("play-pause-btn");
+
+    playPauseBtn.addEventListener("click", () => {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseBtn.textContent = "⏸️ Pause";
+      } else {
+        audioPlayer.pause();
+        playPauseBtn.textContent = "▶️ Play";
+      }
+    });
+
+    lofiBtn.addEventListener("click", () => switchMode("lofi"));
+    chillBtn.addEventListener("click", () => switchMode("chill"));
+    rainyBtn.addEventListener("click", () => switchMode("rainy"));
+
+    // Load default (Lofi)
+    //switchMode("lofi");
   };
 
-  let currentMode = "lofi";
-
-  function switchMode(mode) {
-  currentMode = mode;
-
-  // Remove all active + theme classes
-  [lofiBtn, chillBtn, rainyBtn].forEach((btn) =>
-    btn.classList.remove("active", "lofi-active", "chill-active", "rainy-active")
-  );
-
-  // Add active + theme class to selected mode
-  if (mode === "lofi") lofiBtn.classList.add("active", "lofi-active");
-  if (mode === "chill") chillBtn.classList.add("active", "chill-active");
-  if (mode === "rainy") rainyBtn.classList.add("active", "rainy-active");
-
-  // Load track
-  audioPlayer.src = tracks[mode];
-  // DO NOT auto-play here
-}
-
-const playPauseBtn = document.getElementById("play-pause-btn");
-
-playPauseBtn.addEventListener("click", () => {
-  if (audioPlayer.paused) {
-    audioPlayer.play();
-    playPauseBtn.textContent = "⏸️ Pause";
-  } else {
-    audioPlayer.pause();
-    playPauseBtn.textContent = "▶️ Play";
-  }
-});
-
-
-  lofiBtn.addEventListener("click", () => switchMode("lofi"));
-  chillBtn.addEventListener("click", () => switchMode("chill"));
-  rainyBtn.addEventListener("click", () => switchMode("rainy"));
-
-  // Load default (Lofi)
-  //switchMode("lofi");
-};
-
-document.getElementById("pomodoro-link").addEventListener("click", (e) => {
-  e.preventDefault();
-  renderPomodoro();
-});
-
-
-
-
+  document.getElementById("pomodoro-link").addEventListener("click", (e) => {
+    e.preventDefault();
+    renderPomodoro();
+  });
 
   // Chatbot functionality
   // --- Chatbot Elements ---
-  // Chatbot functionality
-// --- Chatbot Elements ---
-const chatbotToggle = document.getElementById("chatbot-toggle");
-const chatbotBox = document.getElementById("chatbot-box");
-const chatbotClose = document.getElementById("chatbot-close");
-const chatbotMessages = document.getElementById("chatbot-messages");
-const chatbotInput = document.getElementById("chatbot-input");
-const chatbotSend = document.getElementById("chatbot-send");
+  const chatbotToggle = document.getElementById("chatbot-toggle");
+  const chatbotBox = document.getElementById("chatbot-box");
+  const chatbotClose = document.getElementById("chatbot-close");
+  const chatbotMessages = document.getElementById("chatbot-messages");
+  const chatbotInput = document.getElementById("chatbot-input");
+  const chatbotSend = document.getElementById("chatbot-send");
 
-const botIntents = {
-  greetings: [
-    "Hello! 👋 How can I help you with IGDTUWHub?",
-    "Hi there! 😊 What would you like to know?",
-    "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
-  ],
-  resources: [
-    {
-      text: "📚 Loading Resources section for you...",
-      action: () => loadSection("resources-link"),
-    },
-  ],
-  games: [
-    {
-      text: "🎮 Taking you to Games!",
-      action: () => loadSection("games-link"),
-    },
-  ],
-  cgpa: [
-    {
-      text: "📊 Opening the CGPA Calculator...",
-      action: () => loadSection("notes-link"),
-    },
-  ],
-  about: [
-    {
-      text: "👩‍💻 Let me show you About Us.",
-      action: () => loadSection("about-us-link"),
-    },
-  ],
-  events: [
-    {
-      text: "📅 Loading Events section now!",
-      action: () => loadSection("events-link"),
-    },
-  ],
-  pomodoro: [
-    {
-      text: "⏳ Taking you to Pomodoro Timer...",
-      action: () => loadSection("pomodoro-link"), // Link this to your Pomodoro section/page
-    },
-  ],
-  fallback: [
-    "🤔 Sorry, I didn’t get that. Try asking about resources, games, CGPA calculator, pomodoro, or events.",
-  ],
-};
+  const botIntents = {
+    greetings: [
+      "Hello! 👋 How can I help you with IGDTUWHub?",
+      "Hi there! 😊 What would you like to know?",
+      "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
+    ],
+    // ADD THESE THREE NEW SECTIONS:
+    okay: [
+      "Glad to help!",
+      "Awesome!",
+      "Great! Let me know if you need anything else.",
+    ],
+    thanks: ["You're welcome! 😊", "Happy to help!", "No problem!"],
+    bye: ["Goodbye! 👋", "See you later!", "Have a great day!"],
 
-// --- Utility: Pick a random response from an intent ---
-const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    // ... keep your existing resources, games, etc ...
+    resources: [
+      {
+        text: "📚 Loading Resources section for you...",
+        action: () => loadSection("resources-link"),
+      },
+    ],
+    games: [
+      {
+        text: "🎮 Taking you to Games!",
+        action: () => loadSection("games-link"),
+      },
+    ],
+    cgpa: [
+      {
+        text: "📊 Opening the CGPA Calculator...",
+        action: () => loadSection("notes-link"),
+      },
+    ],
+    about: [
+      {
+        text: "👩‍💻 Let me show you About Us.",
+        action: () => loadSection("about-us-link"),
+      },
+    ],
+    events: [
+      {
+        text: "📅 Loading Events section now!",
+        action: () => loadSection("events-link"),
+      },
+    ],
+    pomodoro: [
+      {
+        text: "⏳ Taking you to Pomodoro Timer...",
+        action: () => loadSection("pomodoro-link"),
+      },
+    ],
+    fallback: [
+      "🤔 Sorry, I didn’t get that. Try asking about resources, games, CGPA calculator, or events.",
+    ],
+  };
 
-// --- Message UI ---
-const addMessage = (sender, text) => {
-  const messageEl = document.createElement("div");
-  messageEl.style.marginBottom = "10px";
-  messageEl.style.padding = "8px";
-  messageEl.style.borderRadius = "10px";
-  messageEl.style.maxWidth = "80%";
+  // --- Utility: Pick a random response from an intent ---
+  const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-  if (sender === "user") {
-    messageEl.style.backgroundColor = "#4b89dc";
-    messageEl.style.color = "white";
-    messageEl.style.marginLeft = "auto";
-  } else {
-    messageEl.style.backgroundColor = "#2a2a2a";
-    messageEl.style.color = "white";
-  }
+  // --- Message UI ---
+  const addMessage = (sender, text) => {
+    const messageEl = document.createElement("div");
+    messageEl.style.marginBottom = "10px";
+    messageEl.style.padding = "8px";
+    messageEl.style.borderRadius = "10px";
+    messageEl.style.maxWidth = "80%";
 
-  // FIX: support both string and object
-  messageEl.textContent = typeof text === "string" ? text : text.text;
-
-  chatbotMessages.appendChild(messageEl);
-  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-};
-
-// --- Bot NLP Logic ---
-const getBotResponse = (userMessage) => {
-  const msg = userMessage.toLowerCase();
-
-  if (msg.match(/\b(hi|hello|hey)\b/)) return getRandom(botIntents.greetings);
-  if (msg.includes("resource")) return getRandom(botIntents.resources);
-  if (msg.includes("game")) return getRandom(botIntents.games);
-  if (msg.includes("cgpa") || msg.includes("gpa"))
-    return getRandom(botIntents.cgpa);
-  if (msg.includes("about")) return getRandom(botIntents.about);
-  if (msg.includes("event") || msg.includes("calendar"))
-    return getRandom(botIntents.events);
-  if (msg.includes("pomodoro") || msg.includes("timer"))
-    return getRandom(botIntents.pomodoro);
-
-  // fallback
-  return getRandom(botIntents.fallback);
-};
-
-// --- Send Message ---
-const sendMessage = () => {
-  const userMessage = chatbotInput.value;
-  if (userMessage.trim() === "") return;
-  addMessage("user", userMessage);
-  chatbotInput.value = "";
-
-  setTimeout(() => {
-    const botResponse = getBotResponse(userMessage);
-
-    if (typeof botResponse === "string") {
-      // Normal text response
-      addMessage("bot", botResponse);
-    } else if (botResponse && typeof botResponse === "object") {
-      // Advanced response with action
-      addMessage("bot", botResponse.text);
-      if (botResponse.action) botResponse.action();
+    if (sender === "user") {
+      messageEl.style.backgroundColor = "#4b89dc";
+      messageEl.style.color = "white";
+      messageEl.style.marginLeft = "auto";
+    } else {
+      messageEl.style.backgroundColor = "#2a2a2a";
+      messageEl.style.color = "white";
     }
-  }, 500);
-};
 
-// --- Event Listeners ---
-chatbotToggle.addEventListener("click", () => {
-  const isVisible = chatbotBox.style.display === "flex";
-  chatbotBox.style.display = isVisible ? "none" : "flex";
-  if (!isVisible) {
-    addMessage("bot", "👋 Hi! I'm your assistant. How can I help you today?");
-  }
-});
-chatbotClose.addEventListener("click", () => {
-  chatbotBox.style.display = "none";
-});
-chatbotSend.addEventListener("click", sendMessage);
-chatbotInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    sendMessage();
-  }
-});
+    // FIX: support both string and object
+    messageEl.textContent = typeof text === "string" ? text : text.text;
+
+    chatbotMessages.appendChild(messageEl);
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+  };
+
+  // --- Bot NLP Logic ---
+  const getBotResponse = (userMessage) => {
+    const msg = userMessage.toLowerCase();
+
+    if (msg.match(/\b(hi|hello|hey)\b/)) return getRandom(botIntents.greetings);
+    if (msg.match(/\b(okay|ok|fine)\b/)) return getRandom(botIntents.okay);
+    if (msg.match(/\b(thank|thanks)\b/)) return getRandom(botIntents.thanks);
+    if (msg.match(/\b(bye|goodbye|see ya)\b/)) return getRandom(botIntents.bye);
+    if (msg.includes("resource")) return getRandom(botIntents.resources);
+    if (msg.includes("game")) return getRandom(botIntents.games);
+    if (msg.includes("cgpa") || msg.includes("gpa"))
+      return getRandom(botIntents.cgpa);
+    if (msg.includes("about")) return getRandom(botIntents.about);
+    if (msg.includes("event") || msg.includes("calendar"))
+      return getRandom(botIntents.events);
+
+    // fallback
+    return getRandom(botIntents.fallback);
+  };
+
+  // --- Send Message ---
+  const sendMessage = () => {
+    const userMessage = chatbotInput.value;
+    if (userMessage.trim() === "") return;
+    addMessage("user", userMessage);
+    chatbotInput.value = "";
+
+    setTimeout(() => {
+      const botResponse = getBotResponse(userMessage);
+
+      if (typeof botResponse === "string") {
+        // Normal text response
+        addMessage("bot", botResponse);
+      } else if (botResponse && typeof botResponse === "object") {
+        // Advanced response with action
+        addMessage("bot", botResponse.text);
+        if (botResponse.action) botResponse.action();
+      }
+    }, 500);
+  };
+
+  // --- HANDLE BROWSER BACK BUTTON (COMPLETE VERSION) ---
+  window.addEventListener("popstate", (event) => {
+    if (event.state) {
+      const s = event.state;
+      // Main Sections
+      if (s.page === "home") renderHome(false);
+      else if (s.page === "resources") renderResources(false);
+      else if (s.page === "games") renderGames(false);
+      else if (s.page === "cgpa") renderPerformance(false);
+      else if (s.page === "about") renderAboutUs(false);
+      else if (s.page === "events") renderEventCalendar(false);
+      else if (s.page === "pomodoro") renderPomodoro(false);
+      // Resources Navigation
+      else if (s.page === "years") renderBranchYears(s.branchId, false);
+      else if (s.page === "semesters")
+        renderYearSemesters(s.branchId, s.year, false);
+      else if (s.page === "subjects")
+        renderSemesterSubjects(s.branchId, s.year, s.semester, false);
+      else if (s.page === "options")
+        renderSubjectOptions(s.subject, s.branch, s.year, s.semester, false);
+      else if (s.page === "pyq-view") renderPyqViewer(s.subject, s.term, false);
+      // Specific Games
+      else if (s.page === "tictactoe") renderTicTacToe(false);
+      else if (s.page === "memory") renderMemoryGame(false);
+      else if (s.page === "puzzle") renderPuzzleGame(false);
+      else if (s.page === "pong") renderPongGame(false);
+      else if (s.page === "coding") renderCodingGame(null, false);
+      else if (s.page === "coding-questions")
+        renderCodingQuestions(s.level, false);
+    } else {
+      // Default to home if no state exists
+      renderHome(false);
+    }
+  });
+  // --- Event Listeners ---
+  chatbotToggle.addEventListener("click", () => {
+    const isVisible = chatbotBox.style.display === "flex";
+    chatbotBox.style.display = isVisible ? "none" : "flex";
+    if (!isVisible) {
+      addMessage("bot", "👋 Hi! I'm your assistant. How can I help you today?");
+    }
+  });
+  chatbotClose.addEventListener("click", () => {
+    chatbotBox.style.display = "none";
+  });
+  chatbotSend.addEventListener("click", sendMessage);
+  chatbotInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
 
   // Initial page load
-  renderHome();
+  // This sets the "start point" for the history
+  history.replaceState({ page: "home" }, "", "#home");
+  renderHome(false);
 });
+
