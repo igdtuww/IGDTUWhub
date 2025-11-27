@@ -1102,7 +1102,7 @@ function solve(input) {
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="3" required></textarea>
                     </div>
                     
                     <button type="submit" class="submit-feedback-btn">
