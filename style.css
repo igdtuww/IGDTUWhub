@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #121212;
   color: #e0e0e0;
@@ -1437,4 +1440,12 @@ footer {
   /* Inherits color: #4b89dc and font-size: 1.5rem from existing styles */
   margin-top: 0.2rem;    /* Significantly reduced top margin */
   margin-bottom: 0.5rem; /* Ensure some space below the name, but you can adjust this too */
+}
+
+.feedback-section .add-subject-btn {
+  width: auto;            /* Stops it from stretching 100% */
+  display: table;         /* Helps in centering variable width elements */
+  margin: 0 auto;         /* Centers the button horizontally */
+  padding: 1rem 3rem;     /* Adds nice spacing inside the button */
+  min-width: 200px;       /* Ensures it's not too small */
 }
