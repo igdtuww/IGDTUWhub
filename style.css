@@ -1,6 +1,239 @@
 * {
   box-sizing: border-box;
 }
+/* Add this to style.css */
+/* Add this to style.css */
+
+.society-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures image doesn't stretch */
+  margin-bottom: 1rem;
+  border: 2px solid #4b89dc; /* Optional: Adds a blue border */
+  align-self: center; /* Centers the image in the flex container */
+}
+
+
+/* Better Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.calendar-grid .day {
+  aspect-ratio: 1/1; /* Makes cells perfect squares */
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.calendar-grid .day:hover {
+  background-color: #333;
+}
+
+.calendar-grid .day.header {
+  background-color: transparent;
+  font-weight: bold;
+  color: #4b89dc;
+  aspect-ratio: auto;
+  padding-bottom: 0.5rem;
+}
+
+.calendar-grid .today {
+  border: 2px solid #4b89dc;
+  background-color: rgba(75, 137, 220, 0.1);
+}
+
+.calendar-grid .day.has-event {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.day-number {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* The dot indicator */
+.calendar-grid .event-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  margin-top: 4px;
+  box-shadow: 0 0 5px rgba(255, 193, 7, 0.6);
+}
+/* Societies Page Styles */
+.societies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.society-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.society-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: #4b89dc;
+}
+
+.society-card h3 {
+  color: #4b89dc;
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.society-type {
+  color: #ffc107;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.society-card p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.society-link-btn {
+  background-color: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.society-link-btn:hover {
+  background-color: #4b89dc;
+}
+/* --- Vertical, Modern, Dark UI Form --- */
+
+/* 1. The Container Box (Compact & Spaced from Sides) */
+.feedback-section {
+  background-color: #0f1115; /* Deep dark background */
+  border: 1px solid #2a2a2a;
+  border-radius: 16px; /* Modern rounded corners */
+  padding: 2.5rem; /* Spacious padding inside */
+
+  /* WIDTH CONTROLS */
+  max-width: 500px; /* Maximum width on desktop */
+  width: 90%; /* On smaller screens, take 90% width (leaves space on sides) */
+  margin: 3rem auto; /* Centers the box vertically and horizontally */
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Heading Style */
+.feedback-title {
+  text-align: center;
+  margin-bottom: 0.5rem; /* Reduced bottom margin slightly */
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 3. Form Layout (Vertical Stack) */
+.custom-feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Space between Name, Email, Message */
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Space between Label and Input */
+  text-align: left;
+}
+
+/* 4. Labels */
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-left: 4px;
+}
+
+/* 5. Inputs & Textarea (The Modern Dark Look) */
+.custom-feedback-form input,
+.custom-feedback-form textarea {
+  width: 100%;
+  background-color: #1a1d24; /* Dark blue-grey input background */
+  border: 1px solid #333;
+  color: #b0b0b0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Focus Effect (Purple Glow) */
+.custom-feedback-form input:focus,
+.custom-feedback-form textarea:focus {
+  border-color: #8a2be2;
+  background-color: #20242c;
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+/* Textarea Resize Control */
+.custom-feedback-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+/* 6. Gradient Button */
+.submit-feedback-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #9f55ff 0%, #4b89dc 100%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-feedback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(159, 85, 255, 0.4);
+}
 body {
   background-color: #121212;
   color: #e0e0e0;
@@ -97,7 +330,6 @@ body {
     display: flex;
   }
 }
-
 
 /* Common Section Styles */
 .section {
@@ -526,7 +758,7 @@ td input {
   background-color: #d63384;
   color: #fff;
   border: none;
-  padding-top: 0.5rem; 
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
@@ -670,7 +902,7 @@ footer {
   .nav-links {
     gap: 1rem;
   }
-  .remove-subject-btn{
+  .remove-subject-btn {
     padding-right: 2rem;
   }
   .welcome-section {
@@ -1135,7 +1367,6 @@ footer {
   }
 }
 
-
 /* CGPA Comparison */
 #gpa-comparison-chart {
   max-height: 400px;
@@ -1151,16 +1382,16 @@ footer {
   border: 1px solid #444;
   border-radius: 5px;
   color: #e0e0e0;
-  margin-left:0.5rem;
+  margin-left: 0.5rem;
 }
 #gpa-compare-inputs button {
-/*   padding: 0.5rem 1rem; */
+  /*   padding: 0.5rem 1rem; */
   background-color: #4b89dc;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left:0.75rem;
+  margin-left: 0.75rem;
 }
 
 /* About Us Profiles */
@@ -1215,14 +1446,13 @@ footer {
 .menu-toggle:checked ~ .nav-links {
   display: flex;
 }
-@media (max-width:760px) {
-  .logo{
+@media (max-width: 760px) {
+  .logo {
     padding-left: 8rem;
   }
-  .menu-icon{
-    padding-right:8rem;
+  .menu-icon {
+    padding-right: 8rem;
   }
-  
 }
 
 /* ================= Pomodoro Timer Styles ================= */
@@ -1319,15 +1549,49 @@ footer {
   display: none;
 }
 
-
 /* Pomodoro modal + music styles */
-.modal.hidden { display: none; }
-.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1200; }
-.modal-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-.modal-content { position: relative; background: #1e1e1e; padding: 1rem; border-radius: 10px; width: 94%; max-width: 420px; border: 1px solid #333; z-index: 10; color: #e0e0e0; }
-.music-track-button { width: 100%; padding: 0.7rem; border-radius: 6px; margin-bottom: 6px; background: #2a2a2a; color: #e0e0e0; border: 1px solid #333; text-align: left; cursor: pointer; font-weight: 600; }
-.music-track-button:hover { background:#333; }
-
+.modal.hidden {
+  display: none;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+  position: relative;
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 94%;
+  max-width: 420px;
+  border: 1px solid #333;
+  z-index: 10;
+  color: #e0e0e0;
+}
+.music-track-button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 600;
+}
+.music-track-button:hover {
+  background: #333;
+}
 
 /* ================= Music Section Styling ================= */
 .music-section {
@@ -1351,26 +1615,26 @@ footer {
   margin: 0.4rem;
   font-weight: 600;
   font-size: 0.9rem;
-  background-color: #2a2f3a;        /* dark bluish-grey (not black) */
-  color: #b0c9f0;                   /* soft light blue text */
+  background-color: #2a2f3a; /* dark bluish-grey (not black) */
+  color: #b0c9f0; /* soft light blue text */
   border: 1px solid #3c4452;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .music-mode-button:hover {
-  background-color: #3b4555;        /* slightly lighter on hover */
-  color: #4b89dc;                   /* highlight blue text */
+  background-color: #3b4555; /* slightly lighter on hover */
+  color: #4b89dc; /* highlight blue text */
   border-color: #4b89dc;
   transform: translateY(-2px);
 }
 
 .music-mode-button.active {
-  background-color: #4b89dc;        /* solid theme blue */
+  background-color: #4b89dc; /* solid theme blue */
   color: #fff;
   border-color: #4b89dc;
-  box-shadow: 0 4px 10px rgba(75,137,220,0.4); /* blue glow */
+  box-shadow: 0 4px 10px rgba(75, 137, 220, 0.4); /* blue glow */
 }
 
 /* Play / Pause Button */
@@ -1384,20 +1648,19 @@ footer {
   border: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .play-pause-button:hover {
   background-color: #386ba1;
   transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
 }
 
 .play-pause-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-
 
 /* Play / Pause Button */
 #play-pause-btn {
@@ -1438,115 +1701,112 @@ footer {
 /* Reduce the margin on the team member's name (h3) */
 .profile-card h3 {
   /* Inherits color: #4b89dc and font-size: 1.5rem from existing styles */
-  margin-top: 0.2rem;    /* Significantly reduced top margin */
+  margin-top: 0.2rem; /* Significantly reduced top margin */
   margin-bottom: 0.5rem; /* Ensure some space below the name, but you can adjust this too */
 }
 
 .feedback-section .add-subject-btn {
-  width: auto;            /* Stops it from stretching 100% */
-  display: table;         /* Helps in centering variable width elements */
-  margin: 0 auto;         /* Centers the button horizontally */
-  padding: 1rem 3rem;     /* Adds nice spacing inside the button */
-  min-width: 200px;       /* Ensures it's not too small */
+  width: auto; /* Stops it from stretching 100% */
+  display: table; /* Helps in centering variable width elements */
+  margin: 0 auto; /* Centers the button horizontally */
+  padding: 1rem 3rem; /* Adds nice spacing inside the button */
+  min-width: 200px; /* Ensures it's not too small */
 }
-/* --- Vertical, Modern, Dark UI Form --- */
-
-/* 1. The Container Box (Compact & Spaced from Sides) */
-.feedback-section {
-    background-color: #0f1115; /* Deep dark background */
-    border: 1px solid #2a2a2a;
-    border-radius: 16px;       /* Modern rounded corners */
-    padding: 2.5rem;           /* Spacious padding inside */
-    
-    /* WIDTH CONTROLS */
-    max-width: 500px;          /* Maximum width on desktop */
-    width: 90%;                /* On smaller screens, take 90% width (leaves space on sides) */
-    margin: 3rem auto;         /* Centers the box vertically and horizontally */
-    
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* 2. Heading Style */
-.feedback-title {
-    text-align: center;
-    margin-bottom: 0.5rem; /* Reduced bottom margin slightly */
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 600;
+/* Academic Calendar Button */
+.academic-cal-btn {
+  width: 100%;
+  background-color: #198754; /* Green color */
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* 3. Form Layout (Vertical Stack) */
-.custom-feedback-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem; /* Space between Name, Email, Message */
-    width: 100%;
+.academic-cal-btn:hover {
+  background-color: #146c43;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(25, 135, 84, 0.3);
+}
+/* --- Roadmap Section (Original Dark Theme + Slider) --- */
+
+/* 1. The Slider Container */
+.roadmap-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  gap: 1.5rem;
+  padding: 1rem 0.5rem 2rem 0.5rem; /* Padding for hover effects */
+  scroll-snap-type: x mandatory; /* Snaps cards nicely */
+  scrollbar-width: thin;
+  scrollbar-color: #4b89dc #1e1e1e;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem; /* Space between Label and Input */
-    text-align: left;
+.roadmap-container::-webkit-scrollbar {
+  height: 8px;
 }
 
-/* 4. Labels */
-.form-group label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #e0e0e0;
-    margin-left: 4px;
+.roadmap-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
 }
 
-/* 5. Inputs & Textarea (The Modern Dark Look) */
-.custom-feedback-form input,
-.custom-feedback-form textarea {
-    width: 100%;
-    background-color: #1a1d24; /* Dark blue-grey input background */
-    border: 1px solid #333;
-    color: #b0b0b0;
-    padding: 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    transition: all 0.3s ease;
+.roadmap-container::-webkit-scrollbar-thumb {
+  background-color: #4b89dc;
+  border-radius: 4px;
 }
 
-/* Focus Effect (Purple Glow) */
-.custom-feedback-form input:focus,
-.custom-feedback-form textarea:focus {
-    border-color: #8a2be2;
-    background-color: #20242c;
-    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+/* 2. The Card (Dark Theme Style) */
+.roadmap-card {
+  min-width: 280px; /* Fixed width for slider */
+  flex: 0 0 auto; /* Prevents shrinking */
+  scroll-snap-align: start;
+
+  /* Original Dark Colors */
+  background: linear-gradient(145deg, #1e1e1e, #252525);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Textarea Resize Control */
-.custom-feedback-form textarea {
-    resize: vertical;
-    min-height: 100px;
-    max-height: 300px;
+/* 3. The Colorful Top Strip (The "Very Start" Accent) */
+.roadmap-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #4b89dc, #d63384);
 }
 
-/* 6. Gradient Button */
-.submit-feedback-btn {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 1rem;
-    background: linear-gradient(90deg, #9f55ff 0%, #4b89dc 100%);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 4. Hover Effects */
+.roadmap-card:hover {
+  transform: translateY(-5px);
+  border-color: #4b89dc;
+  box-shadow: 0 8px 20px rgba(75, 137, 220, 0.2);
 }
 
-.submit-feedback-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(159, 85, 255, 0.4);
+/* 5. Icons and Text */
+.roadmap-card i {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
 }
+
+.roadmap-card h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+}
+
