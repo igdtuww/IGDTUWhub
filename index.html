@@ -4,52 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IGDTUWHub</title>
-    <link rel="icon" href="https://res.cloudinary.com/dz69xznw7/image/upload/v1758535657/ChatGPT_Image_Sep_8__2025__01_35_13_PM-removebg-preview_cawl1v.png" type="image/x-icon">
-    <!-- Use Google Fonts for a modern look -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <!-- Chart.js for the CGPA comparison graph -->
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="navbar">
-  <!-- hidden checkbox first -->
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-  <!-- group logo + menu icon -->
-  <div class="logo-menu">
-    <div class="logo">IGDTUWHub</div>
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  </div>
+      <div class="logo-menu">
+        <div class="logo">IGDTUWHub</div>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      </div>
 
-  <!-- nav links -->
-  <ul class="nav-links">
-    <li><a href="#" id="home-link">Home</a></li>
-    <li><a href="#" id="resources-link">Resources</a></li>
-    <li><a href="#" id="games-link">Games</a></li>
-    <li><a href="#" id="notes-link">CGPA Calculator</a></li>
-    <li><a href="#" id="pomodoro-link">Pomodoro</a></li>
-    <li><a href="#" id="events-link">Events</a></li>
-    <li><a href="#" id="about-us-link">About Us</a></li>
-  </ul>
-</nav>
+      <ul class="nav-links">
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="resources-link">Resources</a></li>
+        <li><a href="#" id="societies-link">Societies</a></li>
+        <li><a href="#" id="notes-link">CGPA Calculator</a></li>
+        <li><a href="#" id="pomodoro-link">Pomodoro</a></li>
+        <li><a href="#" id="events-link">Events</a></li>
+        <li><a href="#" id="about-us-link">About Us</a></li>
+      </ul>
+    </nav>
 
+    <main id="dynamic-content" class="container"></main>
 
-    <main id="dynamic-content" class="container">
-      <!-- The main content will be injected here by JavaScript -->
-    </main>
-
-    <!-- Chatbot Container -->
     <div
       id="chatbot-container"
       style="position: fixed; bottom: 20px; right: 20px; z-index: 100"
@@ -145,22 +135,10 @@
       </div>
     </div>
 
-    <!-- Footer with social media links -->
     <footer>
       <p>&copy; 2025 IGDTUWHub. All rights reserved.</p>
-      <!-- <div class="social-links">
-        <a
-          href="https://www.linkedin.com/in/manviiiisinhhh/"
-          target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/manvisinhha/"
-          target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-      </div> -->
     </footer>
     <script src="script.js"></script>
   </body>
 </html>
+
