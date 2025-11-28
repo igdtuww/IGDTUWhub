@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | IGDTUWHub</title>
+    <!-- Use same font as main site -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient Background Glow */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 40%;
+            height: 40%;
+            background: radial-gradient(circle, rgba(75, 137, 220, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 40%;
+            height: 40%;
+            background: radial-gradient(circle, rgba(214, 51, 132, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(30, 30, 30, 0.6); /* Glass effect */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            max-width: 500px;
+            width: 90%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .icon-container {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: #ffc107;
+            animation: spin 3s infinite linear; /* Slow spin for gear */
+            display: inline-block;
+        }
+
+        /* Use pulse for other icons if you change it */
+        @keyframes spin { 
+            100% { transform: rotate(360deg); } 
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #4b89dc, #d63384);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: #4b89dc;
+            color: white;
+            box-shadow: 0 4px 15px rgba(75, 137, 220, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #386ba1;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #333;
+            color: #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            border-color: #e0e0e0;
+            background-color: rgba(255,255,255,0.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-container">
+            <i class="fas fa-cog"></i>
+        </div>
+        <h1>Work in Progress</h1>
+        <p>We are currently gathering resources for this subject.</p>
+        
+        <div class="buttons">
+            <!-- This button uses JS to intelligently close tab or go back -->
+            <button onclick="handleBack()" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Go Back
+            </button>
+            
+            <!-- Optional Home Link -->
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function handleBack() {
+            // Check if the page was opened in a new tab (which usually has no history)
+            if (window.history.length <= 1) {
+                // Try to close the tab
+                window.close();
+                
+                // Fallback message if browser blocks window.close()
+                setTimeout(() => {
+                    alert("This page was opened in a new tab. You can simply close this tab to return to the app.");
+                }, 500);
+            } else {
+                // If there is history, go back normally
+                window.history.back();
+            }
+        }
+    </script>
+</body>
+</html>
