@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.querySelector(".logo");
 
   // Data for branches and subjects
-
   const branches = {
     "cse-ai": {
       name: "CSE-AI",
@@ -831,82 +830,156 @@ function solve(input) {
 // console.log(solve([1, 2, 3, 4]));
 `;
 
-  // Function to render the home page content
+  // --- Render Home Function (Full Version) ---
   const renderHome = (addToHistory = true) => {
     if (addToHistory) {
       history.pushState({ page: "home" }, "", "#home");
     }
-    // ... leave the rest of the function exactly as it is ...
+
     dynamicContent.innerHTML = `
-                    <section class="welcome-section">
-                        <div class="welcome-content">
-                            <h1>Welcome to <br> IGDTUWHub</h1>
-                            <p>The ultimate resource hub for collegians.<br>Explore notes, save resources, and much more!</p>
-                        </div>
-                        <div class="cube-container">
-                            <div class="cube">
-                                <div class="face front"></div>
-                                <div class="face back"></div>
-                                <div class="face right"></div>
-                                <div class="face left"></div>
-                                <div class="face top"></div>
-                                <div class="face bottom"></div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="branches-section section">
-                        <h2>Resources by Branch</h2>
-                        <div class="branches-container">
-                            ${Object.keys(branches)
-                              .map(
-                                (key) => `
-                                <div class="branch-card" data-branch="${key}">
-                                    <i class="${branches[key].icon}"></i>
-                                    <span>${branches[key].name}</span>
-                                </div>
-                            `
-                              )
-                              .join("")}
-                        </div>
-                    </section>
-                    <section class="bottom-sections section">
-                        <div class="games-section card">
-                            <h2>Games</h2>
-                            <div class="games-container">
-                                <div class="game-card" data-game="tic-tac-toe">
-                                    <i class="fas fa-times-circle"></i>
-                                    <span>Tic-Tac-Toe</span>
-                                </div>
-                                <div class="game-card" data-game="memory">
-                                    <i class="fas fa-brain"></i>
-                                    <span>Memory</span>
-                                </div>
-                                <div class="game-card" data-game="puzzle">
-                                    <i class="fas fa-puzzle-piece"></i>
-                                    <span>Puzzle</span>
-                                </div>
-                                <div class="game-card" data-game="pong">
-                                    <i class="fas fa-table-tennis"></i>
-                                    <span>Pong</span>
-                                </div>
-                                <div class="game-card" data-game="coding">
-                                    <i class="fas fa-code"></i>
-                                    <span>Mini Coding Games</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="quick-notes-section card">
-                            <h2>Quick Notes</h2>
-                            <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
-                            <div class="notes-buttons">
-                                <button id="save-note-btn">Save Note</button>
-                                <button id="save-pdf-btn">Save as PDF</button>
-                            </div>
-                            <div id="saved-notes-container"></div>
-                        </div>
-                    </section>
-                `;
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome to <br> IGDTUWHub</h1>
+                <p>The ultimate resource hub for collegians.<br>Explore notes, roadmaps, and much more!</p>
+            </div>
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="branches-section section">
+            <h2>Resources by Branch</h2>
+            <div class="branches-container">
+                ${Object.keys(branches)
+                  .map(
+                    (key) => `
+                    <div class="branch-card" data-branch="${key}">
+                        <i class="${branches[key].icon}"></i>
+                        <span>${branches[key].name}</span>
+                    </div>
+                `
+                  )
+                  .join("")}
+            </div>
+        </section>
+
+        <section class="section" id="roadmaps-section">
+            <h2>Career Roadmaps</h2>
+            <p style="text-align:center; color:#a0a0a0; margin-bottom:1.5rem;">
+                Scroll sideways to explore career paths. Click to view the PDF guide.
+            </p>
+            <div class="roadmap-container">
+                ${Object.keys(roadmapData)
+                  .map(
+                    (key) => `
+                    <div class="roadmap-card" data-roadmap="${key}">
+                        <i class="${roadmapData[key].icon}"></i>
+                        <h3>${roadmapData[key].title}</h3>
+                    </div>
+                `
+                  )
+                  .join("")}
+            </div>
+        </section>
+
+        <section class="bottom-sections section">
+            <div class="games-section card">
+                <h2>Games</h2>
+                <div class="games-container">
+                    <div class="game-card" data-game="tic-tac-toe">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Tic-Tac-Toe</span>
+                    </div>
+                    <div class="game-card" data-game="memory">
+                        <i class="fas fa-brain"></i>
+                        <span>Memory</span>
+                    </div>
+                    <div class="game-card" data-game="puzzle">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Puzzle</span>
+                    </div>
+                    <div class="game-card" data-game="pong">
+                        <i class="fas fa-table-tennis"></i>
+                        <span>Pong</span>
+                    </div>
+                    <div class="game-card" data-game="coding">
+                        <i class="fas fa-code"></i>
+                        <span>Mini Coding Games</span>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-notes-section card">
+                <h2>Quick Notes</h2>
+                <textarea id="notes-area" placeholder="Write your notes here..."></textarea>
+                <div class="notes-buttons">
+                    <button id="save-note-btn">Save Note</button>
+                    <button id="save-pdf-btn">Save as PDF</button>
+                </div>
+                <div id="saved-notes-container"></div>
+            </div>
+        </section>
+    `;
     loadNotes();
+  };
+  const renderRoadmapDetails = (roadmapKey) => {
+    const data = roadmapData[roadmapKey];
+    if (!data) return;
+
+    // Push to history so back button works
+    history.pushState(
+      { page: "roadmap-detail", key: roadmapKey },
+      "",
+      `#roadmap/${roadmapKey}`
+    );
+
+    const timelineHtml = data.steps
+      .map(
+        (step, index) => `
+        <div class="timeline-item" style="animation: fadeIn 0.5s ease forwards; animation-delay: ${
+          index * 0.1
+        }s; opacity: 0;">
+            <div class="timeline-title">${index + 1}. ${step.title}</div>
+            <div class="timeline-desc">${step.desc}</div>
+        </div>
+    `
+      )
+      .join("");
+
+    dynamicContent.innerHTML = `
+        <section class="section">
+            <h2 style="margin-bottom: 0.5rem;">${data.title} Path</h2>
+            <p style="text-align: center; color: #a0a0a0; margin-bottom: 2rem;">Follow these steps to master the skill.</p>
+            
+            <div class="timeline-container">
+                ${timelineHtml}
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="game-back-btn" id="back-to-home-btn">Back to Home</button>
+            </div>
+        </section>
+    `;
+
+    // Add animation keyframes dynamically if not in CSS
+    const style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    document
+      .getElementById("back-to-home-btn")
+      .addEventListener("click", () => renderHome());
   };
 
   // Function to render the CGPA calculator
@@ -941,99 +1014,145 @@ function solve(input) {
                         </div>
                         <div id="cgpa-result"></div>
                     </section>
-                    <section class="gpa-comparison-section section">
-                        <h2>Compare CGPA</h2>
+<section class="target-cgpa-section section">
+                        <h2>Advanced Target Calculator 🎯</h2>
                         <div class="card">
-                            <div id="gpa-compare-inputs">
-                                <input type="number" id="gpa1-input" placeholder="Semester 1 GPA" min="0" max="10">
-                                <input type="number" id="gpa2-input" placeholder="Semester 2 GPA" min="0" max="10">
-                                <button id="compare-btn">Compare</button>
+                            <p style="color:#a0a0a0; margin-bottom: 1.5rem; text-align: center;">
+                                Enter your known SGPAs below. We will calculate what you need in the remaining semesters to hit your goal.
+                            </p>
+
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; justify-content: center;">
+                                <div style="flex: 1; min-width: 200px;">
+                                    <label style="display:block; color:#a0a0a0; font-size: 0.9rem; margin-bottom: 5px;">Target Overall CGPA</label>
+                                    <input type="number" id="target-cgpa-input" placeholder="e.g. 8.5" step="0.01" min="0" max="10"
+                                           style="width: 100%; padding: 10px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 5px;">
+                                </div>
+                                <div style="flex: 1; min-width: 200px;">
+                                    <label style="display:block; color:#a0a0a0; font-size: 0.9rem; margin-bottom: 5px;">Achieve this by end of:</label>
+                                    <select id="target-horizon" style="width: 100%; padding: 10px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 5px;">
+                                        <option value="2">Semester 2</option>
+                                        <option value="3">Semester 3</option>
+                                        <option value="4">Semester 4</option>
+                                        <option value="5">Semester 5</option>
+                                        <option value="6">Semester 6</option>
+                                        <option value="7">Semester 7</option>
+                                        <option value="8" selected>Semester 8 (Graduation)</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div style="width: 100%;">
-                                <canvas id="gpa-comparison-chart"></canvas>
-                                <div id="gpa-comparison-message" style="text-align: center; margin-top: 1rem; font-weight: bold;"></div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-bottom: 1.5rem;">
+                                ${Array(8)
+                                  .fill()
+                                  .map(
+                                    (_, i) => `
+                                    <div class="sem-input-group">
+                                        <label style="font-size: 0.8rem; color: #4b89dc;">Sem ${
+                                          i + 1
+                                        }</label>
+                                        <input type="number" class="sem-grade-input" id="sem-grade-${
+                                          i + 1
+                                        }" placeholder="SGPA" min="0" max="10" step="0.01"
+                                        style="width: 100%; padding: 8px; background: #1e1e1e; border: 1px solid #333; color: white; border-radius: 5px;">
+                                    </div>
+                                `
+                                  )
+                                  .join("")}
                             </div>
+                            
+                            <button id="calc-advanced-target-btn" class="calculate-btn">Calculate Required Grades</button>
+                            
+                            <div id="advanced-target-result" style="margin-top: 1.5rem; text-align: center; font-size: 1.2rem; min-height: 2rem; padding: 10px; line-height: 1.6;"></div>
                         </div>
                     </section>
                 `;
     setupCalculator();
-    setupGpaComparisonChart();
+    setupTargetCgpaCalculator(); // ADD THIS LINE
   };
 
-  const setupGpaComparisonChart = () => {
-    const ctx = document
-      .getElementById("gpa-comparison-chart")
-      .getContext("2d");
-    const gpa1Input = document.getElementById("gpa1-input");
-    const gpa2Input = document.getElementById("gpa2-input");
-    const compareBtn = document.getElementById("compare-btn");
-    const messageEl = document.getElementById("gpa-comparison-message");
+  const setupTargetCgpaCalculator = () => {
+    const targetInput = document.getElementById("target-cgpa-input");
+    const horizonSelect = document.getElementById("target-horizon");
+    const calcBtn = document.getElementById("calc-advanced-target-btn");
+    const resultDiv = document.getElementById("advanced-target-result");
 
-    const gpaChart = new Chart(ctx, {
-      type: "bar",
-      data: {
-        labels: ["Semester 1", "Semester 2"],
-        datasets: [
-          {
-            label: "CGPA",
-            data: [0, 0],
-            backgroundColor: ["#4b89dc", "#ffc107"],
-            borderColor: ["#4b89dc", "#ffc107"],
-            borderWidth: 1,
-          },
-        ],
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 10,
-            grid: {
-              color: "rgba(255, 255, 255, 0.1)",
-            },
-            ticks: {
-              color: "#e0e0e0",
-            },
-          },
-          x: {
-            grid: {
-              color: "rgba(255, 255, 255, 0.1)",
-            },
-            ticks: {
-              color: "#e0e0e0",
-            },
-          },
-        },
-        plugins: {
-          legend: {
-            labels: {
-              color: "#e0e0e0",
-            },
-          },
-        },
-      },
-    });
+    calcBtn.addEventListener("click", () => {
+      const targetCgpa = parseFloat(targetInput.value);
+      const horizonSem = parseInt(horizonSelect.value); // When do they want to achieve it?
 
-    compareBtn.addEventListener("click", () => {
-      const gpa1 = parseFloat(gpa1Input.value) || 0;
-      const gpa2 = parseFloat(gpa2Input.value) || 0;
-
-      gpaChart.data.datasets[0].data = [gpa1, gpa2];
-      gpaChart.update();
-
-      let message = "";
-      if (gpa2 > gpa1) {
-        message = "Great progress! Your GPA has improved.";
-      } else if (gpa2 < gpa1) {
-        message = "You can do it! Your GPA has slightly decreased.";
-      } else {
-        message = "Your GPA has stayed consistent. Keep up the good work!";
+      if (isNaN(targetCgpa) || targetCgpa < 0 || targetCgpa > 10) {
+        resultDiv.innerHTML = `<span style="color:#ffc107">Please enter a valid Target CGPA (0-10).</span>`;
+        return;
       }
-      messageEl.textContent = message;
+
+      let currentSum = 0;
+      let filledCount = 0;
+      let emptyCount = 0;
+
+      // Loop through ONLY the semesters included in the horizon
+      // (e.g., if Horizon is Sem 2, we only look at inputs 1 and 2)
+      for (let i = 1; i <= horizonSem; i++) {
+        const input = document.getElementById(`sem-grade-${i}`);
+        const val = parseFloat(input.value);
+
+        if (!isNaN(val)) {
+          // This semester is done
+          currentSum += val;
+          filledCount++;
+        } else {
+          // This semester is future
+          emptyCount++;
+        }
+      }
+
+      if (emptyCount === 0) {
+        // User filled all boxes for the selected horizon
+        const actualCgpa = currentSum / filledCount;
+        let msg = "";
+        if (actualCgpa >= targetCgpa) {
+          msg = `<span style="color:#198754">Congrats! You have already achieved it. Your CGPA is ${actualCgpa.toFixed(
+            2
+          )}.</span>`;
+        } else {
+          msg = `<span style="color:#d63384">All semesters in this range are completed. Your final CGPA is ${actualCgpa.toFixed(
+            2
+          )} (Target missed).</span>`;
+        }
+        resultDiv.innerHTML = msg;
+        return;
+      }
+
+      // THE FORMULA:
+      // (Target * TotalSems) - (Sum of Current Sems) = (Total Points Needed from Remaining)
+      // Required Average = Total Points Needed / Empty Slots
+      const totalPointsNeeded = targetCgpa * horizonSem;
+      const remainingPointsNeeded = totalPointsNeeded - currentSum;
+      const requiredAverage = remainingPointsNeeded / emptyCount;
+
+      if (requiredAverage > 10) {
+        resultDiv.innerHTML = `
+            You need to average <span style="color:#d63384; font-weight:bold; font-size:1.4rem;">${requiredAverage.toFixed(
+              2
+            )}</span> 
+            over the next ${emptyCount} semester(s).<br>
+            <span style="font-size: 0.9rem; color: #a0a0a0;">(This is mathematically impossible 😢. Try lowering your target or extending the horizon.)</span>`;
+      } else if (requiredAverage <= 0) {
+        resultDiv.innerHTML = `
+            You are already comfortably above your target!<br>
+            Even with 0 SGPA in the next ${emptyCount} semester(s), you'd hit the goal. (But keep studying! 😉)`;
+      } else {
+        resultDiv.innerHTML = `
+            To reach <span style="color:white">${targetCgpa}</span> by the end of Semester ${horizonSem}:<br>
+            You need to average <span style="color:#4b89dc; font-weight:bold; font-size:1.5rem;">${requiredAverage.toFixed(
+              2
+            )} SGPA</span>
+            in the remaining ${emptyCount} semester(s).
+        `;
+      }
     });
   };
 
- const renderAboutUs = (addToHistory = true) => {
+  const renderAboutUs = (addToHistory = true) => {
     // 1. History Logic
     if (addToHistory) {
       history.pushState({ page: "about" }, "", "#about");
@@ -1102,7 +1221,7 @@ function solve(input) {
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message here..." rows="3" required></textarea>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="3" required></textarea>
                     </div>
                     
                     <button type="submit" class="submit-feedback-btn">
@@ -1119,51 +1238,84 @@ function solve(input) {
     const status = document.getElementById("form-status");
 
     if (form) {
-        form.addEventListener("submit", function (ev) {
-            ev.preventDefault();
-            const btn = form.querySelector("button");
-            const originalText = btn.innerHTML;
-            btn.innerHTML = "Sending...";
-            btn.disabled = true;
+      form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        const btn = form.querySelector("button");
+        const originalText = btn.innerHTML;
+        btn.innerHTML = "Sending...";
+        btn.disabled = true;
 
-            const data = new FormData(form);
-            fetch(form.action, {
-                method: form.method,
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    alert("Message sent successfully!"); 
-                    form.reset();
-                    status.innerHTML = "Thanks for helping us improve IGDTUWHub!";
-                    status.style.color = "#a855f7"; // Purple accent
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" },
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Message sent successfully!");
+              form.reset();
+              status.innerHTML = "Thanks for helping us improve IGDTUWHub!";
+              status.style.color = "#a855f7"; // Purple accent
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, "errors")) {
+                  alert(
+                    data["errors"].map((error) => error["message"]).join(", ")
+                  );
                 } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            alert(data["errors"].map(error => error["message"]).join(", "));
-                        } else {
-                            alert("Oops! There was a problem submitting your form");
-                        }
-                    })
+                  alert("Oops! There was a problem submitting your form");
                 }
-            }).catch(error => {
-                alert("Oops! There was a network problem.");
-            }).finally(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            });
-        });
+              });
+            }
+          })
+          .catch((error) => {
+            alert("Oops! There was a network problem.");
+          })
+          .finally(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+          });
+      });
     }
   };
 
+  // --- Render Event Calendar (With Delete Option & Fixed PDF) ---
   const renderEventCalendar = (addToHistory = true) => {
     if (addToHistory) {
       history.pushState({ page: "events" }, "", "#events");
     }
-    // ... leave the rest of the function exactly as it is ...
+
     const today = new Date();
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
+
+    // Helper: Load custom events from LocalStorage
+    const getCustomEvents = () => {
+      return JSON.parse(localStorage.getItem("igdtuw_custom_events") || "{}");
+    };
+
+    // Helper: Save custom events
+    const saveCustomEvent = (dateStr, eventName) => {
+      const events = getCustomEvents();
+      if (!events[dateStr]) events[dateStr] = [];
+      events[dateStr].push(eventName);
+      localStorage.setItem("igdtuw_custom_events", JSON.stringify(events));
+    };
+
+    // Helper: DELETE custom events
+    const deleteCustomEvent = (dateStr, index) => {
+      const events = getCustomEvents();
+      if (events[dateStr]) {
+        events[dateStr].splice(index, 1); // Remove the item at index
+        // If array is empty, delete the date key entirely to clean up
+        if (events[dateStr].length === 0) delete events[dateStr];
+
+        localStorage.setItem("igdtuw_custom_events", JSON.stringify(events));
+        // Re-render to show changes immediately
+        renderCalendar(currentMonth, currentYear);
+      }
+    };
 
     const renderCalendar = (month, year) => {
       const firstDayOfMonth = new Date(year, month, 1).getDay();
@@ -1172,70 +1324,178 @@ function solve(input) {
       const monthName = new Date(year, month).toLocaleString("default", {
         month: "long",
       });
+
       const yearHolidays = holidays[year] || {};
       const monthHolidays = yearHolidays[monthName] || [];
+      const customEvents = getCustomEvents();
 
       let calendarHtml = "";
       for (let i = 0; i < firstDayOfMonth; i++) {
         calendarHtml += "<div></div>";
       }
+
       for (let i = 1; i <= daysInMonth; i++) {
         const isToday =
           i === today.getDate() &&
           month === today.getMonth() &&
           year === today.getFullYear();
-        const holiday = monthHolidays.find(
+
+        const holidayObj = monthHolidays.find(
           (h) => parseInt(h.split("-")[0]) === i
         );
-        const eventName = holiday ? holiday.split("-")[1] : "";
+        let eventName = holidayObj ? holidayObj.split("-")[1] : "";
 
-        calendarHtml += `<div class="day ${
-          isToday ? "today" : ""
-        }" title="${eventName}">
-                            ${i}
-                            ${
-                              eventName
-                                ? `<p style="font-size: 0.7rem; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${eventName}</p>`
-                                : ""
-                            }
-                        </div>`;
+        const dateKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(
+          i
+        ).padStart(2, "0")}`;
+        const myEvents = customEvents[dateKey] || [];
+
+        const allEvents = [];
+        if (eventName) allEvents.push(eventName);
+        if (myEvents.length > 0) allEvents.push(...myEvents);
+
+        const hasEvent = allEvents.length > 0;
+
+        calendarHtml += `
+            <div class="day ${isToday ? "today" : ""} ${
+          hasEvent ? "has-event" : ""
+        }" 
+                 onclick="alert('${
+                   hasEvent ? "Events: " + allEvents.join(", ") : "No events"
+                 }')">
+                <span class="day-number">${i}</span>
+                ${hasEvent ? `<div class="event-dot"></div>` : ""}
+            </div>`;
       }
+
       document.getElementById(
         "current-month-year"
       ).textContent = `${monthName} ${year}`;
       document.getElementById("calendar-grid").innerHTML = `
-                        <div class="day header">Sun</div>
-                        <div class="day header">Mon</div>
-                        <div class="day header">Tue</div>
-                        <div class="day header">Wed</div>
-                        <div class="day header">Thu</div>
-                        <div class="day header">Fri</div>
-                        <div class="day header">Sat</div>
-                        ${calendarHtml}
-                    `;
+        <div class="day header">Sun</div>
+        <div class="day header">Mon</div>
+        <div class="day header">Tue</div>
+        <div class="day header">Wed</div>
+        <div class="day header">Thu</div>
+        <div class="day header">Fri</div>
+        <div class="day header">Sat</div>
+        ${calendarHtml}
+      `;
+
+      renderUpcomingEventsList(month, year, monthHolidays);
+    };
+
+    const renderUpcomingEventsList = (month, year, officialHolidays) => {
+      const listContainer = document.getElementById("event-list-container");
+      const customEvents = getCustomEvents();
+      let listHtml = `<ul class="question-list">`;
+
+      // 1. Official Holidays (No delete button)
+      officialHolidays.forEach((h) => {
+        listHtml += `<li><span style="color:#ffc107; font-weight:bold;">${
+          h.split("-")[0]
+        } ${new Date(year, month).toLocaleString("default", {
+          month: "short",
+        })}:</span> ${h.split("-")[1]} (Official)</li>`;
+      });
+
+      // 2. Personal Events (WITH DELETE BUTTON)
+      Object.keys(customEvents).forEach((dateKey) => {
+        const [eYear, eMonth, eDay] = dateKey.split("-");
+        // Check if event belongs to current view (Year & Month)
+        if (parseInt(eYear) === year && parseInt(eMonth) === month + 1) {
+          customEvents[dateKey].forEach((evt, index) => {
+            listHtml += `
+                        <li style="display: flex; justify-content: space-between; align-items: center;">
+                            <span>
+                                <span style="color:#4b89dc; font-weight:bold;">${eDay} ${new Date(
+              year,
+              month
+            ).toLocaleString("default", { month: "short" })}:</span> 
+                                ${evt} (Personal)
+                            </span>
+                            <i class="fas fa-trash delete-event-btn" 
+                               data-date="${dateKey}" 
+                               data-index="${index}" 
+                               style="color: #d63384; cursor: pointer; margin-left: 10px;"
+                               title="Remove Event"></i>
+                        </li>`;
+          });
+        }
+      });
+
+      listHtml += `</ul>`;
+      if (
+        officialHolidays.length === 0 &&
+        Object.keys(customEvents).length === 0
+      ) {
+        listHtml =
+          "<p style='text-align:center; color:#777;'>No events for this month.</p>";
+      }
+      listContainer.innerHTML = listHtml;
+
+      // Attach Delete Listeners after rendering HTML
+      document.querySelectorAll(".delete-event-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation(); // Prevent list item click if any
+          const dDate = e.target.dataset.date;
+          const dIndex = e.target.dataset.index;
+          if (confirm("Are you sure you want to remove this event?")) {
+            deleteCustomEvent(dDate, dIndex);
+          }
+        });
+      });
     };
 
     dynamicContent.innerHTML = `
-                    <section class="events-section section">
-                        <h2>Event Calendar</h2>
-                        <div class="card">
-                            <div style="display:flex; justify-content:space-between; align-items:center;">
-                                <button id="prev-month-btn"> &lt; </button>
-                                <h3 id="current-month-year"></h3>
-                                <button id="next-month-btn"> &gt; </button>
-                            </div>
-                            <div class="calendar-grid" id="calendar-grid"></div>
-                            <div style="margin-top: 20px;">
-                                <label for="date-picker">Select a Date:</label>
-                                <input type="date" id="date-picker" value="${
-                                  today.toISOString().split("T")[0]
-                                }">
-                                <button id="add-event-btn">Add Event</button>
-                            </div>
-                        </div>
-                    </section>
-                `;
+        <section class="events-section section">
+            <h2>Event Calendar</h2>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+                        <button id="prev-month-btn" class="option-button" style="padding: 0.5rem 1rem;"> &lt; </button>
+                        <h3 id="current-month-year" style="margin:0;"></h3>
+                        <button id="next-month-btn" class="option-button" style="padding: 0.5rem 1rem;"> &gt; </button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
 
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    
+                    <button id="academic-cal-btn" class="academic-cal-btn">
+                        <i class="fas fa-file-pdf"></i> View Academic Calendar
+                    </button>
+                    
+                    <div id="pdf-viewer-container" style="display: none; margin-top: 1rem; border-top: 1px solid #444; padding-top: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: #e0e0e0; font-weight: bold;">Academic Calendar</span>
+                            <button id="close-pdf-btn" style="background: #d63384; color: white; border: none; padding: 2px 10px; border-radius: 4px; cursor: pointer;">Close</button>
+                        </div>
+                        <iframe id="pdf-frame" src="" width="100%" height="400px" style="border: 1px solid #444; border-radius: 5px; background: white;"></iframe>
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid #333; margin: 2rem 0;">
+
+                    <h3>Add New Event</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <input type="date" id="date-picker" value="${
+                          today.toISOString().split("T")[0]
+                        }" 
+                               style="padding: 10px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 5px;">
+                        <input type="text" id="event-name-input" placeholder="Event Name (e.g., Exam, Fest)" 
+                               style="padding: 10px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 5px;">
+                        <button id="add-event-btn" class="add-subject-btn">Add Event</button>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">Events this Month</h3>
+                    <div id="event-list-container"></div>
+                </div>
+            </div>
+        </section>
+    `;
+
+    // Navigation Listeners
     document.getElementById("prev-month-btn").addEventListener("click", () => {
       currentMonth--;
       if (currentMonth < 0) {
@@ -1254,24 +1514,56 @@ function solve(input) {
       renderCalendar(currentMonth, currentYear);
     });
 
-    document.getElementById("date-picker").addEventListener("change", (e) => {
-      const selectedDate = new Date(e.target.value);
-      currentMonth = selectedDate.getMonth();
-      currentYear = selectedDate.getFullYear();
-      renderCalendar(currentMonth, currentYear);
+    // --- PDF VIEWER LOGIC (Fixed with Google Docs Viewer) ---
+    document
+      .getElementById("academic-cal-btn")
+      .addEventListener("click", () => {
+        const container = document.getElementById("pdf-viewer-container");
+        const frame = document.getElementById("pdf-frame");
+        // Use Google Docs Viewer for reliable embedding
+        const rawPdfUrl =
+          "https://www.igdtuw.ac.in/IGDTUW/uploads/837966111.pdf";
+        const embedUrl = `https://docs.google.com/gview?url=${rawPdfUrl}&embedded=true`;
+
+        if (container.style.display === "none") {
+          container.style.display = "block";
+          // Only set source if not already set (prevents reloading)
+          if (frame.src !== embedUrl) {
+            frame.src = embedUrl;
+          }
+        } else {
+          container.style.display = "none";
+        }
+      });
+
+    document.getElementById("close-pdf-btn").addEventListener("click", () => {
+      document.getElementById("pdf-viewer-container").style.display = "none";
     });
 
+    // Add Event Logic
     document.getElementById("add-event-btn").addEventListener("click", () => {
-      const selectedDate = document.getElementById("date-picker").value;
-      const eventName = prompt("Enter event name:");
-      if (selectedDate && eventName) {
-        alert(`Event "${eventName}" added for ${selectedDate}`);
+      const dateInput = document.getElementById("date-picker").value;
+      const nameInput = document.getElementById("event-name-input").value;
+
+      if (dateInput && nameInput) {
+        saveCustomEvent(dateInput, nameInput);
+        alert(`Event "${nameInput}" added!`);
+        document.getElementById("event-name-input").value = "";
+
+        const selectedDate = new Date(dateInput);
+        if (
+          selectedDate.getMonth() === currentMonth &&
+          selectedDate.getFullYear() === currentYear
+        ) {
+          renderCalendar(currentMonth, currentYear);
+        }
+      } else {
+        alert("Please select a date and enter an event name.");
       }
     });
 
     renderCalendar(currentMonth, currentYear);
   };
-
   // Function to render the resources page
   const renderResources = (addToHistory = true) => {
     if (addToHistory) {
@@ -1539,6 +1831,10 @@ function solve(input) {
   };
 
   const pyqLinks = {
+    "Data Communication and Computer Networks":
+    "coming-soon.html",
+    "Workshop Practice":
+    "coming-soon.html",
     "Applied Mathematics":
       "https://drive.google.com/drive/folders/1vuQlxljaUk-nd1J7cLsGeM9P4BisY54v?usp=drive_link",
     "Applied Physics":
@@ -1577,6 +1873,8 @@ function solve(input) {
       "https://drive.google.com/drive/folders/1nvXoCsuMLx1TZqG4oG4SjU_o6x93huln",
     "Data Structures and Algorithm":
       "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
+    "Basics of Electrical and Electronics Engineering":
+      "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
     // keep adding subjects with their PYQ links...
   };
 
@@ -1600,31 +1898,39 @@ function solve(input) {
         `#${subject.replace(/ /g, "-")}`
       );
     }
-    // ... leave the rest of the function exactly as it is ...
+
     const notesLink = subjectLinks[subject] || "#";
-    const pyqLink = pyqLinks[subject]; // 🔗 Placeholder for PYQ, you’ll add real links later
+    const pyqLink = pyqLinks[subject] || "#"; // Handle missing pyq links safely
 
     dynamicContent.innerHTML = `
     <section class="subject-options-section section">
       <h2>${subject}</h2>
       <div class="notes-and-pyq-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-        <a href="${notesLink}" target="_blank" style= "text-decoration: none">
-          <div class="card notes-option" style="padding: 2rem; font-size: 1.5rem">
-            Notes
-          </div>
+        <a href="${notesLink}" target="_blank" style="text-decoration: none">
+          <div class="card notes-option" style="padding: 2rem; font-size: 1.5rem">Notes</div>
         </a>
-        <a href="${pyqLink}" target="_blank"  style= "text-decoration: none;">
-          <div class="card pyq-option" style="padding: 2rem; font-size: 1.5rem;">
-            PYQ
-          </div>
+        <a href="${pyqLink}" target="_blank" style="text-decoration: none;">
+          <div class="card pyq-option" style="padding: 2rem; font-size: 1.5rem;">PYQ</div>
         </a>
       </div>
       <button class="game-back-btn" id="back-to-subjects" 
-              data-branch="${branch}" data-year="${year}" data-semester="${semester}">
-        Back to Subjects
+              data-branch="${branch || ""}" data-year="${
+      year || ""
+    }" data-semester="${semester || ""}">
+        ${branch ? "Back to Subjects" : "Back to Resources"} 
       </button>
     </section>
   `;
+
+    // Logic: If we have branch info, go back to semester. If not (refreshed page), go to Resources.
+    const backBtn = document.getElementById("back-to-subjects");
+    backBtn.addEventListener("click", () => {
+      if (branch && year && semester) {
+        renderSemesterSubjects(branch, year, semester);
+      } else {
+        renderResources();
+      }
+    });
   };
 
   // const renderUnitSelection = (subject, type, branch, year, semester) => {
@@ -1911,7 +2217,279 @@ function solve(input) {
     else if (marks >= 50) return 6;
     else return 0;
   };
+  // --- Roadmap Data (Updated with PDFs & New Fields) ---
+  const roadmapData = {
+    fullstack: {
+      title: "Full Stack Development",
+      icon: "fas fa-layer-group",
+      pdf: "https://roadmap.sh/pdfs/roadmaps/full-stack.pdf", // REPLACE THIS
+    },
+    appdev: {
+      title: "App Development",
+      icon: "fas fa-mobile-alt",
+      pdf: "https://roadmap.sh/pdfs/roadmaps/android.pdf", // REPLACE THIS
+    },
+    arvr: {
+      title: "AR / VR",
+      icon: "fas fa-vr-cardboard",
+      pdf: "https://github.com/Priyanshu-CODERX/extended-reality-roadmap", // REPLACE THIS
+    },
+    dsa: {
+      title: "DSA & CP",
+      icon: "fas fa-brain",
+      pdf: "https://roadmap.sh/r/embed?id=674df7fb5039431075164c67", // REPLACE THIS
+    },
+    aiml: {
+      title: "Machine Learning",
+      icon: "fas fa-robot",
+      pdf: "https://roadmap.sh/r/ml-engineer-3dqvu", // REPLACE THIS
+    },
+    "data-science": {
+      title: "Data Science",
+      icon: "fas fa-chart-pie",
+      pdf: "https://roadmap.sh/pdfs/roadmaps/ai-data-scientist.pdf", // REPLACE THIS
+    },
+  };
+  const societiesData = [
+    // --- TECHNICAL ---
+    {
+      name: "TechNeeds",
+      category: "Technical",
+      type: "Tech Community",
+      desc: "A vibrant community for tech enthusiasts offering resources, hackathons, and expert sessions to foster innovation.",
+      link: "https://www.instagram.com/techneeds_igdtuw_/",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/Tech_needs_image_f83gtz.jpg",
+    },
+    {
+      name: "Lean In IGDTUW",
+      category: "Technical",
+      type: "Mentorship",
+      desc: "A thriving community fostering collaboration and sisterhood through mentorship circles and expert-led sessions.",
+      link: "https://www.instagram.com/leanin.igdtuw/",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/lean_in_igdtuw_logo_crtjw2.jpg",
+    },
+    {
+      name: "AWS Cloud Club",
+      category: "Technical",
+      type: "Cloud Computing",
+      desc: "Student-driven community deepening understanding of Amazon Web Services through events and industry connections.",
+      link: "https://www.instagram.com/awscloudclubigdtuw/",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330494/Aws_cloud_zxqfdl.jpg",
+    },
+    {
+      name: "Minerva",
+      category: "Technical",
+      type: "Tech Forum",
+      desc: "A technical forum where alumni and professionals share expertise in Web Dev, AR/VR, and Robotics.",
+      link: "https://www.instagram.com/minerva.igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330562/fad42caf-5e74-4b72-854b-07045dbc8f66.png",
+    },
+    {
+      name: "AI Club",
+      category: "Technical",
+      type: "Artificial Intelligence",
+      desc: "Collaborative space for AI/ML enthusiasts to delve into technologies via workshops and hackathons.",
+      link: "https://www.instagram.com/aiclubigdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330610/7c27a5cc-873c-488f-a49c-e3180538c87b.png",
+    },
+    {
+      name: "GDG IGDTUW",
+      category: "Technical",
+      type: "Development",
+      desc: "Google Developer Student Club focusing on Android, Flutter, and Cloud skills to solve real-world problems.",
+      link: "https://www.instagram.com/gdg_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330705/6abd3bc5-6f0e-4de2-b980-8307235ab70d.png",
+    },
+    {
+      name: "AssetMerkle",
+      category: "Technical",
+      type: "Web3 & Blockchain",
+      desc: "Student-led Web3 community hosting hackathons and hands-on learning in a pressure-free environment.",
+      link: "https://www.instagram.com/assetmerkle.igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330784/de617b45-be88-4826-bc4d-dbf80e64da98.png",
+    },
+    {
+      name: "IEEE IGDTUW",
+      category: "Technical",
+      type: "Professional Body",
+      desc: "Empowering women in technical roles and driving social impact through the Sparsh Outreach Program.",
+      link: "https://www.instagram.com/ieeeigdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330853/2ca9f831-d377-4bb1-80d8-cb2977662c9b.png",
+    },
+    {
+      name: "Microsoft Student Chapter",
+      category: "Technical",
+      type: "Technical",
+      desc: "The go-to community for guidance in Engineering, Web Dev, AR/VR, and Data Analytics.",
+      link: "https://www.instagram.com/msc.igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330908/f3c29829-4697-4ee0-ae03-79b2be80a1e8.png",
+    },
+    {
+      name: "Nirvana",
+      category: "Technical",
+      type: "Design",
+      desc: "A unique platform to explore UI/UX, graphic design, and branding with mentorship and competitions.",
+      link: "https://www.instagram.com/designclubigdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764330973/aae5c8e2-6301-444a-ad2a-3e0ebb902cc9.png",
+    },
 
+    // --- CULTURAL ---
+    {
+      name: "Taarangana",
+      category: "Cultural",
+      type: "Cultural Fest",
+      desc: "The annual cultural fest of IGDTUW, bringing together music, art, dance, and grand celebrations.",
+      link: "https://www.instagram.com/taarangana/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331042/f03b1487-8ba8-45d4-93ae-e0ec840ec9a9.png",
+    },
+    {
+      name: "Tarannum",
+      category: "Cultural",
+      type: "Music Society",
+      desc: "Vibrant platform for exploring musical talents across genres like classical, semi-classical, and a capella.",
+      link: "https://www.instagram.com/tarannum.igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331130/8bca0b91-0982-4194-85fe-bc322c69dfe9.png",
+    },
+    {
+      name: "Hypnotics",
+      category: "Cultural",
+      type: "Dance Society",
+      desc: "The Western Dance Society renowned for its charm, talent, and excellence in Waacking, Locking, and Hip-hop.",
+      link: "https://www.instagram.com/hypnotics_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331187/1108bd98-b61d-4780-ad47-578f36c33b29.png",
+    },
+    {
+      name: "Rahnuma",
+      category: "Cultural",
+      type: "Dramatics",
+      desc: "The dramatics society known for street plays and stage productions that drive social change.",
+      link: "https://www.instagram.com/rahnuma_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331276/ddfbce9a-38bc-4302-a4b2-962c17eb2f11.png",
+    },
+    {
+      name: "Zena",
+      category: "Cultural",
+      type: "Fashion Society",
+      desc: "Where creativity meets the runway. Zena challenges stereotypes and celebrates diversity in fashion.",
+      link: "https://www.instagram.com/zena.igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331329/76e92632-6530-4464-9194-298228a5c5a9.png",
+    },
+
+    // --- MEDIA & CREATIVE ---
+    {
+      name: "Prekshya",
+      category: "Media",
+      type: "Photography",
+      desc: "Capturing the essence of university life through photowalks, workshops, and creative coverage.",
+      link: "https://www.instagram.com/prekshya_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331387/75511677-c07f-440e-af83-5586a57bd0ec.png",
+    },
+
+    // --- LITERARY & OTHERS ---
+    {
+      name: "Finivesta",
+      category: "Literary",
+      type: "Finance",
+      desc: "Cultivating a community passionate about financial literacy, ethical practices, and the world of economy.",
+      link: "https://www.instagram.com/finivesta_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331452/0fe58a36-1e3c-4da9-a778-be0f5af07e65.png",
+    },
+    {
+      name: "Synergy",
+      category: "Sports",
+      type: "Sports Club",
+      desc: "The official Sports Club of IGDTUW, promoting physical fitness, team spirit, and athletic excellence.",
+      link: "https://www.instagram.com/synergy_igdtuw/?hl=en",
+      image:
+        "https://res.cloudinary.com/dz69xznw7/image/upload/v1764331506/1ff51e81-d878-4f15-83ba-5df3c0a97762.png",
+    },
+  ];
+
+  // --- 2. Render Societies Function (Sorted List) ---
+  const renderSocieties = (addToHistory = true) => {
+    if (addToHistory) {
+      history.pushState({ page: "societies" }, "", "#societies");
+    }
+
+    // 1. Sort the Data: Technical -> Cultural -> Media -> Literary -> Sports
+    const sortOrder = ["Technical", "Cultural", "Media", "Literary", "Sports"];
+
+    // Create a sorted copy of the data
+    const sortedSocieties = [...societiesData].sort((a, b) => {
+      return sortOrder.indexOf(a.category) - sortOrder.indexOf(b.category);
+    });
+
+    // 2. Generate One Single List of Cards
+    const societyCardsHtml = sortedSocieties
+      .map(
+        (soc) => `
+    <div class="society-card">
+        <img src="${soc.image}" alt="${soc.name}" class="society-logo">
+        <h3>${soc.name}</h3>
+        <span class="society-type">${soc.type}</span>
+        <p>${soc.desc}</p>
+        <a href="${soc.link}" target="_blank" class="society-link-btn">
+            <i class="fab fa-instagram"></i> Visit Page
+        </a>
+    </div>
+  `
+      )
+      .join("");
+
+    // 3. Render
+    dynamicContent.innerHTML = `
+    <section class="section">
+        <h2>Student Societies</h2>
+        
+        <div id="search-container" style="max-width: 500px; margin: 0 auto 3rem auto;">
+            <input type="text" id="society-search-bar" 
+                   placeholder="Search societies by name..." 
+                   style="width: 100%; padding: 1rem; border-radius: 5px; border: 1px solid #444; background-color: #2a2a2a; color: #e0e0e0; font-size: 1.1rem;">
+        </div>
+        
+        <div class="societies-container">
+            ${societyCardsHtml}
+        </div>
+    </section>
+  `;
+
+    // 4. Search Functionality
+    const searchInput = document.getElementById("society-search-bar");
+    searchInput.addEventListener("keyup", (e) => {
+      const term = e.target.value.toLowerCase();
+      const cards = document.querySelectorAll(".society-card");
+
+      cards.forEach((card) => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        const type = card
+          .querySelector(".society-type")
+          .textContent.toLowerCase();
+
+        if (name.includes(term) || type.includes(term)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  };
   // Game Logic
   const renderGames = (addToHistory = true) => {
     if (addToHistory) history.pushState({ page: "games" }, "", "#games");
@@ -2538,23 +3116,19 @@ function solve(input) {
   };
 
   // Event listeners for navigation links
+  // Event listeners for navigation links
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const id = e.target.id;
-      if (id === "home-link") {
-        renderHome();
-      } else if (id === "resources-link") {
-        renderResources();
-      } else if (id === "games-link") {
-        renderGames();
-      } else if (id === "notes-link") {
-        renderPerformance();
-      } else if (id === "about-us-link") {
-        renderAboutUs();
-      } else if (id === "events-link") {
-        renderEventCalendar();
-      }
+      if (id === "home-link") renderHome();
+      else if (id === "resources-link") renderResources();
+      else if (id === "societies-link")
+        renderSocieties(); // <--- UPDATED THIS LINE
+      else if (id === "notes-link") renderPerformance();
+      else if (id === "about-us-link") renderAboutUs();
+      else if (id === "events-link") renderEventCalendar();
+      else if (id === "pomodoro-link") renderPomodoro();
     });
   });
   document.querySelectorAll(".nav-links a").forEach((link) => {
@@ -2647,6 +3221,16 @@ function solve(input) {
       const year = btn.dataset.year;
       const semester = btn.dataset.semester;
       renderSemesterSubjects(branchId, year, semester);
+    } else if (e.target.closest(".roadmap-card")) {
+      const card = e.target.closest(".roadmap-card");
+      const key = card.dataset.roadmap;
+      // Open PDF directly
+      const pdfUrl = roadmapData[key].pdf;
+      if (pdfUrl) {
+        window.open(pdfUrl, "_blank");
+      } else {
+        alert("Roadmap PDF coming soon!");
+      }
     } else if (e.target.id === "back-to-semesters") {
       const btn = e.target;
       const branchId = btn.dataset.branch;
@@ -2674,6 +3258,10 @@ function solve(input) {
       const year = btn.dataset.year;
       const semester = btn.dataset.semester;
       renderUnitViewer(subject, type, unit, branch, year, semester);
+    } else if (e.target.closest(".roadmap-card")) {
+      const card = e.target.closest(".roadmap-card");
+      const key = card.dataset.roadmap;
+      renderRoadmapDetails(key);
     }
   });
 
@@ -2856,7 +3444,15 @@ function solve(input) {
 
       // Load track
       audioPlayer.src = tracks[mode];
-      // DO NOT auto-play here
+
+      // --- FIX STARTS HERE ---
+      // Force play immediately when user clicks a mode
+      audioPlayer.play();
+
+      // Force button text to say "Pause" so it stays in sync
+      const btn = document.getElementById("play-pause-btn");
+      if (btn) btn.textContent = "⏸️ Pause";
+      // --- FIX ENDS HERE ---
     }
 
     const playPauseBtn = document.getElementById("play-pause-btn");
@@ -2899,6 +3495,35 @@ function solve(input) {
       "Hi there! 😊 What would you like to know?",
       "Hey! 👩‍💻 Need help navigating IGDTUWHub?",
     ],
+    roadmaps: [
+      {
+        text: "🚀 Taking you to the Career Roadmaps section!",
+        action: () => {
+          // 1. Always render home to ensure the section exists
+          renderHome();
+
+          // 2. Wait slightly longer (300ms) for the HTML to render, then scroll
+          setTimeout(() => {
+            const section = document.getElementById("roadmaps-section");
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }, 300);
+        },
+      },
+    ],
+
+    // ... other intents ...
+
+    societies: [
+      {
+        text: "🤝 Opening the Societies page for you!",
+        action: () => {
+          // Call the function directly instead of simulating a click
+          renderSocieties();
+        },
+      },
+    ],
     // ADD THESE THREE NEW SECTIONS:
     okay: [
       "Glad to help!",
@@ -2909,16 +3534,20 @@ function solve(input) {
     bye: ["Goodbye! 👋", "See you later!", "Have a great day!"],
 
     // ... keep your existing resources, games, etc ...
-    resources: [
-      {
-        text: "📚 Loading Resources section for you...",
-        action: () => loadSection("resources-link"),
-      },
-    ],
     games: [
       {
-        text: "🎮 Taking you to Games!",
-        action: () => loadSection("games-link"),
+        text: "🎮 Opening the Games section for you!",
+        action: () => renderGames(),
+      },
+    ],
+
+    // UPDATE THIS: Direct call to renderSocieties()
+
+    // UPDATE THIS: Direct call to renderResources()
+    resources: [
+      {
+        text: "📚 Loading Resources...",
+        action: () => renderResources(),
       },
     ],
     cgpa: [
@@ -2986,9 +3615,22 @@ function solve(input) {
     if (msg.match(/\b(thank|thanks)\b/)) return getRandom(botIntents.thanks);
     if (msg.match(/\b(bye|goodbye|see ya)\b/)) return getRandom(botIntents.bye);
     if (msg.includes("resource")) return getRandom(botIntents.resources);
-    if (msg.includes("game")) return getRandom(botIntents.games);
     if (msg.includes("cgpa") || msg.includes("gpa"))
       return getRandom(botIntents.cgpa);
+    if (
+      msg.includes("career") ||
+      msg.includes("roadmap") ||
+      msg.includes("path")
+    )
+      return getRandom(botIntents.roadmaps);
+    if (msg.includes("game")) return getRandom(botIntents.games); // Keep this
+    // Checks for "society", "societies", or "club"
+    if (
+      msg.includes("society") ||
+      msg.includes("societies") ||
+      msg.includes("club")
+    )
+      return getRandom(botIntents.societies);
     if (msg.includes("about")) return getRandom(botIntents.about);
     if (msg.includes("event") || msg.includes("calendar"))
       return getRandom(botIntents.events);
@@ -3017,20 +3659,77 @@ function solve(input) {
       }
     }, 500);
   };
+  const handleRouting = () => {
+    const hash = window.location.hash;
 
-  // --- HANDLE BROWSER BACK BUTTON (COMPLETE VERSION) ---
+    // 1. If no hash, go Home
+    if (!hash || hash === "#home") {
+      renderHome(false);
+      return;
+    }
+
+    const cleanHash = decodeURIComponent(hash.substring(1));
+    const parts = cleanHash.split("/");
+    const mainPage = parts[0];
+
+    // ROUTING LOGIC
+    if (mainPage === "resources") renderResources(false);
+    else if (mainPage === "societies") renderSocieties(false);
+    else if (mainPage === "games") renderGames(false);
+    else if (mainPage === "cgpa") renderPerformance(false);
+    else if (mainPage === "events") renderEventCalendar(false);
+    else if (mainPage === "pomodoro") renderPomodoro(false);
+    else if (mainPage === "about") renderAboutUs(false);
+    // Specific fix for Roadmaps: if hash is #roadmaps, go home and scroll
+    else if (mainPage === "roadmaps") {
+      renderHome(false);
+      setTimeout(() => {
+        const section = document.getElementById("roadmaps-section");
+        if (section) section.scrollIntoView();
+      }, 100);
+    } else if (mainPage === "game" && parts[1]) {
+      // ... (keep your existing game routing)
+      if (parts[1] === "tictactoe") renderTicTacToe(false);
+      else if (parts[1] === "memory") renderMemoryGame(false);
+      else if (parts[1] === "puzzle") renderPuzzleGame(false);
+      else if (parts[1] === "pong") renderPongGame(false);
+      else if (parts[1] === "coding") {
+        if (parts[2]) renderCodingQuestions(parts[2], false);
+        else renderCodingGame(null, false);
+      }
+    } else if (branches[mainPage]) {
+      if (parts.length === 1) renderBranchYears(mainPage, false);
+      else if (parts.length === 2)
+        renderYearSemesters(mainPage, parts[1], false);
+      else if (parts.length === 3)
+        renderSemesterSubjects(
+          mainPage,
+          parts[1],
+          parts[2].replace(/-/g, " "),
+          false
+        );
+    } else if (
+      subjectLinks[mainPage.replace(/-/g, " ")] ||
+      pyqLinks[mainPage.replace(/-/g, " ")]
+    ) {
+      renderSubjectOptions(mainPage.replace(/-/g, " "), "", "", "", false);
+    } else {
+      renderHome(false);
+    }
+  };
+  // --- Browser Back/Forward Buttons ---
   window.addEventListener("popstate", (event) => {
     if (event.state) {
       const s = event.state;
-      // Main Sections
       if (s.page === "home") renderHome(false);
       else if (s.page === "resources") renderResources(false);
+      else if (s.page === "societies") renderSocieties(false);
       else if (s.page === "games") renderGames(false);
       else if (s.page === "cgpa") renderPerformance(false);
       else if (s.page === "about") renderAboutUs(false);
       else if (s.page === "events") renderEventCalendar(false);
       else if (s.page === "pomodoro") renderPomodoro(false);
-      // Resources Navigation
+      else if (s.page === "roadmap-detail") renderRoadmapDetails(s.key);
       else if (s.page === "years") renderBranchYears(s.branchId, false);
       else if (s.page === "semesters")
         renderYearSemesters(s.branchId, s.year, false);
@@ -3038,8 +3737,6 @@ function solve(input) {
         renderSemesterSubjects(s.branchId, s.year, s.semester, false);
       else if (s.page === "options")
         renderSubjectOptions(s.subject, s.branch, s.year, s.semester, false);
-      else if (s.page === "pyq-view") renderPyqViewer(s.subject, s.term, false);
-      // Specific Games
       else if (s.page === "tictactoe") renderTicTacToe(false);
       else if (s.page === "memory") renderMemoryGame(false);
       else if (s.page === "puzzle") renderPuzzleGame(false);
@@ -3048,10 +3745,12 @@ function solve(input) {
       else if (s.page === "coding-questions")
         renderCodingQuestions(s.level, false);
     } else {
-      // Default to home if no state exists
-      renderHome(false);
+      handleRouting();
     }
   });
+
+  // --- Initial Page Load ---
+  handleRouting();
   // --- Event Listeners ---
   chatbotToggle.addEventListener("click", () => {
     const isVisible = chatbotBox.style.display === "flex";
@@ -3069,10 +3768,6 @@ function solve(input) {
       sendMessage();
     }
   });
+}); // End of DOMContentLoaded
 
-  // Initial page load
-  // This sets the "start point" for the history
-  history.replaceState({ page: "home" }, "", "#home");
-  renderHome(false);
-});
 
