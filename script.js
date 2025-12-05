@@ -1820,7 +1820,7 @@ function solve(input) {
     "Data Structures and Algorithm":
       "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
     "Database Management Systems":
-      "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
+      "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj?usp=drive_link",
     "Operations Management":
       "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
     "Open Source Technologies":
@@ -1875,6 +1875,8 @@ function solve(input) {
       "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
     "Basics of Electrical and Electronics Engineering":
       "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
+    "Database Management Systems":
+      "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
     // keep adding subjects with their PYQ links...
   };
 
