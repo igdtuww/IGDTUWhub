@@ -1820,7 +1820,7 @@ function solve(input) {
     "Data Structures and Algorithm":
       "https://drive.google.com/drive/folders/1FYj-oCqsSg0LJ5qhEctS6sAgS52vR0ac",
     "Database Management Systems":
-      "https://drive.google.com/drive/folders/1jKnE_loOGHCCaxnbDpflBDf6A4EKmMnj",
+      "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
     "Operations Management":
       "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
     "Open Source Technologies":
