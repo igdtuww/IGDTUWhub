@@ -1939,6 +1939,8 @@ function solve(input) {
       "coming-soon.html",
     "Programming Tools for Mathematics":
       "coming-soon.html",
+    "Design and Analysis of Algorithms":
+      "https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
 
     
     // keep adding subjects with their PYQ links...
