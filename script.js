@@ -1877,6 +1877,26 @@ function solve(input) {
       "https://drive.google.com/drive/folders/131wqerkY-ygTtDpDkyJzG8vWo751rKgp",
     "Database Management Systems":
       "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
+    "Programming with C":
+      "coming-soon.html",
+    "Signals & Systems":
+      "coming-soon.html",
+    "Programming Fundamentals":
+      "https://drive.google.com/drive/folders/1l3RxhRQhOrVr7ItJpH_2Kce_Ur8nsDUE",
+    "Electronics Workshop":
+      "coming-soon.html",
+    "Fundamentals of Electrical Sciences":
+      "coming-soon.html",
+    "Ergonomic Design":
+      "coming-soon.html",
+    "Introduction to Internet of Things":
+       "coming-soon.html",
+    "Advanced IoT and Real World Applications":
+      "coming-soon.html",
+    "Cloud Computing":
+      "coming-soon.html",
+    "Fundamentals of Devops":
+      "coming-soon.html",
     // keep adding subjects with their PYQ links...
   };
 
