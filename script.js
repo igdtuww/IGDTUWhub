@@ -1825,6 +1825,8 @@ function solve(input) {
       "https://drive.google.com/drive/folders/1Hnpt92cMZNFxA_nGyGLN62TCOy0uIhzP",
     "Open Source Technologies":
       "https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
+    "Indian Knowledge System":
+      "https://drive.google.com/drive/folders/1JKisG10iMNF4qKzmJS9c45dAmUOphS59",
 
     //"subject": "link",
     // add more subjects here...
@@ -1878,9 +1880,9 @@ function solve(input) {
     "Database Management Systems":
       "https://drive.google.com/drive/folders/1WvVDqC7XKC-w5FmB4jeUPXnDqB4HP8Mh?usp=drive_link",
     "Programming with C":
-      "coming-soon.html",
+      "https://drive.google.com/drive/folders/13JYqi-6qzWiuqyNcQmO2F6HQGitJriRY",
     "Signals & Systems":
-      "coming-soon.html",
+      "https://drive.google.com/drive/folders/1-xBztDfOZEFvEjkhp_5lIk7yY-nl7uhe",
     "Programming Fundamentals":
       "https://drive.google.com/drive/folders/1l3RxhRQhOrVr7ItJpH_2Kce_Ur8nsDUE",
     "Electronics Workshop":
@@ -1890,13 +1892,55 @@ function solve(input) {
     "Ergonomic Design":
       "coming-soon.html",
     "Introduction to Internet of Things":
-       "coming-soon.html",
+       "https://drive.google.com/drive/folders/10wc-MPYlVwJbeAQp6Od_66Jn6ZDi2ney",
     "Advanced IoT and Real World Applications":
       "coming-soon.html",
     "Cloud Computing":
       "coming-soon.html",
     "Fundamentals of Devops":
       "coming-soon.html",
+    "Data Structures": 
+      "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
+    "Mobile Application Development":
+      "https://drive.google.com/drive/folders/1n5ODhFZac24Zd4mktc1YZPoUvQPN4xEu",
+    "Network Analysis and Synthesis":
+      "coming-soon.html",
+    "Indian Knowledge System":
+      "https://drive.google.com/drive/folders/1psUnoWfLg3VgpUB3sabYZCEpAapQqEdO",
+    "Open Source Technologies":
+      "https://drive.google.com/drive/folders/1DTdBKXqoEY0EVLH9aoxj6Inr6SVij6iX",
+    "Engineering Graphics & CAD Modelling":
+      "coming-soon.html",
+    "Engineering Materials":
+      "coming-soon.html",
+    "Numerical Techniques for Engineers":
+      "coming-soon.html",
+    "Production Technology-I":
+      "coming-soon.html",
+    "Thermal Engineering-I":
+      "coming-soon.html",
+    "Robotics Lab":
+      "coming-soon.html",
+    "Thermal Engineering-II":
+      "coming-soon.html",
+    "Production Technology-II":
+      "coming-soon.html",
+    "Fluid Mechanics and Hydraulic Machines":
+      "coming-soon.html",
+    "Strength of Materials":
+      "https://drive.google.com/drive/folders/1-X__gb4stO7p8SBnpdkZHsYWNZwF1SHn",
+    "IoT Lab":
+      "coming-soon.html",
+    "Calculus I":
+      "coming-soon.html",
+    "Calculus II":
+      "coming-soon.html",
+    "Linear Algebra":
+      "coming-soon.html",
+    "Programming Tools for Mathematics":
+      "coming-soon.html",
+
+    
     // keep adding subjects with their PYQ links...
   };
 
