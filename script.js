@@ -1827,6 +1827,44 @@ function solve(input) {
       "https://drive.google.com/drive/folders/1FbT1675wBhIQ7gVtV3zx3j0lQ7rMXltA",
     "Indian Knowledge System":
       "https://drive.google.com/drive/folders/1JKisG10iMNF4qKzmJS9c45dAmUOphS59",
+    "Design and Analysis of Algorithms":
+      "https://drive.google.com/drive/folders/1Z-5TbKvFhYWdEGlEmzrJS3eTUk4zRvnf?usp=drive_link",
+    "Operating Systems":
+      "https://drive.google.com/drive/folders/1wi1wpyJ-NkaZjitHBOlugutWrfHmVZzB?usp=drive_link",
+    "Cloud Computing":
+      "https://drive.google.com/drive/folders/1FJn3W-bgHF9bllkkDAtd6xhjspqEeX6E?usp=drive_link",
+    "Software Engineering":
+      "https://drive.google.com/drive/folders/1SJMMxPDMypkQbbP02oFPfIKTwOMI6uPY?usp=drive_link",
+    "Fundamentals of Devops":
+      "https://drive.google.com/drive/folders/1TLRSwOtOMpuW1yyxr5lrpgmadwgVsEbC?usp=drive_link",
+    "Artificial Intelligence":
+      "https://drive.google.com/drive/folders/1IE-_mXKynVWpojvvOGCCMhJHPhPExt0A?usp=drive_link",
+    "Computer Organization and Architecture":
+      "https://drive.google.com/drive/folders/1pr5vlwc1AFVmZQgsQkDz8VDE_qzf6eAE?usp=drive_link",
+    "Data Communication and Computer Networks":
+      "https://drive.google.com/drive/folders/1c7e9-jFw82_EqKRBdhYk8O_wrnbBqoVs?usp=drive_link",
+    "Advanced IoT and Real World Applications":
+      "https://drive.google.com/drive/folders/1FciF5VeeKg4-iXVcrTE3KzNTh3aHn89d?usp=drive_link",
+    "Computer Networks":
+      "https://drive.google.com/drive/folders/1COjUvylpWabPNpaV7KcPU_MJ_rDzHUnj?usp=drive_link",
+    "Analog Electronics":
+      "https://drive.google.com/drive/folders/1aM54lOajoK0Sv3RGIbtypwDudtZ6uKHX?usp=drive_link",
+    "Electromagnetic Field Theory & Antenna":
+      "https://drive.google.com/drive/folders/1Lw8ET8ldSqx4JFv8LUm3DYiIdZeNCUzp?usp=drive_link",
+    "Digital Communication Systems":
+      "https://drive.google.com/drive/folders/16Tixly8QPx2Jktypc7gHPKT_toGoVIfR?usp=drive_link",
+    "Control Systems":
+      "https://drive.google.com/drive/folders/18XQwSUrOdVrLXwfxfZH53aRauT1gcd-z?usp=drive_link",
+    "Thermal Engineering - II":
+      "https://drive.google.com/drive/folders/1WOD4b4aSSXennn_u7zTpN7LWG3hBnunb?usp=drive_link",
+    "Production Technology - II":
+      "https://drive.google.com/drive/folders/1tGhsRereUlVSGEONPYyo0r_FdV6ZV2wv?usp=drive_link",
+    "Fluid Mechanics and Hydraulic Machines":
+      "https://drive.google.com/drive/folders/1RUXOPf9OxMf9K1l9-5ssJl9NLHhr0XZA?usp=drive_link",
+    "Strength of Materials":
+      "https://drive.google.com/drive/folders/1XOX7lJEhWfXcNAr3LMuhWjo0I47iYrJR?usp=drive_link",
+    "IoT Lab":
+      "https://drive.google.com/drive/folders/15qXoIellUeSYWs2B2pVpvXmS8Y8xmGlD?usp=drive_link",
 
     //"subject": "link",
     // add more subjects here...
