@@ -15,35 +15,41 @@ It serves as a **centralized academic and productivity hub** that includes:
 
 ---
 
-## 🌟 Features
+##🌟 Features
 
 - **Dynamic Resource Section:**  
-  Access notes, past year questions (PYQs), and additional material by branch → year → semester.
+  Access notes, past year questions (PYQs), and additional material by **branch → year → semester**.
 
 - **Quick Notes with Save & PDF Download:**  
-  Users can write and store quick notes locally in the browser or download them as PDF files using `jsPDF`.
+  Write and store quick notes locally in the browser or download them as PDF files using `jsPDF`.
 
 - **Saved Courses:**  
   Bookmark and manage frequently accessed courses for faster navigation.
 
 - **CGPA Calculator:**  
-  Simple interface to calculate GPA based on subjects, credits, and marks.
+  Calculate your GPA easily based on subjects, credits, and marks.
 
-- **Academic Calendar Viewer:**  
-  Monthly academic events including exams, festivals, and breaks (2025–26 included).
+- **Advanced Target Calculator:**  
+  Set academic targets and calculate the required grades to achieve your desired CGPA or score.
+
+- **Academic & Event Calendar Viewer:**  
+  Monthly academic events, festivals, exams, breaks, and society events (2025–26 included).
+
+- **Society & Clubs Section:**  
+  Stay updated with college societies, clubs, and extracurricular opportunities.
 
 - **Games Section:**  
-  Relax with basic games like Tic Tac Toe, Memory Match, and Puzzle.
+  Relax with games like **Tic Tac Toe**, **Memory Match**, and **Puzzle**.
 
 - **Pomodoro Timer:**  
-  Stay productive with the **25-minute focus + 5-minute break technique** built right into the platform.  
-  Perfect for study sessions, revision, or project work.
+  Boost productivity with the **25-minute focus + 5-minute break technique**, ideal for study sessions, revision, or project work.
 
 - **Integrated Chatbot:**  
-  Assists users with navigation and FAQs.
+  Get instant help with navigation, FAQs, and platform guidance.
 
 - **Fully Responsive UI:**  
-  Mobile, tablet, and desktop friendly using modern CSS and layout techniques.
+  Optimized for **mobile, tablet, and desktop** using modern CSS and layout techniques.
+
 
 ---
 
