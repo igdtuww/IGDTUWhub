@@ -1934,7 +1934,7 @@ function solve(input) {
     "Advanced IoT and Real World Applications":
       "coming-soon.html",
     "Cloud Computing":
-      "coming-soon.html",
+      "https://drive.google.com/drive/folders/17K71KaAuYSvNG6yB4tAVjomZYSKnhBoe?usp=drive_link",
     "Fundamentals of Devops":
       "coming-soon.html",
     "Data Structures": 
