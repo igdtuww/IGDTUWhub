@@ -1936,7 +1936,7 @@ function solve(input) {
     "Cloud Computing":
       "https://drive.google.com/drive/folders/17K71KaAuYSvNG6yB4tAVjomZYSKnhBoe?usp=drive_link",
     "Fundamentals of Devops":
-      "coming-soon.html",
+      "https://drive.google.com/drive/folders/1N_VD9Pb-iarRA3PeGxxigjvyFuLjLJPI",
     "Data Structures": 
       "https://drive.google.com/drive/folders/1JQHLCETFYXILJU8aYZ4hw6tPofHhdO8I",
     "Mobile Application Development":
