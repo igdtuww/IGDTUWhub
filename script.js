@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Operating Systems",
             "Data Communication and Computer Networks",
             "Advanced IoT and Real World Applications",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Operating Systems",
             "Software Engineering",
             "Open Source Technologies",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -184,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Artificial Intelligence",
             "Analog Communication Systems",
             "Design and Ananlysis of Algorithms",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -254,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Electromagnetic Field Theory & Antenna",
             "Digital Communication Systems",
             "Control Systems",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -326,6 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Software Engineering",
             "Cloud Computing",
             "Fundamentals of Devops",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -398,6 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Artificial Intelligence",
             "Cloud Computing",
             "Fundamentals of Devops",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -471,6 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Fluid Mechanics and Hydraulic Machines",
             "Strength of Materials",
             "IoT Lab",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -544,6 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Fluid Mechanics and Hydraulic Machines",
             "Strength of Materials",
             "IoT Lab",
+            "Understanding Human Values",
           ],
         },
         // 3: {
@@ -1865,6 +1873,8 @@ function solve(input) {
       "https://drive.google.com/drive/folders/1XOX7lJEhWfXcNAr3LMuhWjo0I47iYrJR?usp=drive_link",
     "IoT Lab":
       "https://drive.google.com/drive/folders/15qXoIellUeSYWs2B2pVpvXmS8Y8xmGlD?usp=drive_link",
+    "Understanding Human Values":
+      "https://drive.google.com/drive/folders/11kT61zI7-NJRkRsLS2cBjqhkEqGRWLW9?usp=drive_link",
 
     //"subject": "link",
     // add more subjects here...
@@ -1979,6 +1989,8 @@ function solve(input) {
       "coming-soon.html",
     "Design and Analysis of Algorithms":
       "https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
+    "Understanding Human Values":
+      "coming-soon.html",
 
     
     // keep adding subjects with their PYQ links...
