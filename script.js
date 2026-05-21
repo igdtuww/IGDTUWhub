@@ -1990,7 +1990,7 @@ function solve(input) {
     "Design and Analysis of Algorithms":
       "https://drive.google.com/drive/folders/1Ty7qvCZsYghf4x9aQKev_a2oukkdra8E",
     "Understanding Human Values":
-      "coming-soon.html",
+      "https://drive.google.com/drive/folders/1kqH7SAEvLtVpkUqsE49iOjCyVmndyQjn?usp=drive_link",
 
     
     // keep adding subjects with their PYQ links...
