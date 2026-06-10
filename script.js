@@ -2271,7 +2271,7 @@ function solve(input) {
       let totalGradePoints = 0;
       let isValid = true;
 
-      rows.forEach((row) => {
+      for (const row of rows) {
         const creditsInput = row.querySelector(".credits-input");
         const marksInput = row.querySelector(".marks-input");
 
@@ -2287,13 +2287,13 @@ function solve(input) {
         ) {
           isValid = false;
           alert("Please enter valid numbers for credits and marks (0-100).");
-          return;
+          break;
         }
 
         const gpaPoint = getGpaPoint(marks);
         totalCredits += credits;
         totalGradePoints += credits * gpaPoint;
-      });
+      }
 
       if (isValid && totalCredits > 0) {
         const cgpa = totalGradePoints / totalCredits;
@@ -2328,11 +2328,13 @@ function solve(input) {
   };
 
   const getGpaPoint = (marks) => {
-    if (marks >= 90) return 10;
-    else if (marks >= 80) return 9;
-    else if (marks >= 70) return 8;
-    else if (marks >= 60) return 7;
-    else if (marks >= 50) return 6;
+    if (marks >= 93) return 10;
+    else if (marks >= 85) return 9;
+    else if (marks >= 77) return 8;
+    else if (marks >= 69) return 7;
+    else if (marks >= 61) return 6;
+    else if (marks >= 53) return 5;
+    else if (marks >= 45) return 4;
     else return 0;
   };
   // --- Roadmap Data (Updated with PDFs & New Fields) ---
